@@ -4166,8 +4166,10 @@ bool CheckBlockHeader(const CBlockHeader& block, CValidationState& state, bool f
 {
     // Check proof of work matches claimed amount
     if (fCheckPOW && !CheckProofOfWork(block.GetHash(), block.nBits))
-        return state.DoS(50, error("CheckBlockHeader() : proof of work failed"),
+        return state.DoS(50, "",
             REJECT_INVALID, "high-hash");
+        //return state.DoS(50, error("CheckBlockHeader() : proof of work failed"),
+        //    REJECT_INVALID, "high-hash");
 
     // Version 4 header must be used after Params().Zerocoin_StartHeight(). And never before.
     if (block.GetBlockTime() > Params().Zerocoin_StartTime()) {
@@ -4190,8 +4192,10 @@ bool CheckBlock(const CBlock& block, CValidationState& state, bool fCheckPOW, bo
     // Check that the header is valid (particularly PoW).  This is mostly
     // redundant with the call in AcceptBlockHeader.
     if (!CheckBlockHeader(block, state, block.IsProofOfWork()))
-        return state.DoS(100, error("CheckBlock() : CheckBlockHeader failed"),
+        return state.DoS(100, "",
             REJECT_INVALID, "bad-header", true);
+        //return state.DoS(100, error("CheckBlock() : CheckBlockHeader failed"),
+        //    REJECT_INVALID, "bad-header", true);
 
     // Check timestamp
     LogPrint("debug", "%s: block=%s  is proof of stake=%d\n", __func__, block.GetHash().ToString().c_str(), block.IsProofOfStake());
