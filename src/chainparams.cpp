@@ -53,7 +53,9 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0, uint256("0x00000732d7b120985c2051ccc37d1cb55057526fdbeba9666d7760fb51328ecf"));
+    (0, uint256("0x00000732d7b120985c2051ccc37d1cb55057526fdbeba9666d7760fb51328ecf"))
+    (300, uint256("0x0000004f0afc89e2705e371de2d49b0c8c262522551fccc7910a65d078415f83"))
+    (1000, uint256("0x1f5d4e5a684245903d4ee29d6f4ab019703e3940ea2b5cf543138379908caaf4"));
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
     1557039007, // * UNIX timestamp of last checkpoint block
@@ -127,25 +129,25 @@ public:
         nTargetSpacing = 1 * 60;  // PIVX: 1 minute
         nMaturity = 100;
         nMasternodeCountDrift = 20;
-        nMaxMoneyOut = 21000000 * COIN;
+        nMaxMoneyOut = 90000000000 * COIN;
 
         /** Height or Time Based Activations **/
-        nLastPOWBlock = 259200;
-        nModifierUpdateBlock = 615800;
-        nZerocoinStartHeight = 863787;
-        nZerocoinStartTime = 1557039007;
-        nBlockEnforceSerialRange = 895400; //Enforce serial range starting this block
-        nBlockRecalculateAccumulators = 908000; //Trigger a recalculation of accumulators
-        nBlockFirstFraudulent = 891737; //First block that bad serials emerged
-        nBlockLastGoodCheckpoint = 891730; //Last valid accumulator checkpoint
-        nBlockEnforceInvalidUTXO = 902850; //Start enforcing the invalid UTXO's
-        nInvalidAmountFiltered = 268200*COIN; //Amount of invalid coins filtered through exchanges, that should be considered valid
-        nBlockZerocoinV2 = 1153160; //!> The block that zerocoin v2 becomes active - roughly Tuesday, May 8, 2018 4:00:00 AM GMT
-        nBlockDoubleAccumulated = 1050010;
+        nLastPOWBlock = 200;
+        nModifierUpdateBlock = 0;
+        nZerocoinStartHeight = 999999999;
+        nZerocoinStartTime = 4294967295;
+        nBlockEnforceSerialRange = 0; //Enforce serial range starting this block
+        nBlockRecalculateAccumulators = 999999999; //Trigger a recalculation of accumulators
+        nBlockFirstFraudulent = 0; //First block that bad serials emerged
+        nBlockLastGoodCheckpoint = 0; //Last valid accumulator checkpoint
+        nBlockEnforceInvalidUTXO = 0; //Start enforcing the invalid UTXO's
+        nInvalidAmountFiltered = 0 * COIN; //Amount of invalid coins filtered through exchanges, that should be considered valid
+        nBlockZerocoinV2 = 999999999; //!> The block that zerocoin v2 becomes active - roughly Tuesday, May 8, 2018 4:00:00 AM GMT
+        nBlockDoubleAccumulated = 0;
 
         // Fake Serial Attack
-        nFakeSerialBlockheightEnd = 1686229;
-        nSupplyBeforeFakeSerial = 4131563 * COIN;   // zerocoin supply at block nFakeSerialBlockheightEnd
+        nFakeSerialBlockheightEnd = 0;
+        nSupplyBeforeFakeSerial = 0 * COIN;   // zerocoin supply at block nFakeSerialBlockheightEnd
 
         /**
          * Build the genesis block. Note that the output of the genesis coinbase cannot
