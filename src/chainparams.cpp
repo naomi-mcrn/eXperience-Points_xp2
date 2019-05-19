@@ -53,9 +53,8 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0, uint256("0x00000732d7b120985c2051ccc37d1cb55057526fdbeba9666d7760fb51328ecf"))
-    (300, uint256("0x0000004f0afc89e2705e371de2d49b0c8c262522551fccc7910a65d078415f83"))
-    (1000, uint256("0x1f5d4e5a684245903d4ee29d6f4ab019703e3940ea2b5cf543138379908caaf4"));
+    (0, uint256("0x00000732d7b120985c2051ccc37d1cb55057526fdbeba9666d7760fb51328ecf"));
+    //(1000, uint256("0x1f5d4e5a684245903d4ee29d6f4ab019703e3940ea2b5cf543138379908caaf4"));
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
     1557039007, // * UNIX timestamp of last checkpoint block
@@ -209,10 +208,10 @@ public:
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 75);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 13);
         base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 55);
-        base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x02)(0x2D)(0x25)(0x33).convert_to_container<std::vector<unsigned char> >();
-        base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x02)(0x21)(0x31)(0x2B).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x88)(0xb2)(0x1e).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x88)(0xad)(0xe4).convert_to_container<std::vector<unsigned char> >();
         // 	BIP44 coin type is from https://github.com/satoshilabs/slips/blob/master/slip-0044.md
-        base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x80)(0x00)(0x00)(0x77).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x80)(0x00)(0x02)(0xef).convert_to_container<std::vector<unsigned char> >();
 
         convertSeed6(vFixedSeeds, pnSeed6_main, ARRAYLEN(pnSeed6_main));
 
@@ -227,7 +226,7 @@ public:
 
         nPoolMaxTransactions = 3;
         strSporkKey = "0424882491D50DB396BF7C1CE2D87787DD82B406AD938402D5D1F4ACD2AFA7FD267C22A701B48671114D0C12DBAE37AC65CD7AE50847E1886ED4484510D125969A";
-        strObfuscationPoolDummyAddress = "D87q2gC9j6nNrnzCsg4aY6bHMLsT9nUhEw";
+        strObfuscationPoolDummyAddress = "XHohdJoJ3V26K9UotJPfJ3nwFrMoCRvHDp";
         nStartMasternodePayments = 1403728576; //Wed, 25 Jun 2014 20:36:16 GMT
 
         /** Zerocoin */
