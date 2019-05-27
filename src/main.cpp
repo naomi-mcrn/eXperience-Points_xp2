@@ -1892,24 +1892,38 @@ int64_t GetBlockValue(int nHeight)
 {
     if (Params().NetworkID() == CBaseChainParams::TESTNET) {
         if (nHeight < 200 && nHeight > 0)
-            return 7500000 * COIN;
+            return 1200000 * COIN;
     }
 
     if (Params().NetworkID() == CBaseChainParams::REGTEST) {
         if (nHeight == 0)
-            return 7500 * COIN;
+            return 1200 * COIN;
 
     }
 
     int64_t nSubsidy = 0;
     if (nHeight == 0) {
         nSubsidy = 3000001 * COIN;
-    } else if (nHeight < 11 && nHeight > 0) {
-        nSubsidy = 1350000000 * COIN;
-    } else if (nHeight <= 199 && nHeight >= 11) {
-        nSubsidy = 7500 * COIN;
-    } else {
-        nSubsidy = 7500 * COIN;
+    } else if (nHeight <= 10 && nHeight >= 1) {
+        nSubsidy = 400000000 * COIN;
+    } else if (nHeight <= 52570 && nHeight >= 11) {
+        nSubsidy = 1200 * COIN;
+    } else if (nHeight <= 210250 && nHeight >= 52571) {
+        nSubsidy = 1100 * COIN;
+    } else if (nHeight <= 526610 && nHeight >= 210251) {
+        nSubsidy = 1000 * COIN;
+    } else if (nHeight <= 1051210 && nHeight >= 526611) {
+        nSubsidy = 900 * COIN;
+    } else if (nHeight <= 2628010 && nHeight >= 1051211) {
+        nSubsidy = 800 * COIN;
+    } else if (nHeight <= 4204810 && nHeight >= 2628011) {
+        nSubsidy = 700 * COIN;
+    } else if (nHeight <= 6307210 && nHeight >= 4204811) {
+        nSubsidy = 600 * COIN;
+    } else if (nHeight <= 8935210 && nHeight >= 6307211) {
+        nSubsidy = 500 * COIN;
+    } else if (nHeight <= 30796910 && nHeight >= 8935211) {
+        nSubsidy = 400 * COIN;
     }
     return nSubsidy;
 }
@@ -2160,8 +2174,24 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
 
     if (nHeight <= Params().LAST_POW_BLOCK()) {
         ret = 0;
-    } else {
-	ret = blockValue * .2;
+    } else if (nHeight <= 52570 && nHeight > Params().LAST_POW_BLOCK()) {
+        ret = blockValue * .40;
+    } else if (nHeight <= 210250 && nHeight >= 52571) {
+        ret = blockValue * .42;
+    } else if (nHeight <= 526610 && nHeight >= 210251) {
+        ret = blockValue * .44;
+    } else if (nHeight <= 1051210 && nHeight >= 526611) {
+        ret = blockValue * .46;
+    } else if (nHeight <= 2628010 && nHeight >= 1051211) {
+        ret = blockValue * .50;
+    } else if (nHeight <= 4204810 && nHeight >= 2628011) {
+        ret = blockValue * .54;
+    } else if (nHeight <= 6307210 && nHeight >= 4204811) {
+        ret = blockValue * .58;
+    } else if (nHeight <= 8935210 && nHeight >= 6307211) {
+        ret = blockValue * .62;
+    } else if (nHeight <= 30796910 && nHeight >= 8935211) {
+        ret = blockValue * .75;
     }
 
     return ret;
