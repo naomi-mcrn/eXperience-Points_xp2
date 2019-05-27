@@ -128,10 +128,10 @@ public:
         nTargetSpacing = 1 * 60;  // PIVX: 1 minute
         nMaturity = 100;
         nMasternodeCountDrift = 20;
-        nMaxMoneyOut = 90000000000 * COIN;
+        nMaxMoneyOut = 20000000000 * COIN;
 
         /** Height or Time Based Activations **/
-        nLastPOWBlock = 200;
+        nLastPOWBlock = 1000;
         nModifierUpdateBlock = 0;
         nZerocoinStartHeight = 999999999;
         nZerocoinStartTime = 4294967295;
