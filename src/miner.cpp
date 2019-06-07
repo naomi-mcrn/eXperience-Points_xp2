@@ -141,7 +141,7 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn, CWallet* pwallet, 
     pblock->vtx.push_back(txNew);
     pblocktemplate->vTxFees.push_back(-1);   // updated at end
     pblocktemplate->vTxSigOps.push_back(-1); // updated at end
-
+/*
     // ppcoin: if coinstake available add coinstake tx
     static int64_t nLastCoinStakeSearchTime = GetAdjustedTime(); // only initialized at startup
 
@@ -169,7 +169,7 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn, CWallet* pwallet, 
             return NULL;
         }
     }
-
+*/
     // Largest block you're willing to create:
     unsigned int nBlockMaxSize = GetArg("-blockmaxsize", DEFAULT_BLOCK_MAX_SIZE);
     // Limit to betweeen 1K and MAX_BLOCK_SIZE-1K for sanity:
@@ -200,6 +200,11 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn, CWallet* pwallet, 
         list<COrphan> vOrphan; // list memory doesn't move
         map<uint256, vector<COrphan*> > mapDependers;
         bool fPrintPriority = GetBoolArg("-printpriority", false);
+
+        // Setup temporary vectors for delaying Coinstake till after tx evalaution
+        vector<CTransaction> vecXPtx;
+        vector<CAmount> vecXPnTxFees;
+        vector<unsigned int> vecXPnTxSigOps;
 
         // This vector will be sorted into a priority queue:
         vector<TxPriority> vecPriority;
@@ -406,9 +411,12 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn, CWallet* pwallet, 
             UpdateCoins(tx, state, view, txundo, nHeight);
 
             // Added
-            pblock->vtx.push_back(tx);
-            pblocktemplate->vTxFees.push_back(nTxFees);
-            pblocktemplate->vTxSigOps.push_back(nTxSigOps);
+            //pblock->vtx.push_back(tx);
+            //pblocktemplate->vTxFees.push_back(nTxFees);
+            //pblocktemplate->vTxSigOps.push_back(nTxSigOps);
+            vecXPtx.push_back(tx);
+            vecXPnTxFees.push_back(nTxFees);
+            vecXPnTxSigOps.push_back(nTxSigOps);
             nBlockSize += nTxSize;
             ++nBlockTx;
             nBlockSigOps += nTxSigOps;
@@ -434,6 +442,43 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn, CWallet* pwallet, 
                     }
                 }
             }
+        }
+
+        // ppcoin: if coinstake available add coinstake tx
+        static int64_t nLastCoinStakeSearchTime = GetAdjustedTime(); // only initialized at startup
+
+        if (fProofOfStake) {
+            boost::this_thread::interruption_point();
+            pblock->nTime = GetAdjustedTime();
+            pblock->nBits = GetNextWorkRequired(pindexPrev, pblock);
+            CMutableTransaction txCoinStake;
+            int64_t nSearchTime = pblock->nTime; // search to current time
+            bool fStakeFound = false;
+            if (nSearchTime >= nLastCoinStakeSearchTime) {
+                unsigned int nTxNewTime = 0;
+                if (pwallet->CreateCoinStake(*pwallet, pblock->nBits, nSearchTime - nLastCoinStakeSearchTime, txCoinStake, nTxNewTime, nFees)) {
+                    pblock->nTime = nTxNewTime;
+                    pblock->vtx[0].vout[0].SetEmpty();
+                    pblock->vtx.push_back(CTransaction(txCoinStake));
+                    fStakeFound = true;
+                }
+                nLastCoinStakeSearchInterval = nSearchTime - nLastCoinStakeSearchTime;
+                nLastCoinStakeSearchTime = nSearchTime;
+            }
+
+            if (!fStakeFound) {
+                LogPrint("staking", "CreateNewBlock(): stake not found\n");
+                return NULL;
+            }
+        }
+
+        while (!vecXPtx.empty()) {
+            pblock->vtx.push_back(vecXPtx.front());
+            pblocktemplate->vTxFees.push_back(vecXPnTxFees.front());
+            pblocktemplate->vTxSigOps.push_back(vecXPnTxSigOps.front());
+            vecXPtx.erase(vecXPtx.begin());
+            vecXPnTxFees.erase(vecXPnTxFees.begin());
+            vecXPnTxSigOps.erase(vecXPnTxSigOps.begin());
         }
 
         if (!fProofOfStake) {

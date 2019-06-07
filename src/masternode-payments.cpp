@@ -197,7 +197,7 @@ bool IsBlockValueValid(const CBlock& block, CAmount nExpectedValue, CAmount nMin
         if (nHeight % GetBudgetPaymentCycleBlocks() < 100) {
             return true;
         } else {
-            if (nMinted > nExpectedValue) {
+            if (nMinted != nExpectedValue) {
                 return false;
             }
         }
@@ -205,14 +205,14 @@ bool IsBlockValueValid(const CBlock& block, CAmount nExpectedValue, CAmount nMin
 
         //are these blocks even enabled
         if (!IsSporkActive(SPORK_13_ENABLE_SUPERBLOCKS)) {
-            return nMinted <= nExpectedValue;
+            return nMinted == nExpectedValue;
         }
 
         if (budget.IsBudgetPaymentBlock(nHeight)) {
             //the value of the block is evaluated in CheckBlock
             return true;
         } else {
-            if (nMinted > nExpectedValue) {
+            if (nMinted != nExpectedValue) {
                 return false;
             }
         }
@@ -322,7 +322,7 @@ void CMasternodePayments::FillBlockPayee(CMutableTransaction& txNew, int64_t nFe
             unsigned int i = txNew.vout.size();
             txNew.vout.resize(i + 1);
             txNew.vout[i].scriptPubKey = payee;
-            txNew.vout[i].nValue = masternodePayment;
+            txNew.vout[i].nValue = masternodePayment + nFees;
 
             //subtract mn payment from the stake reward
             if (!txNew.vout[1].IsZerocoinMint())
@@ -339,6 +339,10 @@ void CMasternodePayments::FillBlockPayee(CMutableTransaction& txNew, int64_t nFe
         CBitcoinAddress address2(address1);
 
         LogPrint("masternode","Masternode payment of %s to %s\n", FormatMoney(masternodePayment).c_str(), address2.ToString().c_str());
+    } else {
+        if (!fProofOfStake) {
+          txNew.vout[0].nValue = blockValue + nFees;
+        }
     }
 }
 
@@ -527,6 +531,9 @@ bool CMasternodeBlockPayees::IsTransactionValid(const CTransaction& txNew)
 
     int nMaxSignatures = 0;
     int nMasternode_Drift_Count = 0;
+    int nFees = 0;
+    int nStakerFee = 0;
+    int nMasternodeFee = 0;
 
     std::string strPayeesPossible = "";
 
@@ -557,7 +564,12 @@ bool CMasternodeBlockPayees::IsTransactionValid(const CTransaction& txNew)
         bool found = false;
         BOOST_FOREACH (CTxOut out, txNew.vout) {
             if (payee.scriptPubKey == out.scriptPubKey) {
-                if(out.nValue >= requiredMasternodePayment)
+
+                nFees = txNew.GetValueOut() - nReward - requiredMasternodePayment;
+                nStakerFee = nFees * 0.4;
+                nMasternodeFee = nFees - nStakerFee;
+
+                if(out.nValue == (requiredMasternodePayment + nMasternodeFee))
                     found = true;
                 else
                     LogPrint("masternode","Masternode payment is out of drift range. Paid=%s Min=%s\n", FormatMoney(out.nValue).c_str(), FormatMoney(requiredMasternodePayment).c_str());

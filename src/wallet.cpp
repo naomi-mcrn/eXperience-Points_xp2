@@ -2970,7 +2970,8 @@ bool CWallet::CreateCoinStake(
         unsigned int nBits,
         int64_t nSearchInterval,
         CMutableTransaction& txNew,
-        unsigned int& nTxNewTime
+        unsigned int& nTxNewTime,
+        unsigned int nFees
         )
 {
     // The following split & combine thresholds are important to security
@@ -3046,10 +3047,16 @@ bool CWallet::CreateCoinStake(
             LogPrintf("CreateCoinStake : kernel found\n");
             nCredit += stakeInput->GetValue();
 
+            // Calculate fee distribution
+            int nStakerFee = 0;
+            int nMasterNodeFee = 0;
+            nStakerFee = nFees * 0.4;
+            nMasterNodeFee = nFees - nStakerFee;
+
             // Calculate reward
             CAmount nReward;
             nReward = GetBlockValue(chainActive.Height() + 1);
-            nCredit += nReward;
+            nCredit += (nReward + nStakerFee);
 
             // Create the output transaction(s)
             vector<CTxOut> vout;
@@ -3075,7 +3082,7 @@ bool CWallet::CreateCoinStake(
                 return error("CreateCoinStake : exceeded coinstake size limit");
 
             //Masternode payment
-            FillBlockPayee(txNew, nMinFee, true, stakeInput->IsZPIV());
+            FillBlockPayee(txNew, nMasterNodeFee, true, stakeInput->IsZPIV());
 
             {
                 TRY_LOCK(zpivTracker->cs_spendcache, fLocked);
