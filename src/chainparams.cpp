@@ -207,9 +207,9 @@ public:
 
 	vSeeds.push_back(CDNSSeedData("experiencepoints.io", "mainnet-seeds.experiencepoints.io"));
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 75);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 55);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 13);
-        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 55);
+        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 73);
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x88)(0xb2)(0x1e).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x88)(0xad)(0xe4).convert_to_container<std::vector<unsigned char> >();
         // 	BIP44 coin type is from https://github.com/satoshilabs/slips/blob/master/slip-0044.md
@@ -227,8 +227,8 @@ public:
         fHeadersFirstSyncingActive = false;
 
         nPoolMaxTransactions = 3;
-        strSporkKey = "0424882491D50DB396BF7C1CE2D87787DD82B406AD938402D5D1F4ACD2AFA7FD267C22A701B48671114D0C12DBAE37AC65CD7AE50847E1886ED4484510D125969A";
-        strObfuscationPoolDummyAddress = "XHohdJoJ3V26K9UotJPfJ3nwFrMoCRvHDp";
+        strSporkKey = "047F0CE56DA40D3C750F6BCC49D1FF596F0369FAF99AA8CAC02BA89E0727DB109B92EAE18EADE2E2CFF4F8D29F73AF86472322153D04C4F438879A0AB60E624C09";
+        strObfuscationPoolDummyAddress = "PCHE8XM7ygzzxpeBbQzgFUvwhhBjTe2MCd";
         nStartMasternodePayments = 1403728576; //Wed, 25 Jun 2014 20:36:16 GMT
 
         /** Zerocoin */
@@ -281,17 +281,17 @@ public:
         nLastPOWBlock = 200;
         nMaturity = 15;
         nMasternodeCountDrift = 4;
-        nModifierUpdateBlock = 51197; //approx Mon, 17 Apr 2017 04:00:00 GMT
-        nMaxMoneyOut = 43199500 * COIN;
-        nZerocoinStartHeight = 201576;
-        nZerocoinStartTime = 1501776000;
-        nBlockEnforceSerialRange = 1; //Enforce serial range starting this block
-        nBlockRecalculateAccumulators = 9908000; //Trigger a recalculation of accumulators
-        nBlockFirstFraudulent = 9891737; //First block that bad serials emerged
-        nBlockLastGoodCheckpoint = 9891730; //Last valid accumulator checkpoint
-        nBlockEnforceInvalidUTXO = 9902850; //Start enforcing the invalid UTXO's
+        nModifierUpdateBlock = 0;
+        nMaxMoneyOut = 20000000000 * COIN;
+        nZerocoinStartHeight = 999999999;
+        nZerocoinStartTime = 4294967295;
+        nBlockEnforceSerialRange = 0; //Enforce serial range starting this block
+        nBlockRecalculateAccumulators = 999999999; //Trigger a recalculation of accumulators
+        nBlockFirstFraudulent = 0; //First block that bad serials emerged
+        nBlockLastGoodCheckpoint = 0; //Last valid accumulator checkpoint
+        nBlockEnforceInvalidUTXO = 0; //Start enforcing the invalid UTXO's
         nInvalidAmountFiltered = 0; //Amount of invalid coins filtered through exchanges, that should be considered valid
-        nBlockZerocoinV2 = 444020; //!> The block that zerocoin v2 becomes active
+        nBlockZerocoinV2 = 999999999; //!> The block that zerocoin v2 becomes active
 
         // Fake Serial Attack
         nFakeSerialBlockheightEnd = -1;
@@ -335,9 +335,11 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 139); // Testnet pivx addresses start with 'x' or 'y'
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 19);  // Testnet pivx script addresses start with '8' or '9'
-        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 239);     // Testnet private keys start with '9' or 'c' (Bitcoin defaults)
+        vSeeds.push_back(CDNSSeedData("experiencepoints.io", "testnet-seeds.experiencepoints.io"));
+
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 127);
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 20);
+        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 78);
         // Testnet pivx BIP32 pubkeys start with 'DRKV'
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x3a)(0x80)(0x61)(0xa0).convert_to_container<std::vector<unsigned char> >();
         // Testnet pivx BIP32 prvkeys start with 'DRKP'
@@ -355,8 +357,8 @@ public:
         fTestnetToBeDeprecatedFieldRPC = true;
 
         nPoolMaxTransactions = 2;
-        strSporkKey = "04EEA4C9ED773BCB884CE17D73FA9256552C7108D19AE8D2949A222F584AA95DB3D80B19622793117AC28AFE6F8756F3136761EACF822F600C5E13770BA1280B36";
-        strObfuscationPoolDummyAddress = "y57cqfGRkekRyDRNeJiLtYVEbvhXrNbmox";
+        strSporkKey = "047B4EA9C7FE427191B8A84153275C0EDA92A95E79843A02B46FFD1B4B931DE04628BDD490DA9F6B91C36463E300919C53D433788CF2A651C69656EC3E7643DDDE";
+        strObfuscationPoolDummyAddress = "tAxde4mnMcRWJm8W2no1AJdneT76hWMWan";
         nStartMasternodePayments = 1420837558; //Fri, 09 Jan 2015 21:05:58 GMT
         nBudget_Fee_Confirmations = 3; // Number of confirmations for the finalization fee. We have to make this very short
                                        // here because we only have a 8 block finalization window on testnet

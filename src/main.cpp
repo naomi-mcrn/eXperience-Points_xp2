@@ -1890,40 +1890,64 @@ double ConvertBitsToDouble(unsigned int nBits)
 
 int64_t GetBlockValue(int nHeight)
 {
+    int64_t nSubsidy = 0;
+
     if (Params().NetworkID() == CBaseChainParams::TESTNET) {
-        if (nHeight < 200 && nHeight > 0)
-            return 1200000 * COIN;
+        if (nHeight == 1) {
+            nSubsidy = 3000001 * COIN;
+        } else if (nHeight <= 11 && nHeight >= 2) {
+            nSubsidy = 400000000 * COIN;
+        } else if (nHeight <= 601 && nHeight >= 12) {
+            nSubsidy = 1200 * COIN;
+        } else if (nHeight <= 701 && nHeight >= 602) {
+            nSubsidy = 1100 * COIN;
+        } else if (nHeight <= 801 && nHeight >= 702) {
+            nSubsidy = 1000 * COIN;
+        } else if (nHeight <= 901 && nHeight >= 802) {
+            nSubsidy = 900 * COIN;
+        } else if (nHeight <= 1001 && nHeight >= 902) {
+            nSubsidy = 800 * COIN;
+        } else if (nHeight <= 1101 && nHeight >= 1002) {
+            nSubsidy = 700 * COIN;
+        } else if (nHeight <= 1201 && nHeight >= 1102) {
+            nSubsidy = 600 * COIN;
+        } else if (nHeight <= 1301 && nHeight >= 1202) {
+            nSubsidy = 500 * COIN;
+        } else if (nHeight <= 1401 && nHeight >= 1302) {
+            nSubsidy = 400 * COIN;
+        }
     }
 
     if (Params().NetworkID() == CBaseChainParams::REGTEST) {
-        if (nHeight == 0)
+        if (nHeight == 1)
             return 1200 * COIN;
 
     }
 
-    int64_t nSubsidy = 0;
-    if (nHeight == 0) {
-        nSubsidy = 3000001 * COIN;
-    } else if (nHeight <= 10 && nHeight >= 1) {
-        nSubsidy = 400000000 * COIN;
-    } else if (nHeight <= 52570 && nHeight >= 11) {
-        nSubsidy = 1200 * COIN;
-    } else if (nHeight <= 210250 && nHeight >= 52571) {
-        nSubsidy = 1100 * COIN;
-    } else if (nHeight <= 526610 && nHeight >= 210251) {
-        nSubsidy = 1000 * COIN;
-    } else if (nHeight <= 1051210 && nHeight >= 526611) {
-        nSubsidy = 900 * COIN;
-    } else if (nHeight <= 2628010 && nHeight >= 1051211) {
-        nSubsidy = 800 * COIN;
-    } else if (nHeight <= 4204810 && nHeight >= 2628011) {
-        nSubsidy = 700 * COIN;
-    } else if (nHeight <= 6307210 && nHeight >= 4204811) {
-        nSubsidy = 600 * COIN;
-    } else if (nHeight <= 8935210 && nHeight >= 6307211) {
-        nSubsidy = 500 * COIN;
-    } else if (nHeight <= 30796910 && nHeight >= 8935211) {
-        nSubsidy = 400 * COIN;
+    if (Params().NetworkID() == CBaseChainParams::MAIN) {
+        if (nHeight == 1) {
+            nSubsidy = 3000001 * COIN;
+        } else if (nHeight <= 11 && nHeight >= 2) {
+            nSubsidy = 400000000 * COIN;
+        } else if (nHeight <= 52571 && nHeight >= 12) {
+            nSubsidy = 1200 * COIN;
+        } else if (nHeight <= 210251 && nHeight >= 52572) {
+            nSubsidy = 1100 * COIN;
+        } else if (nHeight <= 526611 && nHeight >= 210252) {
+            nSubsidy = 1000 * COIN;
+        } else if (nHeight <= 1051211 && nHeight >= 526612) {
+            nSubsidy = 900 * COIN;
+        } else if (nHeight <= 2628011 && nHeight >= 1051212) {
+            nSubsidy = 800 * COIN;
+        } else if (nHeight <= 4204811 && nHeight >= 2628012) {
+            nSubsidy = 700 * COIN;
+        } else if (nHeight <= 6307211 && nHeight >= 4204812) {
+            nSubsidy = 600 * COIN;
+        } else if (nHeight <= 8935211 && nHeight >= 6307212) {
+            nSubsidy = 500 * COIN;
+        } else if (nHeight <= 30796911 && nHeight >= 8935212) {
+            nSubsidy = 400 * COIN;
+        }
     }
     return nSubsidy;
 }
@@ -2168,30 +2192,51 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
     int64_t ret = 0;
 
     if (Params().NetworkID() == CBaseChainParams::TESTNET) {
-        if (nHeight < 200)
-            return 0;
+        if (nHeight <= Params().LAST_POW_BLOCK()) {
+            ret = 0;
+        } else if (nHeight <= 601 && nHeight > Params().LAST_POW_BLOCK()) {
+            ret = blockValue * .40;
+        } else if (nHeight <= 701 && nHeight >= 602) {
+            ret = blockValue * .42;
+        } else if (nHeight <= 801 && nHeight >= 702) {
+            ret = blockValue * .44;
+        } else if (nHeight <= 901 && nHeight >= 802) {
+            ret = blockValue * .46;
+        } else if (nHeight <= 1001 && nHeight >= 902) {
+            ret = blockValue * .51;
+        } else if (nHeight <= 1101 && nHeight >= 1002) {
+            ret = blockValue * .54;
+        } else if (nHeight <= 1201 && nHeight >= 1102) {
+            ret = blockValue * .58;
+        } else if (nHeight <= 1301 && nHeight >= 1202) {
+            ret = blockValue * .62;
+        } else if (nHeight <= 1401 && nHeight >= 1302) {
+            ret = blockValue * .75;
+        }
     }
 
-    if (nHeight <= Params().LAST_POW_BLOCK()) {
-        ret = 0;
-    } else if (nHeight <= 52570 && nHeight > Params().LAST_POW_BLOCK()) {
-        ret = blockValue * .40;
-    } else if (nHeight <= 210250 && nHeight >= 52571) {
-        ret = blockValue * .42;
-    } else if (nHeight <= 526610 && nHeight >= 210251) {
-        ret = blockValue * .44;
-    } else if (nHeight <= 1051210 && nHeight >= 526611) {
-        ret = blockValue * .46;
-    } else if (nHeight <= 2628010 && nHeight >= 1051211) {
-        ret = blockValue * .50;
-    } else if (nHeight <= 4204810 && nHeight >= 2628011) {
-        ret = blockValue * .54;
-    } else if (nHeight <= 6307210 && nHeight >= 4204811) {
-        ret = blockValue * .58;
-    } else if (nHeight <= 8935210 && nHeight >= 6307211) {
-        ret = blockValue * .62;
-    } else if (nHeight <= 30796910 && nHeight >= 8935211) {
-        ret = blockValue * .75;
+    if (Params().NetworkID() == CBaseChainParams::MAIN) {
+        if (nHeight <= Params().LAST_POW_BLOCK()) {
+            ret = 0;
+        } else if (nHeight <= 52571 && nHeight > Params().LAST_POW_BLOCK()) {
+            ret = blockValue * .40;
+        } else if (nHeight <= 210251 && nHeight >= 52572) {
+            ret = blockValue * .42;
+        } else if (nHeight <= 526611 && nHeight >= 210252) {
+            ret = blockValue * .44;
+        } else if (nHeight <= 1051211 && nHeight >= 526612) {
+            ret = blockValue * .46;
+        } else if (nHeight <= 2628011 && nHeight >= 1051212) {
+            ret = blockValue * .51;
+        } else if (nHeight <= 4204811 && nHeight >= 2628012) {
+            ret = blockValue * .54;
+        } else if (nHeight <= 6307211 && nHeight >= 4204812) {
+            ret = blockValue * .58;
+        } else if (nHeight <= 8935211 && nHeight >= 6307212) {
+            ret = blockValue * .62;
+        } else if (nHeight <= 30796911 && nHeight >= 8935212) {
+            ret = blockValue * .75;
+        }
     }
 
     return ret;
@@ -2364,8 +2409,8 @@ bool CScriptCheck::operator()()
     return true;
 }
 
-CBitcoinAddress addressExp1("XJqTAJ6QF1iPuft4Lckq9zGykpoU3Hn9Yn");
-CBitcoinAddress addressExp2("XK8BwQ8ZGSfEg68osdHtZemQk4fbFLiCx1");
+CBitcoinAddress addressExp1("PQ72SjLCNR1HCwsXRrEJWNgAkAFe11sWTx");
+CBitcoinAddress addressExp2("PXUaUNWYdQeHAkshWKfnSfMAWx99eDAVnn");
 
 map<COutPoint, COutPoint> mapInvalidOutPoints;
 map<CBigNum, CAmount> mapInvalidSerials;
@@ -3238,7 +3283,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
     LogPrint("bench", "      - Connect %u transactions: %.2fms (%.3fms/tx, %.3fms/txin) [%.2fs]\n", (unsigned)block.vtx.size(), 0.001 * (nTime1 - nTimeStart), 0.001 * (nTime1 - nTimeStart) / block.vtx.size(), nInputs <= 1 ? 0 : 0.001 * (nTime1 - nTimeStart) / (nInputs - 1), nTimeConnect * 0.000001);
 
     //PoW phase redistributed fees to miner. PoS stage destroys fees.
-    CAmount nExpectedMint = GetBlockValue(pindex->pprev->nHeight);
+    CAmount nExpectedMint = GetBlockValue(pindex->nHeight);
     //if (block.IsProofOfWork())
         nExpectedMint += nFees;
 
