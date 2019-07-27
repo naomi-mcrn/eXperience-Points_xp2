@@ -185,6 +185,9 @@ bool CSporkManager::CheckSignature(CSporkMessage& spork, bool fCheckSigner)
     //note: need to investigate why this is failing
     std::string strMessage = std::to_string(spork.nSporkID) + std::to_string(spork.nValue) + std::to_string(spork.nTimeSigned);
     CPubKey pubkeynew(ParseHex(Params().SporkKey()));
+    if (fDebug){
+        LogPrintf("SporkKey is %s", Params().SporkKey());
+    }
     std::string errorMessage = "";
 
     bool fValidWithNewKey = obfuScationSigner.VerifyMessage(pubkeynew, spork.vchSig,strMessage, errorMessage);
