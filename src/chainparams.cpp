@@ -270,7 +270,7 @@ public:
         pchMessageStart[1] = 0x96;
         pchMessageStart[2] = 0x02;
         pchMessageStart[3] = 0xd9;
-        vAlertPubKey = ParseHex("042cbeb9ca34ea1b69fbef2c6c6dff7d048102e9c248eb5d889e46d2533c1a97ea09e9e96462d6d67617de5fd278c792a8a3a225bfd8f9b162eeaf67dcd0a6e928");
+        vAlertPubKey = ParseHex("043d4edee736072e1212b35e81d8a65c560dfc8f277928ce248a8374f0f635d15b58c92710ba6704d199aaee7017b51348ec5bc84fc8abeb66e7d7c7f3f8ca3d23");
         nDefaultPort = 19326;
         nEnforceBlockUpgradeMajority = 4320; // 75%
         nRejectBlockOutdatedMajority = 5472; // 95%
@@ -335,7 +335,7 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
 
-        vSeeds.push_back(CDNSSeedData("experiencepoints.io", "testnet-seeds.experiencepoints.io"));
+        //vSeeds.push_back(CDNSSeedData("experiencepoints.io", "testnet-seeds.experiencepoints.io"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 127);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 20);
@@ -357,7 +357,7 @@ public:
         fTestnetToBeDeprecatedFieldRPC = true;
 
         nPoolMaxTransactions = 2;
-        strSporkKey = "047B4EA9C7FE427191B8A84153275C0EDA92A95E79843A02B46FFD1B4B931DE04628BDD490DA9F6B91C36463E300919C53D433788CF2A651C69656EC3E7643DDDE";
+        strSporkKey = "043D4EDEE736072E1212B35E81D8A65C560DFC8F277928CE248A8374F0F635D15B58C92710BA6704D199AAEE7017B51348EC5BC84FC8ABEB66E7D7C7F3F8CA3D23";
         strObfuscationPoolDummyAddress = "tAxde4mnMcRWJm8W2no1AJdneT76hWMWan";
         nStartMasternodePayments = 1420837558; //Fri, 09 Jan 2015 21:05:58 GMT
         nBudget_Fee_Confirmations = 3; // Number of confirmations for the finalization fee. We have to make this very short
