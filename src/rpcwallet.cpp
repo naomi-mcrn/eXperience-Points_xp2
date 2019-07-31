@@ -85,7 +85,7 @@ UniValue getnewaddress(const UniValue& params, bool fHelp)
     if (fHelp || params.size() > 1)
         throw runtime_error(
             "getnewaddress ( \"account\" )\n"
-            "\nReturns a new PIVX address for receiving payments.\n"
+            "\nReturns a new address for receiving payments.\n"
             "If 'account' is specified (recommended), it is added to the address book \n"
             "so payments received with the address will be credited to 'account'.\n"
 
@@ -93,7 +93,7 @@ UniValue getnewaddress(const UniValue& params, bool fHelp)
             "1. \"account\"        (string, optional) The account name for the address to be linked to. if not provided, the default account \"\" is used. It can also be set to the empty string \"\" to represent the default account. The account does not need to exist, it will be created if there is no account by the given name.\n"
 
             "\nResult:\n"
-            "\"pivxaddress\"    (string) The new pivx address\n"
+            "\"address\"    (string) The new address\n"
 
             "\nExamples:\n" +
             HelpExampleCli("getnewaddress", "") + HelpExampleCli("getnewaddress", "\"\"") +
@@ -160,13 +160,13 @@ UniValue getaccountaddress(const UniValue& params, bool fHelp)
     if (fHelp || params.size() != 1)
         throw runtime_error(
             "getaccountaddress \"account\"\n"
-            "\nReturns the current PIVX address for receiving payments to this account.\n"
+            "\nReturns the current address for receiving payments to this account.\n"
 
             "\nArguments:\n"
             "1. \"account\"       (string, required) The account name for the address. It can also be set to the empty string \"\" to represent the default account. The account does not need to exist, it will be created and a new address created  if there is no account by the given name.\n"
 
             "\nResult:\n"
-            "\"pivxaddress\"   (string) The account pivx address\n"
+            "\"address\"   (string) The account address\n"
 
             "\nExamples:\n" +
             HelpExampleCli("getaccountaddress", "") + HelpExampleCli("getaccountaddress", "\"\"") +
@@ -189,7 +189,7 @@ UniValue getrawchangeaddress(const UniValue& params, bool fHelp)
     if (fHelp || params.size() > 1)
         throw runtime_error(
             "getrawchangeaddress\n"
-            "\nReturns a new PIVX address, for receiving change.\n"
+            "\nReturns a new address, for receiving change.\n"
             "This is for use with raw transactions, NOT normal use.\n"
 
             "\nResult:\n"
@@ -220,21 +220,21 @@ UniValue setaccount(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() < 1 || params.size() > 2)
         throw runtime_error(
-            "setaccount \"pivxaddress\" \"account\"\n"
+            "setaccount \"address\" \"account\"\n"
             "\nSets the account associated with the given address.\n"
 
             "\nArguments:\n"
-            "1. \"pivxaddress\"  (string, required) The pivx address to be associated with an account.\n"
+            "1. \"address\"  (string, required) The address to be associated with an account.\n"
             "2. \"account\"         (string, required) The account to assign the address to.\n"
 
             "\nExamples:\n" +
-            HelpExampleCli("setaccount", "\"DMJRSsuU9zfyrvxVaAEFQqK4MxZg6vgeS6\" \"tabby\"") + HelpExampleRpc("setaccount", "\"DMJRSsuU9zfyrvxVaAEFQqK4MxZg6vgeS6\", \"tabby\""));
+            HelpExampleCli("setaccount", "\"PQ72SjLCNR1HCwsXRrEJWNgAkAFe11sWTx\" \"tabby\"") + HelpExampleRpc("setaccount", "\"PQ72SjLCNR1HCwsXRrEJWNgAkAFe11sWTx\", \"tabby\""));
 
     LOCK2(cs_main, pwalletMain->cs_wallet);
 
     CBitcoinAddress address(params[0].get_str());
     if (!address.IsValid())
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid PIVX address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid address");
 
 
     string strAccount;
@@ -261,23 +261,23 @@ UniValue getaccount(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 1)
         throw runtime_error(
-            "getaccount \"pivxaddress\"\n"
+            "getaccount \"address\"\n"
             "\nReturns the account associated with the given address.\n"
 
             "\nArguments:\n"
-            "1. \"pivxaddress\"  (string, required) The pivx address for account lookup.\n"
+            "1. \"address\"  (string, required) The address for account lookup.\n"
 
             "\nResult:\n"
             "\"accountname\"        (string) the account address\n"
 
             "\nExamples:\n" +
-            HelpExampleCli("getaccount", "\"DMJRSsuU9zfyrvxVaAEFQqK4MxZg6vgeS6\"") + HelpExampleRpc("getaccount", "\"DMJRSsuU9zfyrvxVaAEFQqK4MxZg6vgeS6\""));
+            HelpExampleCli("getaccount", "\"PQ72SjLCNR1HCwsXRrEJWNgAkAFe11sWTx\"") + HelpExampleRpc("getaccount", "\"PQ72SjLCNR1HCwsXRrEJWNgAkAFe11sWTx\""));
 
     LOCK2(cs_main, pwalletMain->cs_wallet);
 
     CBitcoinAddress address(params[0].get_str());
     if (!address.IsValid())
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid PIVX address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid address");
 
     string strAccount;
     map<CTxDestination, CAddressBookData>::iterator mi = pwalletMain->mapAddressBook.find(address.Get());
@@ -299,7 +299,7 @@ UniValue getaddressesbyaccount(const UniValue& params, bool fHelp)
 
             "\nResult:\n"
             "[                     (json array of string)\n"
-            "  \"pivxaddress\"  (string) a pivx address associated with the given account\n"
+            "  \"address\"  (string) an address associated with the given account\n"
             "  ,...\n"
             "]\n"
 
@@ -357,13 +357,13 @@ UniValue sendtoaddress(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() < 2 || params.size() > 4)
         throw runtime_error(
-            "sendtoaddress \"pivxaddress\" amount ( \"comment\" \"comment-to\" )\n"
+            "sendtoaddress \"address\" amount ( \"comment\" \"comment-to\" )\n"
             "\nSend an amount to a given address. The amount is a real and is rounded to the nearest 0.00000001\n" +
             HelpRequiringPassphrase() + "\n"
 
             "\nArguments:\n"
-            "1. \"pivxaddress\"  (string, required) The pivx address to send to.\n"
-            "2. \"amount\"      (numeric, required) The amount in PIV to send. eg 0.1\n"
+            "1. \"address\"  (string, required) The address to send to.\n"
+            "2. \"amount\"      (numeric, required) The amount in XP to send. eg 0.1\n"
             "3. \"comment\"     (string, optional) A comment used to store what the transaction is for. \n"
             "                             This is not part of the transaction, just kept in your wallet.\n"
             "4. \"comment-to\"  (string, optional) A comment to store the name of the person or organization \n"
@@ -374,15 +374,15 @@ UniValue sendtoaddress(const UniValue& params, bool fHelp)
             "\"transactionid\"  (string) The transaction id.\n"
 
             "\nExamples:\n" +
-            HelpExampleCli("sendtoaddress", "\"DMJRSsuU9zfyrvxVaAEFQqK4MxZg6vgeS6\" 0.1") +
-            HelpExampleCli("sendtoaddress", "\"DMJRSsuU9zfyrvxVaAEFQqK4MxZg6vgeS6\" 0.1 \"donation\" \"seans outpost\"") +
-            HelpExampleRpc("sendtoaddress", "\"DMJRSsuU9zfyrvxVaAEFQqK4MxZg6vgeS6\", 0.1, \"donation\", \"seans outpost\""));
+            HelpExampleCli("sendtoaddress", "\"PQ72SjLCNR1HCwsXRrEJWNgAkAFe11sWTx\" 0.1") +
+            HelpExampleCli("sendtoaddress", "\"PQ72SjLCNR1HCwsXRrEJWNgAkAFe11sWTx\" 0.1 \"donation\" \"seans outpost\"") +
+            HelpExampleRpc("sendtoaddress", "\"PQ72SjLCNR1HCwsXRrEJWNgAkAFe11sWTx\", 0.1, \"donation\", \"seans outpost\""));
 
     LOCK2(cs_main, pwalletMain->cs_wallet);
 
     CBitcoinAddress address(params[0].get_str());
     if (!address.IsValid())
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid PIVX address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid address");
 
     // Amount
     CAmount nAmount = AmountFromValue(params[1]);
@@ -405,13 +405,13 @@ UniValue sendtoaddressix(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() < 2 || params.size() > 4)
         throw runtime_error(
-            "sendtoaddressix \"pivxaddress\" amount ( \"comment\" \"comment-to\" )\n"
+            "sendtoaddressix \"address\" amount ( \"comment\" \"comment-to\" )\n"
             "\nSend an amount to a given address. The amount is a real and is rounded to the nearest 0.00000001\n" +
             HelpRequiringPassphrase() + "\n"
 
             "\nArguments:\n"
-            "1. \"pivxaddress\"  (string, required) The pivx address to send to.\n"
-            "2. \"amount\"      (numeric, required) The amount in PIV to send. eg 0.1\n"
+            "1. \"address\"  (string, required) The address to send to.\n"
+            "2. \"amount\"      (numeric, required) The amount in XP to send. eg 0.1\n"
             "3. \"comment\"     (string, optional) A comment used to store what the transaction is for. \n"
             "                             This is not part of the transaction, just kept in your wallet.\n"
             "4. \"comment-to\"  (string, optional) A comment to store the name of the person or organization \n"
@@ -422,15 +422,15 @@ UniValue sendtoaddressix(const UniValue& params, bool fHelp)
             "\"transactionid\"  (string) The transaction id.\n"
 
             "\nExamples:\n" +
-            HelpExampleCli("sendtoaddressix", "\"DMJRSsuU9zfyrvxVaAEFQqK4MxZg6vgeS6\" 0.1") +
-            HelpExampleCli("sendtoaddressix", "\"DMJRSsuU9zfyrvxVaAEFQqK4MxZg6vgeS6\" 0.1 \"donation\" \"seans outpost\"") +
-            HelpExampleRpc("sendtoaddressix", "\"DMJRSsuU9zfyrvxVaAEFQqK4MxZg6vgeS6\", 0.1, \"donation\", \"seans outpost\""));
+            HelpExampleCli("sendtoaddressix", "\"PQ72SjLCNR1HCwsXRrEJWNgAkAFe11sWTx\" 0.1") +
+            HelpExampleCli("sendtoaddressix", "\"PQ72SjLCNR1HCwsXRrEJWNgAkAFe11sWTx\" 0.1 \"donation\" \"seans outpost\"") +
+            HelpExampleRpc("sendtoaddressix", "\"PQ72SjLCNR1HCwsXRrEJWNgAkAFe11sWTx\", 0.1, \"donation\", \"seans outpost\""));
 
     LOCK2(cs_main, pwalletMain->cs_wallet);
 
     CBitcoinAddress address(params[0].get_str());
     if (!address.IsValid())
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid PIVX address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid address");
 
     // Amount
     CAmount nAmount = AmountFromValue(params[1]);
@@ -462,8 +462,8 @@ UniValue listaddressgroupings(const UniValue& params, bool fHelp)
             "[\n"
             "  [\n"
             "    [\n"
-            "      \"pivxaddress\",     (string) The pivx address\n"
-            "      amount,                 (numeric) The amount in PIV\n"
+            "      \"address\",     (string) The address\n"
+            "      amount,                 (numeric) The amount in XP\n"
             "      \"account\"             (string, optional) The account\n"
             "    ]\n"
             "    ,...\n"
@@ -499,12 +499,12 @@ UniValue signmessage(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() != 2)
         throw runtime_error(
-            "signmessage \"pivxaddress\" \"message\"\n"
+            "signmessage \"address\" \"message\"\n"
             "\nSign a message with the private key of an address" +
             HelpRequiringPassphrase() + "\n"
 
             "\nArguments:\n"
-            "1. \"pivxaddress\"  (string, required) The pivx address to use for the private key.\n"
+            "1. \"address\"  (string, required) The address to use for the private key.\n"
             "2. \"message\"         (string, required) The message to create a signature of.\n"
 
             "\nResult:\n"
@@ -514,11 +514,11 @@ UniValue signmessage(const UniValue& params, bool fHelp)
             "\nUnlock the wallet for 30 seconds\n" +
             HelpExampleCli("walletpassphrase", "\"mypassphrase\" 30") +
             "\nCreate the signature\n" +
-            HelpExampleCli("signmessage", "\"DMJRSsuU9zfyrvxVaAEFQqK4MxZg6vgeS6\" \"my message\"") +
+            HelpExampleCli("signmessage", "\"PQ72SjLCNR1HCwsXRrEJWNgAkAFe11sWTx\" \"my message\"") +
             "\nVerify the signature\n" +
-            HelpExampleCli("verifymessage", "\"DMJRSsuU9zfyrvxVaAEFQqK4MxZg6vgeS6\" \"signature\" \"my message\"") +
+            HelpExampleCli("verifymessage", "\"PQ72SjLCNR1HCwsXRrEJWNgAkAFe11sWTx\" \"signature\" \"my message\"") +
             "\nAs json rpc\n" +
-            HelpExampleRpc("signmessage", "\"DMJRSsuU9zfyrvxVaAEFQqK4MxZg6vgeS6\", \"my message\""));
+            HelpExampleRpc("signmessage", "\"PQ72SjLCNR1HCwsXRrEJWNgAkAFe11sWTx\", \"my message\""));
 
     LOCK2(cs_main, pwalletMain->cs_wallet);
 
@@ -554,32 +554,32 @@ UniValue getreceivedbyaddress(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() < 1 || params.size() > 2)
         throw std::runtime_error(
-            "getreceivedbyaddress \"pivxaddress\" ( minconf )\n"
-            "\nReturns the total amount received by the given pivxaddress in transactions with at least minconf confirmations.\n"
+            "getreceivedbyaddress \"address\" ( minconf )\n"
+            "\nReturns the total amount received by the given address in transactions with at least minconf confirmations.\n"
 
             "\nArguments:\n"
-            "1. \"pivxaddress\"  (string, required) The pivx address for transactions.\n"
+            "1. \"address\"  (string, required) The address for transactions.\n"
             "2. minconf             (numeric, optional, default=1) Only include transactions confirmed at least this many times.\n"
 
             "\nResult:\n"
-            "amount   (numeric) The total amount in PIV received at this address.\n"
+            "amount   (numeric) The total amount in XP received at this address.\n"
 
             "\nExamples:\n"
             "\nThe amount from transactions with at least 1 confirmation\n" +
-            HelpExampleCli("getreceivedbyaddress", "\"DMJRSsuU9zfyrvxVaAEFQqK4MxZg6vgeS6\"") +
+            HelpExampleCli("getreceivedbyaddress", "\"PQ72SjLCNR1HCwsXRrEJWNgAkAFe11sWTx\"") +
             "\nThe amount including unconfirmed transactions, zero confirmations\n" +
-            HelpExampleCli("getreceivedbyaddress", "\"DMJRSsuU9zfyrvxVaAEFQqK4MxZg6vgeS6\" 0") +
+            HelpExampleCli("getreceivedbyaddress", "\"PQ72SjLCNR1HCwsXRrEJWNgAkAFe11sWTx\" 0") +
             "\nThe amount with at least 6 confirmation, very safe\n" +
-            HelpExampleCli("getreceivedbyaddress", "\"DMJRSsuU9zfyrvxVaAEFQqK4MxZg6vgeS6\" 6") +
+            HelpExampleCli("getreceivedbyaddress", "\"PQ72SjLCNR1HCwsXRrEJWNgAkAFe11sWTx\" 6") +
             "\nAs a json rpc call\n" +
-            HelpExampleRpc("getreceivedbyaddress", "\"DMJRSsuU9zfyrvxVaAEFQqK4MxZg6vgeS6\", 6"));
+            HelpExampleRpc("getreceivedbyaddress", "\"PQ72SjLCNR1HCwsXRrEJWNgAkAFe11sWTx\", 6"));
 
     LOCK2(cs_main, pwalletMain->cs_wallet);
 
     // pivx address
     CBitcoinAddress address = CBitcoinAddress(params[0].get_str());
     if (!address.IsValid())
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid PIVX address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid address");
     CScript scriptPubKey = GetScriptForDestination(address.Get());
     if (!IsMine(*pwalletMain, scriptPubKey))
         throw JSONRPCError(RPC_WALLET_ERROR, "Address not found in wallet");
@@ -618,7 +618,7 @@ UniValue getreceivedbyaccount(const UniValue& params, bool fHelp)
             "2. minconf          (numeric, optional, default=1) Only include transactions confirmed at least this many times.\n"
 
             "\nResult:\n"
-            "amount              (numeric) The total amount in PIV received for this account.\n"
+            "amount              (numeric) The total amount in XP received for this account.\n"
 
             "\nExamples:\n"
             "\nAmount received by the default account with at least 1 confirmation\n" +
@@ -707,7 +707,7 @@ UniValue getbalance(const UniValue& params, bool fHelp)
             "3. includeWatchonly (bool, optional, default=false) Also include balance in watchonly addresses (see 'importaddress')\n"
 
             "\nResult:\n"
-            "amount              (numeric) The total amount in PIV received for this account.\n"
+            "amount              (numeric) The total amount in XP received for this account.\n"
 
             "\nExamples:\n"
             "\nThe total amount in the server across all accounts\n" +
@@ -790,7 +790,7 @@ UniValue movecmd(const UniValue& params, bool fHelp)
             "\nArguments:\n"
             "1. \"fromaccount\"   (string, required) The name of the account to move funds from. May be the default account using \"\".\n"
             "2. \"toaccount\"     (string, required) The name of the account to move funds to. May be the default account using \"\".\n"
-            "3. amount            (numeric, required) Quantity of PIV to move between accounts.\n"
+            "3. amount            (numeric, required) Quantity of XP to move between accounts.\n"
             "4. minconf           (numeric, optional, default=1) Only use funds with at least this many confirmations.\n"
             "5. \"comment\"       (string, optional) An optional comment, stored in the wallet only.\n"
 
@@ -798,9 +798,9 @@ UniValue movecmd(const UniValue& params, bool fHelp)
             "true|false           (boolean) true if successful.\n"
 
             "\nExamples:\n"
-            "\nMove 0.01 PIV from the default account to the account named tabby\n" +
+            "\nMove 0.01 XP from the default account to the account named tabby\n" +
             HelpExampleCli("move", "\"\" \"tabby\" 0.01") +
-            "\nMove 0.01 PIV from timotei to akiko with a comment\n" +
+            "\nMove 0.01 XP from timotei to akiko with a comment\n" +
             HelpExampleCli("move", "\"timotei\" \"akiko\" 0.01 1 \"happy birthday!\"") +
             "\nAs a json rpc call\n" +
             HelpExampleRpc("move", "\"timotei\", \"akiko\", 0.01, 1, \"happy birthday!\""));
@@ -854,15 +854,15 @@ UniValue sendfrom(const UniValue& params, bool fHelp)
 {
     if (fHelp || params.size() < 3 || params.size() > 6)
         throw runtime_error(
-            "sendfrom \"fromaccount\" \"topivxaddress\" amount ( minconf \"comment\" \"comment-to\" )\n"
-            "\nSent an amount from an account to a pivx address.\n"
+            "sendfrom \"fromaccount\" \"toaddress\" amount ( minconf \"comment\" \"comment-to\" )\n"
+            "\nSent an amount from an account to an address.\n"
             "The amount is a real and is rounded to the nearest 0.00000001." +
             HelpRequiringPassphrase() + "\n"
 
             "\nArguments:\n"
             "1. \"fromaccount\"       (string, required) The name of the account to send funds from. May be the default account using \"\".\n"
-            "2. \"topivxaddress\"  (string, required) The pivx address to send funds to.\n"
-            "3. amount                (numeric, required) The amount in PIV. (transaction fee is added on top).\n"
+            "2. \"toaddress\"  (string, required) The address to send funds to.\n"
+            "3. amount                (numeric, required) The amount in XP. (transaction fee is added on top).\n"
             "4. minconf               (numeric, optional, default=1) Only use funds with at least this many confirmations.\n"
             "5. \"comment\"           (string, optional) A comment used to store what the transaction is for. \n"
             "                                     This is not part of the transaction, just kept in your wallet.\n"
@@ -874,19 +874,19 @@ UniValue sendfrom(const UniValue& params, bool fHelp)
             "\"transactionid\"        (string) The transaction id.\n"
 
             "\nExamples:\n"
-            "\nSend 0.01 PIV from the default account to the address, must have at least 1 confirmation\n" +
-            HelpExampleCli("sendfrom", "\"\" \"DMJRSsuU9zfyrvxVaAEFQqK4MxZg6vgeS6\" 0.01") +
+            "\nSend 0.01 XP from the default account to the address, must have at least 1 confirmation\n" +
+            HelpExampleCli("sendfrom", "\"\" \"PQ72SjLCNR1HCwsXRrEJWNgAkAFe11sWTx\" 0.01") +
             "\nSend 0.01 from the tabby account to the given address, funds must have at least 6 confirmations\n" +
-            HelpExampleCli("sendfrom", "\"tabby\" \"DMJRSsuU9zfyrvxVaAEFQqK4MxZg6vgeS6\" 0.01 6 \"donation\" \"seans outpost\"") +
+            HelpExampleCli("sendfrom", "\"tabby\" \"PQ72SjLCNR1HCwsXRrEJWNgAkAFe11sWTx\" 0.01 6 \"donation\" \"seans outpost\"") +
             "\nAs a json rpc call\n" +
-            HelpExampleRpc("sendfrom", "\"tabby\", \"DMJRSsuU9zfyrvxVaAEFQqK4MxZg6vgeS6\", 0.01, 6, \"donation\", \"seans outpost\""));
+            HelpExampleRpc("sendfrom", "\"tabby\", \"PQ72SjLCNR1HCwsXRrEJWNgAkAFe11sWTx\", 0.01, 6, \"donation\", \"seans outpost\""));
 
     LOCK2(cs_main, pwalletMain->cs_wallet);
 
     string strAccount = AccountFromValue(params[0]);
     CBitcoinAddress address(params[1].get_str());
     if (!address.IsValid())
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid PIVX address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid address");
     CAmount nAmount = AmountFromValue(params[2]);
     int nMinDepth = 1;
     if (params.size() > 3)
@@ -924,7 +924,7 @@ UniValue sendmany(const UniValue& params, bool fHelp)
             "1. \"fromaccount\"         (string, required) The account to send the funds from, can be \"\" for the default account\n"
             "2. \"amounts\"             (string, required) A json object with addresses and amounts\n"
             "    {\n"
-            "      \"address\":amount   (numeric) The pivx address is the key, the numeric amount in PIV is the value\n"
+            "      \"address\":amount   (numeric) The address is the key, the numeric amount in XP is the value\n"
             "      ,...\n"
             "    }\n"
             "3. minconf                 (numeric, optional, default=1) Only use the balance confirmed at least this many times.\n"
@@ -936,11 +936,11 @@ UniValue sendmany(const UniValue& params, bool fHelp)
 
             "\nExamples:\n"
             "\nSend two amounts to two different addresses:\n" +
-            HelpExampleCli("sendmany", "\"tabby\" \"{\\\"DMJRSsuU9zfyrvxVaAEFQqK4MxZg6vgeS6\\\":0.01,\\\"DAD3Y6ivr8nPQLT1NEPX84DxGCw9jz9Jvg\\\":0.02}\"") +
+            HelpExampleCli("sendmany", "\"tabby\" \"{\\\"PQ72SjLCNR1HCwsXRrEJWNgAkAFe11sWTx\\\":0.01,\\\"PXUaUNWYdQeHAkshWKfnSfMAWx99eDAVnn\\\":0.02}\"") +
             "\nSend two amounts to two different addresses setting the confirmation and comment:\n" +
-            HelpExampleCli("sendmany", "\"tabby\" \"{\\\"DMJRSsuU9zfyrvxVaAEFQqK4MxZg6vgeS6\\\":0.01,\\\"DAD3Y6ivr8nPQLT1NEPX84DxGCw9jz9Jvg\\\":0.02}\" 6 \"testing\"") +
+            HelpExampleCli("sendmany", "\"tabby\" \"{\\\"PQ72SjLCNR1HCwsXRrEJWNgAkAFe11sWTx\\\":0.01,\\\"PXUaUNWYdQeHAkshWKfnSfMAWx99eDAVnn\\\":0.02}\" 6 \"testing\"") +
             "\nAs a json rpc call\n" +
-            HelpExampleRpc("sendmany", "\"tabby\", \"{\\\"DMJRSsuU9zfyrvxVaAEFQqK4MxZg6vgeS6\\\":0.01,\\\"DAD3Y6ivr8nPQLT1NEPX84DxGCw9jz9Jvg\\\":0.02}\", 6, \"testing\""));
+            HelpExampleRpc("sendmany", "\"tabby\", \"{\\\"PQ72SjLCNR1HCwsXRrEJWNgAkAFe11sWTx\\\":0.01,\\\"PXUaUNWYdQeHAkshWKfnSfMAWx99eDAVnn\\\":0.02}\", 6, \"testing\""));
 
     LOCK2(cs_main, pwalletMain->cs_wallet);
 
@@ -963,7 +963,7 @@ UniValue sendmany(const UniValue& params, bool fHelp)
     BOOST_FOREACH(const string& name_, keys) {
         CBitcoinAddress address(name_);
         if (!address.IsValid())
-            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, string("Invalid PIVX address: ")+name_);
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, string("Invalid address: ")+name_);
 
         if (setAddress.count(address))
             throw JSONRPCError(RPC_INVALID_PARAMETER, string("Invalid parameter, duplicated address: ")+name_);
@@ -1005,26 +1005,26 @@ UniValue addmultisigaddress(const UniValue& params, bool fHelp)
         throw runtime_error(
             "addmultisigaddress nrequired [\"key\",...] ( \"account\" )\n"
             "\nAdd a nrequired-to-sign multisignature address to the wallet.\n"
-            "Each key is a PIVX address or hex-encoded public key.\n"
+            "Each key is an address or hex-encoded public key.\n"
             "If 'account' is specified, assign address to that account.\n"
 
             "\nArguments:\n"
             "1. nrequired        (numeric, required) The number of required signatures out of the n keys or addresses.\n"
-            "2. \"keysobject\"   (string, required) A json array of pivx addresses or hex-encoded public keys\n"
+            "2. \"keysobject\"   (string, required) A json array of addresses or hex-encoded public keys\n"
             "     [\n"
-            "       \"address\"  (string) pivx address or hex-encoded public key\n"
+            "       \"address\"  (string) Address or hex-encoded public key\n"
             "       ...,\n"
             "     ]\n"
             "3. \"account\"      (string, optional) An account to assign the addresses to.\n"
 
             "\nResult:\n"
-            "\"pivxaddress\"  (string) A pivx address associated with the keys.\n"
+            "\"address\"  (string) An address associated with the keys.\n"
 
             "\nExamples:\n"
             "\nAdd a multisig address from 2 addresses\n" +
-            HelpExampleCli("addmultisigaddress", "2 \"[\\\"DMJRSsuU9zfyrvxVaAEFQqK4MxZg6vgeS6\\\",\\\"DAD3Y6ivr8nPQLT1NEPX84DxGCw9jz9Jvg\\\"]\"") +
+            HelpExampleCli("addmultisigaddress", "2 \"[\\\"PQ72SjLCNR1HCwsXRrEJWNgAkAFe11sWTx\\\",\\\"PXUaUNWYdQeHAkshWKfnSfMAWx99eDAVnn\\\"]\"") +
             "\nAs json rpc call\n" +
-            HelpExampleRpc("addmultisigaddress", "2, \"[\\\"DMJRSsuU9zfyrvxVaAEFQqK4MxZg6vgeS6\\\",\\\"DAD3Y6ivr8nPQLT1NEPX84DxGCw9jz9Jvg\\\"]\""));
+            HelpExampleRpc("addmultisigaddress", "2, \"[\\\"PQ72SjLCNR1HCwsXRrEJWNgAkAFe11sWTx\\\",\\\"PXUaUNWYdQeHAkshWKfnSfMAWx99eDAVnn\\\"]\""));
 
     LOCK2(cs_main, pwalletMain->cs_wallet);
 
@@ -1190,7 +1190,7 @@ UniValue listreceivedbyaddress(const UniValue& params, bool fHelp)
             "    \"involvesWatchonly\" : \"true\",    (bool) Only returned if imported addresses were involved in transaction\n"
             "    \"address\" : \"receivingaddress\",  (string) The receiving address\n"
             "    \"account\" : \"accountname\",       (string) The account of the receiving address. The default account is \"\".\n"
-            "    \"amount\" : x.xxx,                  (numeric) The total amount in PIV received by the address\n"
+            "    \"amount\" : x.xxx,                  (numeric) The total amount in XP received by the address\n"
             "    \"confirmations\" : n                (numeric) The number of confirmations of the most recent transaction included\n"
             "    \"bcconfirmations\" : n              (numeric) The number of blockchain confirmations of the most recent transaction included\n"
             "  }\n"
@@ -1342,17 +1342,17 @@ UniValue listtransactions(const UniValue& params, bool fHelp)
             "  {\n"
             "    \"account\":\"accountname\",       (string) The account name associated with the transaction. \n"
             "                                                It will be \"\" for the default account.\n"
-            "    \"address\":\"pivxaddress\",    (string) The pivx address of the transaction. Not present for \n"
+            "    \"address\":\"address\",    (string) The address of the transaction. Not present for \n"
             "                                                move transactions (category = move).\n"
             "    \"category\":\"send|receive|move\", (string) The transaction category. 'move' is a local (off blockchain)\n"
             "                                                transaction between accounts, and not associated with an address,\n"
             "                                                transaction id or block. 'send' and 'receive' transactions are \n"
             "                                                associated with an address, transaction id and block details\n"
-            "    \"amount\": x.xxx,          (numeric) The amount in PIV. This is negative for the 'send' category, and for the\n"
+            "    \"amount\": x.xxx,          (numeric) The amount in XP. This is negative for the 'send' category, and for the\n"
             "                                         'move' category for moves outbound. It is positive for the 'receive' category,\n"
             "                                         and for the 'move' category for inbound funds.\n"
             "    \"vout\" : n,               (numeric) the vout value\n"
-            "    \"fee\": x.xxx,             (numeric) The amount of the fee in PIV. This is negative and only available for the \n"
+            "    \"fee\": x.xxx,             (numeric) The amount of the fee in XP. This is negative and only available for the \n"
             "                                         'send' category of transactions.\n"
             "    \"confirmations\": n,       (numeric) The number of confirmations for the transaction. Available for 'send' and \n"
             "                                         'receive' category of transactions.\n"
@@ -1537,12 +1537,12 @@ UniValue listsinceblock(const UniValue& params, bool fHelp)
             "{\n"
             "  \"transactions\": [\n"
             "    \"account\":\"accountname\",       (string) The account name associated with the transaction. Will be \"\" for the default account.\n"
-            "    \"address\":\"pivxaddress\",    (string) The pivx address of the transaction. Not present for move transactions (category = move).\n"
+            "    \"address\":\"address\",    (string) The address of the transaction. Not present for move transactions (category = move).\n"
             "    \"category\":\"send|receive\",     (string) The transaction category. 'send' has negative amounts, 'receive' has positive amounts.\n"
-            "    \"amount\": x.xxx,          (numeric) The amount in PIV. This is negative for the 'send' category, and for the 'move' category for moves \n"
+            "    \"amount\": x.xxx,          (numeric) The amount in XP. This is negative for the 'send' category, and for the 'move' category for moves \n"
             "                                          outbound. It is positive for the 'receive' category, and for the 'move' category for inbound funds.\n"
             "    \"vout\" : n,               (numeric) the vout value\n"
-            "    \"fee\": x.xxx,             (numeric) The amount of the fee in PIV. This is negative and only available for the 'send' category of transactions.\n"
+            "    \"fee\": x.xxx,             (numeric) The amount of the fee in XP. This is negative and only available for the 'send' category of transactions.\n"
             "    \"confirmations\": n,       (numeric) The number of confirmations for the transaction. Available for 'send' and 'receive' category of transactions.\n"
             "    \"bcconfirmations\" : n,    (numeric) The number of blockchain confirmations for the transaction. Available for 'send' and 'receive' category of transactions.\n"
             "    \"blockhash\": \"hashvalue\",     (string) The block hash containing the transaction. Available for 'send' and 'receive' category of transactions.\n"
@@ -1622,7 +1622,7 @@ UniValue gettransaction(const UniValue& params, bool fHelp)
 
             "\nResult:\n"
             "{\n"
-            "  \"amount\" : x.xxx,        (numeric) The transaction amount in PIV\n"
+            "  \"amount\" : x.xxx,        (numeric) The transaction amount in XP\n"
             "  \"confirmations\" : n,     (numeric) The number of confirmations\n"
             "  \"bcconfirmations\" : n,   (numeric) The number of blockchain confirmations\n"
             "  \"blockhash\" : \"hash\",  (string) The block hash\n"
@@ -1634,9 +1634,9 @@ UniValue gettransaction(const UniValue& params, bool fHelp)
             "  \"details\" : [\n"
             "    {\n"
             "      \"account\" : \"accountname\",  (string) The account name involved in the transaction, can be \"\" for the default account.\n"
-            "      \"address\" : \"pivxaddress\",   (string) The pivx address involved in the transaction\n"
+            "      \"address\" : \"address\",   (string) The address involved in the transaction\n"
             "      \"category\" : \"send|receive\",    (string) The category, either 'send' or 'receive'\n"
-            "      \"amount\" : x.xxx                  (numeric) The amount in PIV\n"
+            "      \"amount\" : x.xxx                  (numeric) The amount in XP\n"
             "      \"vout\" : n,                       (numeric) the vout value\n"
             "    }\n"
             "    ,...\n"
@@ -1757,7 +1757,7 @@ UniValue walletpassphrase(const UniValue& params, bool fHelp)
         throw runtime_error(
             "walletpassphrase \"passphrase\" timeout ( anonymizeonly )\n"
             "\nStores the wallet decryption key in memory for 'timeout' seconds.\n"
-            "This is needed prior to performing transactions related to private keys such as sending PIVs\n"
+            "This is needed prior to performing transactions related to private keys such as sending XPs\n"
 
             "\nArguments:\n"
             "1. \"passphrase\"     (string, required) The wallet passphrase\n"
@@ -1922,10 +1922,10 @@ UniValue encryptwallet(const UniValue& params, bool fHelp)
             "\nExamples:\n"
             "\nEncrypt you wallet\n" +
             HelpExampleCli("encryptwallet", "\"my pass phrase\"") +
-            "\nNow set the passphrase to use the wallet, such as for signing or sending PIVs\n" +
+            "\nNow set the passphrase to use the wallet, such as for signing or sending XPs\n" +
             HelpExampleCli("walletpassphrase", "\"my pass phrase\"") +
             "\nNow we can so something like sign\n" +
-            HelpExampleCli("signmessage", "\"pivxaddress\" \"test message\"") +
+            HelpExampleCli("signmessage", "\"address\" \"test message\"") +
             "\nNow lock the wallet again by removing the passphrase\n" +
             HelpExampleCli("walletlock", "") +
             "\nAs a json rpc call\n" +
@@ -1956,7 +1956,7 @@ UniValue encryptwallet(const UniValue& params, bool fHelp)
     // slack space in .dat files; that is bad if the old data is
     // unencrypted private keys. So:
     StartShutdown();
-    return "wallet encrypted; pivx server stopping, restart to run with encrypted wallet. The keypool has been flushed, you need to make a new backup.";
+    return "wallet encrypted; eXperience Points server stopping, restart to run with encrypted wallet. The keypool has been flushed, you need to make a new backup.";
 }
 
 UniValue lockunspent(const UniValue& params, bool fHelp)
@@ -1966,7 +1966,7 @@ UniValue lockunspent(const UniValue& params, bool fHelp)
             "lockunspent unlock [{\"txid\":\"txid\",\"vout\":n},...]\n"
             "\nUpdates list of temporarily unspendable outputs.\n"
             "Temporarily lock (unlock=false) or unlock (unlock=true) specified transaction outputs.\n"
-            "A locked transaction output will not be chosen by automatic coin selection, when spending PIVs.\n"
+            "A locked transaction output will not be chosen by automatic coin selection, when spending XPs.\n"
             "Locks are stored in memory only. Nodes start with zero locked outputs, and the locked output list\n"
             "is always cleared (by virtue of process exit) when a node stops or fails.\n"
             "Also see the listunspent call\n"
@@ -2095,7 +2095,7 @@ UniValue settxfee(const UniValue& params, bool fHelp)
             "\nSet the transaction fee per kB.\n"
 
             "\nArguments:\n"
-            "1. amount         (numeric, required) The transaction fee in PIV/kB rounded to the nearest 0.00000001\n"
+            "1. amount         (numeric, required) The transaction fee in XP/kB rounded to the nearest 0.00000001\n"
 
             "\nResult\n"
             "true|false        (boolean) Returns true if successful\n"
@@ -2123,14 +2123,14 @@ UniValue getwalletinfo(const UniValue& params, bool fHelp)
             "\nResult:\n"
             "{\n"
             "  \"walletversion\": xxxxx,     (numeric) the wallet version\n"
-            "  \"balance\": xxxxxxx,         (numeric) the total PIV balance of the wallet\n"
-            "  \"unconfirmed_balance\": xxx, (numeric) the total unconfirmed balance of the wallet in PIV\n"
-            "  \"immature_balance\": xxxxxx, (numeric) the total immature balance of the wallet in PIV\n"
+            "  \"balance\": xxxxxxx,         (numeric) the total XP balance of the wallet\n"
+            "  \"unconfirmed_balance\": xxx, (numeric) the total unconfirmed balance of the wallet in XP\n"
+            "  \"immature_balance\": xxxxxx, (numeric) the total immature balance of the wallet in XP\n"
             "  \"txcount\": xxxxxxx,         (numeric) the total number of transactions in the wallet\n"
             "  \"keypoololdest\": xxxxxx,    (numeric) the timestamp (seconds since GMT epoch) of the oldest pre-generated key in the key pool\n"
             "  \"keypoolsize\": xxxx,        (numeric) how many new keys are pre-generated\n"
             "  \"unlocked_until\": ttt,      (numeric) the timestamp in seconds since epoch (midnight Jan 1 1970 GMT) that the wallet is unlocked for transfers, or 0 if the wallet is locked\n"
-            "  \"paytxfee\": x.xxxx,         (numeric) the transaction fee configuration, set in PIV/kB\n"
+            "  \"paytxfee\": x.xxxx,         (numeric) the transaction fee configuration, set in XP/kB\n"
             "  \"automintaddresses\": status (boolean) the status of automint addresses (true if enabled, false if disabled)\n"
             "}\n"
 
@@ -2271,7 +2271,7 @@ UniValue autocombinerewards(const UniValue& params, bool fHelp)
     if (fHelp || params.size() < 1 || (fEnable && params.size() != 2) || params.size() > 2)
         throw runtime_error(
             "autocombinerewards enable ( threshold )\n"
-            "\nWallet will automatically monitor for any coins with value below the threshold amount, and combine them if they reside with the same PIVX address\n"
+            "\nWallet will automatically monitor for any coins with value below the threshold amount, and combine them if they reside with the same address\n"
             "When autocombinerewards runs it will create a transaction, and therefore will be subject to transaction fees.\n"
 
             "\nArguments:\n"
@@ -2480,7 +2480,7 @@ UniValue multisend(const UniValue& params, bool fHelp)
             "The MultiSend transaction is sent when the staked coins mature (100 confirmations)\n"
             "****************************************************************\n"
             "TO CREATE OR ADD TO THE MULTISEND VECTOR:\n"
-            "multisend <PIVX Address> <percent>\n"
+            "multisend <Address> <percent>\n"
             "This will add a new address to the MultiSend vector\n"
             "Percent is a whole number 1 to 100.\n"
             "****************************************************************\n"
@@ -2499,7 +2499,7 @@ UniValue multisend(const UniValue& params, bool fHelp)
     string strAddress = params[0].get_str();
     CBitcoinAddress address(strAddress);
     if (!address.IsValid())
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid PIV address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid address");
     if (std::stoi(params[1].get_str().c_str()) < 0)
         throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid parameter, expected valid percentage");
     if (pwalletMain->IsLocked())
@@ -2544,11 +2544,11 @@ UniValue getzerocoinbalance(const UniValue& params, bool fHelp)
     if (fHelp || params.size() != 0)
         throw runtime_error(
             "getzerocoinbalance\n"
-            "\nReturn the wallet's total zPIV balance.\n" +
+            "\nReturn the wallet's total zXP balance.\n" +
             HelpRequiringPassphrase() + "\n"
 
             "\nResult:\n"
-            "amount         (numeric) Total zPIV balance.\n"
+            "amount         (numeric) Total zXP balance.\n"
 
             "\nExamples:\n" +
             HelpExampleCli("getzerocoinbalance", "") + HelpExampleRpc("getzerocoinbalance", ""));
@@ -2572,7 +2572,7 @@ UniValue listmintedzerocoins(const UniValue& params, bool fHelp)
     if (fHelp || params.size() > 2)
         throw runtime_error(
             "listmintedzerocoins (fVerbose) (fMatureOnly)\n"
-            "\nList all zPIV mints in the wallet.\n" +
+            "\nList all zXP mints in the wallet.\n" +
             HelpRequiringPassphrase() + "\n"
 
             "\nArguments:\n"
@@ -2590,7 +2590,7 @@ UniValue listmintedzerocoins(const UniValue& params, bool fHelp)
             "  {\n"
             "    \"serial hash\": \"xxx\",   (string) Mint serial hash in hex format.\n"
             "    \"version\": n,   (numeric) Zerocoin version number.\n"
-            "    \"zPIV ID\": \"xxx\",   (string) Pubcoin in hex format.\n"
+            "    \"zXP ID\": \"xxx\",   (string) Pubcoin in hex format.\n"
             "    \"denomination\": n,   (numeric) Coin denomination.\n"
             "    \"mint height\": n     (numeric) Height of the block containing this mint.\n"
             "    \"confirmations\": n   (numeric) Number of confirmations.\n"
@@ -2623,7 +2623,7 @@ UniValue listmintedzerocoins(const UniValue& params, bool fHelp)
             UniValue objMint(UniValue::VOBJ);
             objMint.push_back(Pair("serial hash", m.hashSerial.GetHex()));  // Serial hash
             objMint.push_back(Pair("version", m.nVersion));                 // Zerocoin version
-            objMint.push_back(Pair("zPIV ID", m.hashPubcoin.GetHex()));     // PubCoin
+            objMint.push_back(Pair("zXP ID", m.hashPubcoin.GetHex()));     // PubCoin
             int denom = libzerocoin::ZerocoinDenominationToInt(m.denom);
             objMint.push_back(Pair("denomination", denom));                 // Denomination
             objMint.push_back(Pair("mint height", m.nHeight));              // Mint Height
@@ -2701,7 +2701,7 @@ UniValue listspentzerocoins(const UniValue& params, bool fHelp)
     if (fHelp || params.size() != 0)
         throw runtime_error(
             "listspentzerocoins\n"
-            "\nList all the spent zPIV mints in the wallet.\n" +
+            "\nList all the spent zXP mints in the wallet.\n" +
             HelpRequiringPassphrase() + "\n"
 
             "\nResult:\n"
@@ -2733,11 +2733,11 @@ UniValue mintzerocoin(const UniValue& params, bool fHelp)
     if (fHelp || params.size() < 1 || params.size() > 2)
         throw runtime_error(
             "mintzerocoin amount ( utxos )\n"
-            "\nMint the specified zPIV amount\n" +
+            "\nMint the specified zXP amount\n" +
             HelpRequiringPassphrase() + "\n"
 
             "\nArguments:\n"
-            "1. amount      (numeric, required) Enter an amount of Piv to convert to zPIV\n"
+            "1. amount      (numeric, required) Enter an amount of Piv to convert to zXP\n"
             "2. utxos       (string, optional) A json array of objects.\n"
             "                   Each object needs the txid (string) and vout (numeric)\n"
             "  [\n"
@@ -2781,7 +2781,7 @@ UniValue mintzerocoin(const UniValue& params, bool fHelp)
 
     int64_t nTime = GetTimeMillis();
     if(GetAdjustedTime() > GetSporkValue(SPORK_16_ZEROCOIN_MAINTENANCE_MODE))
-        throw JSONRPCError(RPC_WALLET_ERROR, "zPIV is currently disabled due to maintenance.");
+        throw JSONRPCError(RPC_WALLET_ERROR, "zXP is currently disabled due to maintenance.");
 
     EnsureWalletIsUnlocked(true);
 
@@ -2844,7 +2844,7 @@ UniValue spendzerocoin(const UniValue& params, bool fHelp)
     if (fHelp || params.size() > 4 || params.size() < 3)
         throw runtime_error(
             "spendzerocoin amount mintchange minimizechange ( \"address\" )\n"
-            "\nSpend zPIV to a PIV address.\n" +
+            "\nSpend zXP to a XP address.\n" +
             HelpRequiringPassphrase() + "\n"
 
             "\nArguments:\n"
@@ -2870,21 +2870,21 @@ UniValue spendzerocoin(const UniValue& params, bool fHelp)
             "  ],\n"
             "  \"outputs\": [                 (array) JSON array of output objects.\n"
             "    {\n"
-            "      \"value\": amount,         (numeric) Value in PIV.\n"
-            "      \"address\": \"xxx\"         (string) PIV address or \"zerocoinmint\" for reminted change.\n"
+            "      \"value\": amount,         (numeric) Value in XP.\n"
+            "      \"address\": \"xxx\"         (string) Address or \"zerocoinmint\" for reminted change.\n"
             "    }\n"
             "    ,...\n"
             "  ]\n"
             "}\n"
 
             "\nExamples\n" +
-            HelpExampleCli("spendzerocoin", "5000 false true \"DMJRSsuU9zfyrvxVaAEFQqK4MxZg6vgeS6\"") +
-            HelpExampleRpc("spendzerocoin", "5000 false true \"DMJRSsuU9zfyrvxVaAEFQqK4MxZg6vgeS6\""));
+            HelpExampleCli("spendzerocoin", "5000 false true \"PQ72SjLCNR1HCwsXRrEJWNgAkAFe11sWTx\"") +
+            HelpExampleRpc("spendzerocoin", "5000 false true \"PQ72SjLCNR1HCwsXRrEJWNgAkAFe11sWTx\""));
 
     LOCK2(cs_main, pwalletMain->cs_wallet);
 
     if(GetAdjustedTime() > GetSporkValue(SPORK_16_ZEROCOIN_MAINTENANCE_MODE))
-        throw JSONRPCError(RPC_WALLET_ERROR, "zPIV is currently disabled due to maintenance.");
+        throw JSONRPCError(RPC_WALLET_ERROR, "zXP is currently disabled due to maintenance.");
 
     EnsureWalletIsUnlocked();
 
@@ -2904,7 +2904,7 @@ UniValue spendzerocoinmints(const UniValue& params, bool fHelp)
     if (fHelp || params.size() < 1 || params.size() > 2)
         throw runtime_error(
             "spendzerocoinmints mints_list (\"address\") \n"
-            "\nSpend zPIV mints to a PIV address.\n" +
+            "\nSpend zXP mints to a XP address.\n" +
             HelpRequiringPassphrase() + "\n"
 
             "\nArguments:\n"
@@ -2927,21 +2927,21 @@ UniValue spendzerocoinmints(const UniValue& params, bool fHelp)
             "  ],\n"
             "  \"outputs\": [                 (array) JSON array of output objects.\n"
             "    {\n"
-            "      \"value\": amount,         (numeric) Value in PIV.\n"
-            "      \"address\": \"xxx\"         (string) PIV address or \"zerocoinmint\" for reminted change.\n"
+            "      \"value\": amount,         (numeric) Value in XP.\n"
+            "      \"address\": \"xxx\"         (string) Address or \"zerocoinmint\" for reminted change.\n"
             "    }\n"
             "    ,...\n"
             "  ]\n"
             "}\n"
 
             "\nExamples\n" +
-            HelpExampleCli("spendzerocoinmints", "'[\"0d8c16eee7737e3cc1e4e70dc006634182b175e039700931283b202715a0818f\", \"dfe585659e265e6a509d93effb906d3d2a0ac2fe3464b2c3b6d71a3ef34c8ad7\"]' \"DMJRSsuU9zfyrvxVaAEFQqK4MxZg6vgeS6\"") +
-            HelpExampleRpc("spendzerocoinmints", "[\"0d8c16eee7737e3cc1e4e70dc006634182b175e039700931283b202715a0818f\", \"dfe585659e265e6a509d93effb906d3d2a0ac2fe3464b2c3b6d71a3ef34c8ad7\"], \"DMJRSsuU9zfyrvxVaAEFQqK4MxZg6vgeS6\""));
+            HelpExampleCli("spendzerocoinmints", "'[\"0d8c16eee7737e3cc1e4e70dc006634182b175e039700931283b202715a0818f\", \"dfe585659e265e6a509d93effb906d3d2a0ac2fe3464b2c3b6d71a3ef34c8ad7\"]' \"PQ72SjLCNR1HCwsXRrEJWNgAkAFe11sWTx\"") +
+            HelpExampleRpc("spendzerocoinmints", "[\"0d8c16eee7737e3cc1e4e70dc006634182b175e039700931283b202715a0818f\", \"dfe585659e265e6a509d93effb906d3d2a0ac2fe3464b2c3b6d71a3ef34c8ad7\"], \"PQ72SjLCNR1HCwsXRrEJWNgAkAFe11sWTx\""));
 
     LOCK2(cs_main, pwalletMain->cs_wallet);
 
     if(GetAdjustedTime() > GetSporkValue(SPORK_16_ZEROCOIN_MAINTENANCE_MODE))
-        throw JSONRPCError(RPC_WALLET_ERROR, "zPIV is currently disabled due to maintenance.");
+        throw JSONRPCError(RPC_WALLET_ERROR, "zXP is currently disabled due to maintenance.");
 
     std::string address_str = "";
     if (params.size() > 1) {
@@ -2986,7 +2986,7 @@ UniValue spendzerocoinmints(const UniValue& params, bool fHelp)
         // to avoid type confusion from the JSON interpreter
         address = CBitcoinAddress(params[3].get_str());
         if(!address.IsValid())
-            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid PIVX address");
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid address");
     }
 
     return DoZpivSpend(nAmount, false, true, vMintsSelected, address_str);
@@ -3004,7 +3004,7 @@ extern UniValue DoZpivSpend(const CAmount nAmount, bool fMintChange, bool fMinim
     if(address_str != "") { // Spend to supplied destination address
         address = CBitcoinAddress(address_str);
         if(!address.IsValid())
-            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid PIVX address");
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid address");
         fSuccess = pwalletMain->SpendZerocoin(nAmount, wtx, receipt, vMintsSelected, fMintChange, fMinimizeChange, &address);
     } else                   // Spend to newly generated local address
         fSuccess = pwalletMain->SpendZerocoin(nAmount, wtx, receipt, vMintsSelected, fMintChange, fMinimizeChange);
@@ -3243,12 +3243,12 @@ UniValue exportzerocoins(const UniValue& params, bool fHelp)
 
             "\nArguments:\n"
             "1. \"include_spent\"        (bool, required) Include mints that have already been spent\n"
-            "2. \"denomination\"         (integer, optional) Export a specific denomination of zPIV\n"
+            "2. \"denomination\"         (integer, optional) Export a specific denomination of zXP\n"
 
             "\nResult:\n"
             "[                   (array of json object)\n"
             "  {\n"
-            "    \"id\": \"serial hash\",  (string) the mint's zPIV serial hash \n"
+            "    \"id\": \"serial hash\",  (string) the mint's zXP serial hash \n"
             "    \"d\": n,         (numeric) the mint's zerocoin denomination \n"
             "    \"p\": \"pubcoin\", (string) The public coin\n"
             "    \"s\": \"serial\",  (string) The secret serial number\n"
@@ -3256,8 +3256,8 @@ UniValue exportzerocoins(const UniValue& params, bool fHelp)
             "    \"t\": \"txid\",    (string) The txid that the coin was minted in\n"
             "    \"h\": n,         (numeric) The height the tx was added to the blockchain\n"
             "    \"u\": used,      (boolean) Whether the mint has been spent\n"
-            "    \"v\": version,   (numeric) The version of the zPIV\n"
-            "    \"k\": \"privkey\"  (string) The zPIV private key (V2+ zPIV only)\n"
+            "    \"v\": version,   (numeric) The version of the zXP\n"
+            "    \"k\": \"privkey\"  (string) The zXP private key (V2+ zXP only)\n"
             "  }\n"
             "  ,...\n"
             "]\n"
@@ -3328,7 +3328,7 @@ UniValue importzerocoins(const UniValue& params, bool fHelp)
             "\nResult:\n"
             "{\n"
             "  \"added\": n,        (numeric) The quantity of zerocoin mints that were added\n"
-            "  \"value\": amount    (numeric) The total zPIV value of zerocoin mints that were added\n"
+            "  \"value\": amount    (numeric) The total zXP value of zerocoin mints that were added\n"
             "}\n"
 
             "\nExamples\n" +
@@ -3408,7 +3408,7 @@ UniValue reconsiderzerocoins(const UniValue& params, bool fHelp)
     if(fHelp || !params.empty())
         throw runtime_error(
             "reconsiderzerocoins\n"
-            "\nCheck archived zPIV list to see if any mints were added to the blockchain.\n" +
+            "\nCheck archived zXP list to see if any mints were added to the blockchain.\n" +
             HelpRequiringPassphrase() + "\n"
 
             "\nResult:\n"
@@ -3458,19 +3458,19 @@ UniValue setzpivseed(const UniValue& params, bool fHelp)
 {
     if(fHelp || params.size() != 1)
         throw runtime_error(
-            "setzpivseed \"seed\"\n"
-            "\nSet the wallet's deterministic zpiv seed to a specific value.\n" +
+            "setzxpseed \"seed\"\n"
+            "\nSet the wallet's deterministic zXP seed to a specific value.\n" +
             HelpRequiringPassphrase() + "\n"
 
             "\nArguments:\n"
-            "1. \"seed\"        (string, required) The deterministic zpiv seed.\n"
+            "1. \"seed\"        (string, required) The deterministic zXP seed.\n"
 
             "\nResult\n"
             "\"success\" : b,  (boolean) Whether the seed was successfully set.\n"
 
             "\nExamples\n" +
-            HelpExampleCli("setzpivseed", "63f793e7895dd30d99187b35fbfb314a5f91af0add9e0a4e5877036d1e392dd5") +
-            HelpExampleRpc("setzpivseed", "63f793e7895dd30d99187b35fbfb314a5f91af0add9e0a4e5877036d1e392dd5"));
+            HelpExampleCli("setzxpseed", "63f793e7895dd30d99187b35fbfb314a5f91af0add9e0a4e5877036d1e392dd5") +
+            HelpExampleRpc("setzxpseed", "63f793e7895dd30d99187b35fbfb314a5f91af0add9e0a4e5877036d1e392dd5"));
 
     EnsureWalletIsUnlocked();
 
@@ -3492,15 +3492,15 @@ UniValue getzpivseed(const UniValue& params, bool fHelp)
 {
     if(fHelp || !params.empty())
         throw runtime_error(
-            "getzpivseed\n"
-            "\nCheck archived zPIV list to see if any mints were added to the blockchain.\n" +
+            "getzxpseed\n"
+            "\nCheck archived zXP list to see if any mints were added to the blockchain.\n" +
             HelpRequiringPassphrase() + "\n"
 
             "\nResult\n"
-            "\"seed\" : s,  (string) The deterministic zPIV seed.\n"
+            "\"seed\" : s,  (string) The deterministic zXP seed.\n"
 
             "\nExamples\n" +
-            HelpExampleCli("getzpivseed", "") + HelpExampleRpc("getzpivseed", ""));
+            HelpExampleCli("getzxpseed", "") + HelpExampleRpc("getzxpseed", ""));
 
     EnsureWalletIsUnlocked();
 
@@ -3518,12 +3518,12 @@ UniValue generatemintlist(const UniValue& params, bool fHelp)
     if(fHelp || params.size() != 2)
         throw runtime_error(
             "generatemintlist\n"
-            "\nShow mints that are derived from the deterministic zPIV seed.\n" +
+            "\nShow mints that are derived from the deterministic zXP seed.\n" +
             HelpRequiringPassphrase() + "\n"
 
             "\nArguments\n"
-            "1. \"count\"  : n,  (numeric) Which sequential zPIV to start with.\n"
-            "2. \"range\"  : n,  (numeric) How many zPIV to generate.\n"
+            "1. \"count\"  : n,  (numeric) Which sequential zXP to start with.\n"
+            "2. \"range\"  : n,  (numeric) How many zXP to generate.\n"
 
             "\nResult:\n"
             "[\n"
@@ -3565,8 +3565,8 @@ UniValue generatemintlist(const UniValue& params, bool fHelp)
 UniValue dzpivstate(const UniValue& params, bool fHelp) {
     if (fHelp || params.size() != 0)
         throw runtime_error(
-                "dzpivstate\n"
-                        "\nThe current state of the mintpool of the deterministic zPIV wallet.\n" +
+                "dzxpstate\n"
+                        "\nThe current state of the mintpool of the deterministic zXP wallet.\n" +
                 HelpRequiringPassphrase() + "\n"
 
                         "\nExamples\n" +
@@ -3576,7 +3576,7 @@ UniValue dzpivstate(const UniValue& params, bool fHelp) {
     UniValue obj(UniValue::VOBJ);
     int nCount, nCountLastUsed;
     zwallet->GetState(nCount, nCountLastUsed);
-    obj.push_back(Pair("dzpiv_count", nCount));
+    obj.push_back(Pair("dzxp_count", nCount));
     obj.push_back(Pair("mintpool_count", nCountLastUsed));
 
     return obj;
@@ -3617,17 +3617,17 @@ UniValue searchdzpiv(const UniValue& params, bool fHelp)
 {
     if(fHelp || params.size() != 3)
         throw runtime_error(
-            "searchdzpiv\n"
-            "\nMake an extended search for deterministically generated zPIV that have not yet been recognized by the wallet.\n" +
+            "searchdzxp\n"
+            "\nMake an extended search for deterministically generated zXP that have not yet been recognized by the wallet.\n" +
             HelpRequiringPassphrase() + "\n"
 
             "\nArguments\n"
-            "1. \"count\"       (numeric) Which sequential zPIV to start with.\n"
-            "2. \"range\"       (numeric) How many zPIV to generate.\n"
+            "1. \"count\"       (numeric) Which sequential zXP to start with.\n"
+            "2. \"range\"       (numeric) How many zXP to generate.\n"
             "3. \"threads\"     (numeric) How many threads should this operation consume.\n"
 
             "\nExamples\n" +
-            HelpExampleCli("searchdzpiv", "1, 100, 2") + HelpExampleRpc("searchdzpiv", "1, 100, 2"));
+            HelpExampleCli("searchdzxp", "1, 100, 2") + HelpExampleRpc("searchdzxp", "1, 100, 2"));
 
     EnsureWalletIsUnlocked();
 
@@ -3690,7 +3690,7 @@ UniValue createautomintaddress(const UniValue& params, bool fHelp)
                 HelpRequiringPassphrase() + "\n"
 
                 "\nResult\n"
-                "\"address\"     (string) PIVX address for auto minting\n" +
+                "\"address\"     (string) Address for auto minting\n" +
                 HelpExampleCli("createautomintaddress", "") +
                 HelpExampleRpc("createautomintaddress", ""));
 
@@ -3712,7 +3712,7 @@ UniValue spendrawzerocoin(const UniValue& params, bool fHelp)
             "2. \"randomnessHex\"    (string, required) A zerocoin randomness value (hex)\n"
             "3. denom                (numeric, required) A zerocoin denomination (decimal)\n"
             "4. \"priv key\"         (string, required) The private key associated with this coin (hex)\n"
-            "5. \"address\"          (string, optional) PIVX address to spend to. If not specified, spend to change add.\n"
+            "5. \"address\"          (string, optional) Address to spend to. If not specified, spend to change add.\n"
 
             "\nResult:\n"
                 "\"txid\"             (string) The transaction txid in hex\n"
@@ -3724,7 +3724,7 @@ UniValue spendrawzerocoin(const UniValue& params, bool fHelp)
     LOCK2(cs_main, pwalletMain->cs_wallet);
 
     if (GetAdjustedTime() > GetSporkValue(SPORK_16_ZEROCOIN_MAINTENANCE_MODE))
-            throw JSONRPCError(RPC_WALLET_ERROR, "zPIV is currently disabled due to maintenance.");
+            throw JSONRPCError(RPC_WALLET_ERROR, "zXP is currently disabled due to maintenance.");
 
     CBigNum serial;
     serial.SetHex(params[0].get_str());
@@ -3766,7 +3766,7 @@ UniValue clearspendcache(const UniValue& params, bool fHelp)
     if(fHelp || params.size() != 0)
         throw runtime_error(
             "clearspendcache\n"
-            "\nClear the pre-computed zPIV spend cache, and database.\n" +
+            "\nClear the pre-computed zXP spend cache, and database.\n" +
             HelpRequiringPassphrase() + "\n"
 
             "\nExamples\n" +

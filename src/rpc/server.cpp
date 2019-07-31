@@ -464,11 +464,11 @@ static const CRPCCommand vRPCCommands[] =
         {"zerocoin", "exportzerocoins", &exportzerocoins, false, false, true},
         {"zerocoin", "reconsiderzerocoins", &reconsiderzerocoins, false, false, true},
         {"zerocoin", "getspentzerocoinamount", &getspentzerocoinamount, false, false, false},
-        {"zerocoin", "getzpivseed", &getzpivseed, false, false, true},
-        {"zerocoin", "setzpivseed", &setzpivseed, false, false, true},
+        {"zerocoin", "getzxpseed", &getzpivseed, false, false, true},
+        {"zerocoin", "setzxpseed", &setzpivseed, false, false, true},
         {"zerocoin", "generatemintlist", &generatemintlist, false, false, true},
-        {"zerocoin", "searchdzpiv", &searchdzpiv, false, false, true},
-        {"zerocoin", "dzpivstate", &dzpivstate, false, false, true},
+        {"zerocoin", "searchdzxp", &searchdzpiv, false, false, true},
+        {"zerocoin", "dzxpstate", &dzpivstate, false, false, true},
         {"zerocoin", "clearspendcache", &clearspendcache, false, false, true}
 
 #endif // ENABLE_WALLET
@@ -633,7 +633,7 @@ std::vector<std::string> CRPCTable::listCommands() const
 
 std::string HelpExampleCli(string methodname, string args)
 {
-    return "> pivx-cli " + methodname + " " + args + "\n";
+    return "> eXperiencePoints-cli " + methodname + " " + args + "\n";
 }
 
 std::string HelpExampleRpc(string methodname, string args)

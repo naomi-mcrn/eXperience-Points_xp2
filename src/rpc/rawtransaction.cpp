@@ -129,7 +129,7 @@ UniValue getrawtransaction(const UniValue& params, bool fHelp)
             "  ],\n"
             "  \"vout\" : [              (array of json objects)\n"
             "     {\n"
-            "       \"value\" : x.xxx,            (numeric) The value in btc\n"
+            "       \"value\" : x.xxx,            (numeric) The value in XP\n"
             "       \"n\" : n,                    (numeric) index\n"
             "       \"scriptPubKey\" : {          (json object)\n"
             "         \"asm\" : \"asm\",          (string) the asm\n"
@@ -137,7 +137,7 @@ UniValue getrawtransaction(const UniValue& params, bool fHelp)
             "         \"reqSigs\" : n,            (numeric) The required sigs\n"
             "         \"type\" : \"pubkeyhash\",  (string) The type, eg 'pubkeyhash'\n"
             "         \"addresses\" : [           (json array of string)\n"
-            "           \"pivxaddress\"        (string) pivx address\n"
+            "           \"address\"        (string) Address\n"
             "           ,...\n"
             "         ]\n"
             "       }\n"
@@ -221,9 +221,9 @@ UniValue listunspent(const UniValue& params, bool fHelp)
             "\nArguments:\n"
             "1. minconf          (numeric, optional, default=1) The minimum confirmations to filter\n"
             "2. maxconf          (numeric, optional, default=9999999) The maximum confirmations to filter\n"
-            "3. \"addresses\"    (string) A json array of pivx addresses to filter\n"
+            "3. \"addresses\"    (string) A json array of addresses to filter\n"
             "    [\n"
-            "      \"address\"   (string) pivx address\n"
+            "      \"address\"   (string) Address\n"
             "      ,...\n"
             "    ]\n"
             "4. watchonlyconfig  (numberic, optional, default=1) 1 = list regular unspent transactions, 2 = list only watchonly transactions,  3 = list all unspent transactions (including watchonly)\n"
@@ -233,17 +233,17 @@ UniValue listunspent(const UniValue& params, bool fHelp)
             "  {\n"
             "    \"txid\" : \"txid\",        (string) the transaction id \n"
             "    \"vout\" : n,               (numeric) the vout value\n"
-            "    \"address\" : \"address\",  (string) the pivx address\n"
+            "    \"address\" : \"address\",  (string) the address\n"
             "    \"account\" : \"account\",  (string) The associated account, or \"\" for the default account\n"
             "    \"scriptPubKey\" : \"key\", (string) the script key\n"
-            "    \"amount\" : x.xxx,         (numeric) the transaction amount in btc\n"
+            "    \"amount\" : x.xxx,         (numeric) the transaction amount in XP\n"
             "    \"confirmations\" : n       (numeric) The number of confirmations\n"
             "  }\n"
             "  ,...\n"
             "]\n"
 
             "\nExamples\n" +
-            HelpExampleCli("listunspent", "") + HelpExampleCli("listunspent", "6 9999999 \"[\\\"1PGFqEzfmQch1gKD3ra4k18PNj3tTUUSqg\\\",\\\"1LtvqCaApEdUGFkpKMM4MstjcaL4dKg8SP\\\"]\"") + HelpExampleRpc("listunspent", "6, 9999999 \"[\\\"1PGFqEzfmQch1gKD3ra4k18PNj3tTUUSqg\\\",\\\"1LtvqCaApEdUGFkpKMM4MstjcaL4dKg8SP\\\"]\""));
+            HelpExampleCli("listunspent", "") + HelpExampleCli("listunspent", "6 9999999 \"[\\\"PQ72SjLCNR1HCwsXRrEJWNgAkAFe11sWTx\\\",\\\"PXUaUNWYdQeHAkshWKfnSfMAWx99eDAVnn\\\"]\"") + HelpExampleRpc("listunspent", "6, 9999999 \"[\\\"PQ72SjLCNR1HCwsXRrEJWNgAkAFe11sWTx\\\",\\\"PXUaUNWYdQeHAkshWKfnSfMAWx99eDAVnn\\\"]\""));
 
     RPCTypeCheck(params, boost::assign::list_of(UniValue::VNUM)(UniValue::VNUM)(UniValue::VARR)(UniValue::VNUM));
 
@@ -262,7 +262,7 @@ UniValue listunspent(const UniValue& params, bool fHelp)
             const UniValue& input = inputs[inx];
             CBitcoinAddress address(input.get_str());
             if (!address.IsValid())
-                throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, string("Invalid PIVX address: ") + input.get_str());
+                throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, string("Invalid address: ") + input.get_str());
             if (setAddress.count(address))
                 throw JSONRPCError(RPC_INVALID_PARAMETER, string("Invalid parameter, duplicated address: ") + input.get_str());
             setAddress.insert(address);
@@ -347,7 +347,7 @@ UniValue createrawtransaction(const UniValue& params, bool fHelp)
             "     ]\n"
             "2. \"addresses\"           (string, required) a json object with addresses as keys and amounts as values\n"
             "    {\n"
-            "      \"address\": x.xxx   (numeric, required) The key is the pivx address, the value is the btc amount\n"
+            "      \"address\": x.xxx   (numeric, required) The key is the address, the value is the XP amount\n"
             "      ,...\n"
             "    }\n"
             "3. locktime                (numeric, optional, default=0) Raw locktime. Non-0 value also locktime-activates inputs\n"
@@ -410,7 +410,7 @@ UniValue createrawtransaction(const UniValue& params, bool fHelp)
     BOOST_FOREACH(const string& name_, addrList) {
         CBitcoinAddress address(name_);
         if (!address.IsValid())
-            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, string("Invalid PIVX address: ")+name_);
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, string("Invalid address: ")+name_);
 
         if (setAddress.count(address))
             throw JSONRPCError(RPC_INVALID_PARAMETER, string("Invalid parameter, duplicated address: ")+name_);
@@ -456,7 +456,7 @@ UniValue decoderawtransaction(const UniValue& params, bool fHelp)
             "  ],\n"
             "  \"vout\" : [             (array of json objects)\n"
             "     {\n"
-            "       \"value\" : x.xxx,            (numeric) The value in btc\n"
+            "       \"value\" : x.xxx,            (numeric) The value in XP\n"
             "       \"n\" : n,                    (numeric) index\n"
             "       \"scriptPubKey\" : {          (json object)\n"
             "         \"asm\" : \"asm\",          (string) the asm\n"
@@ -464,7 +464,7 @@ UniValue decoderawtransaction(const UniValue& params, bool fHelp)
             "         \"reqSigs\" : n,            (numeric) The required sigs\n"
             "         \"type\" : \"pubkeyhash\",  (string) The type, eg 'pubkeyhash'\n"
             "         \"addresses\" : [           (json array of string)\n"
-            "           \"12tvKAXCxZjSmdNbao16dKXC8tRWfcF5oc\"   (string) pivx address\n"
+            "           \"12tvKAXCxZjSmdNbao16dKXC8tRWfcF5oc\"   (string) Address\n"
             "           ,...\n"
             "         ]\n"
             "       }\n"
@@ -507,7 +507,7 @@ UniValue decodescript(const UniValue& params, bool fHelp)
             "  \"type\":\"type\", (string) The output type\n"
             "  \"reqSigs\": n,    (numeric) The required signatures\n"
             "  \"addresses\": [   (json array of string)\n"
-            "     \"address\"     (string) pivx address\n"
+            "     \"address\"     (string) Address\n"
             "     ,...\n"
             "  ],\n"
             "  \"p2sh\",\"address\" (string) script address\n"
@@ -915,7 +915,7 @@ UniValue createrawzerocoinstake(const UniValue& params, bool fHelp)
     if (fHelp || params.size() != 1)
         throw runtime_error(
             "createrawzerocoinstake mint_input \n"
-            "\nCreates raw zPIV coinstakes (without MN output).\n" +
+            "\nCreates raw zXP coinstakes (without MN output).\n" +
             HelpRequiringPassphrase() + "\n"
 
             "\nArguments:\n"
@@ -936,7 +936,7 @@ UniValue createrawzerocoinstake(const UniValue& params, bool fHelp)
     LOCK2(cs_main, pwalletMain->cs_wallet);
 
     if(GetAdjustedTime() > GetSporkValue(SPORK_16_ZEROCOIN_MAINTENANCE_MODE))
-        throw JSONRPCError(RPC_WALLET_ERROR, "zPIV is currently disabled due to maintenance.");
+        throw JSONRPCError(RPC_WALLET_ERROR, "zXP is currently disabled due to maintenance.");
 
     std::string serial_hash = params[0].get_str();
     if (!IsHex(serial_hash))
@@ -962,11 +962,11 @@ UniValue createrawzerocoinstake(const UniValue& params, bool fHelp)
     vOutMint[0] = CTxOut(0, scriptEmpty);
     CDeterministicMint dMint;
     if (!pwalletMain->CreateZPIVOutPut(staked_denom, vOutMint[1], dMint))
-        throw JSONRPCError(RPC_WALLET_ERROR, "failed to create new zpiv output");
+        throw JSONRPCError(RPC_WALLET_ERROR, "failed to create new zXP output");
 
     for (int i=2; i<5; i++) {
         if (!pwalletMain->CreateZPIVOutPut(libzerocoin::ZQ_ONE, vOutMint[i], dMint))
-            throw JSONRPCError(RPC_WALLET_ERROR, "failed to create new zpiv output");
+            throw JSONRPCError(RPC_WALLET_ERROR, "failed to create new zXP output");
     }
     coinstake_tx.vout = vOutMint;
 

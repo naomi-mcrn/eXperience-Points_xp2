@@ -2118,7 +2118,7 @@ bool CWallet::SelectStakeCoins(std::list<std::unique_ptr<CStakeInput> >& listInp
     vector<COutput> vCoins;
     AvailableCoins(vCoins, true, NULL, false, STAKABLE_COINS);
     CAmount nAmountSelected = 0;
-    if (GetBoolArg("-pivstake", true) && !fPrecompute) {
+    if (GetBoolArg("-xpstake", true) && !fPrecompute) {
         for (const COutput &out : vCoins) {
             //make sure not to outrun target amount
             if (nAmountSelected + out.tx->vout[out.i].nValue > nTargetAmount)
@@ -2150,7 +2150,7 @@ bool CWallet::SelectStakeCoins(std::list<std::unique_ptr<CStakeInput> >& listInp
     }
 
     //zPIV
-    if ((GetBoolArg("-zpivstake", true) || fPrecompute) && chainActive.Height() > Params().Zerocoin_Block_V2_Start() && !IsSporkActive(SPORK_16_ZEROCOIN_MAINTENANCE_MODE)) {
+    if ((GetBoolArg("-zxpstake", true) || fPrecompute) && chainActive.Height() > Params().Zerocoin_Block_V2_Start() && !IsSporkActive(SPORK_16_ZEROCOIN_MAINTENANCE_MODE)) {
         //Only update zPIV set once per update interval
         bool fUpdate = false;
         static int64_t nTimeLastUpdate = 0;
@@ -4620,7 +4620,7 @@ bool CWallet::CreateZerocoinMintTransaction(const CAmount nValue, CMutableTransa
         CTxOut outMint;
         CDeterministicMint dMint;
         if (!CreateZPIVOutPut(denomination, outMint, dMint)) {
-            strFailReason = strprintf("%s: failed to create new zpiv output", __func__);
+            strFailReason = strprintf("%s: failed to create new zXP output", __func__);
             return error(strFailReason.c_str());
         }
         txNew.vout.push_back(outMint);
@@ -5195,7 +5195,7 @@ string CWallet::GetUniqueWalletBackupName(bool fzpivAuto) const
     std::string strWalletBackupName = strprintf("%s", DateTimeStrFormat(".%Y-%m-%d-%H-%M", GetTime()));
     ssDateTime << strWalletBackupName;
 
-    return strprintf("wallet%s.dat%s", fzpivAuto ? "-autozpivbackup" : "", DateTimeStrFormat(".%Y-%m-%d-%H-%M", GetTime()));
+    return strprintf("wallet%s.dat%s", fzpivAuto ? "-autozxpbackup" : "", DateTimeStrFormat(".%Y-%m-%d-%H-%M", GetTime()));
 }
 
 void CWallet::ZPivBackupWallet()
@@ -5205,14 +5205,14 @@ void CWallet::ZPivBackupWallet()
     string strNewBackupName;
 
     for (int i = 0; i < 10; i++) {
-        strNewBackupName = strprintf("wallet-autozpivbackup-%d.dat", i);
+        strNewBackupName = strprintf("wallet-autozxpbackup-%d.dat", i);
         backupPath = backupDir / strNewBackupName;
 
         if (filesystem::exists(backupPath)) {
             //Keep up to 10 backups
             if (i <= 8) {
                 //If the next file backup exists and is newer, then iterate
-                filesystem::path nextBackupPath = backupDir / strprintf("wallet-autozpivbackup-%d.dat", i + 1);
+                filesystem::path nextBackupPath = backupDir / strprintf("wallet-autozxpbackup-%d.dat", i + 1);
                 if (filesystem::exists(nextBackupPath)) {
                     time_t timeThis = filesystem::last_write_time(backupPath);
                     time_t timeNext = filesystem::last_write_time(nextBackupPath);
@@ -5227,7 +5227,7 @@ void CWallet::ZPivBackupWallet()
                 continue;
             }
             //reset to 0 because name with 9 already used
-            strNewBackupName = strprintf("wallet-autozpivbackup-%d.dat", 0);
+            strNewBackupName = strprintf("wallet-autozxpbackup-%d.dat", 0);
             backupPath = backupDir / strNewBackupName;
             break;
         }
@@ -5237,8 +5237,8 @@ void CWallet::ZPivBackupWallet()
 
     BackupWallet(*this, backupPath.string());
 
-    if(!GetArg("-zpivbackuppath", "").empty()) {
-        filesystem::path customPath(GetArg("-zpivbackuppath", ""));
+    if(!GetArg("-zxpbackuppath", "").empty()) {
+        filesystem::path customPath(GetArg("-zxpbackuppath", ""));
         filesystem::create_directories(customPath);
 
         if(!customPath.has_extension()) {
