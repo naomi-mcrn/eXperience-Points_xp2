@@ -105,9 +105,9 @@ public:
 
     /** Spork key and Masternode Handling **/
     std::string SporkKey() const { return strSporkKey; }
-    std::string SporkKeyOld() const { return strSporkKeyOld; }
-    int64_t NewSporkStart() const { return nEnforceNewSporkKey; }
-    int64_t RejectOldSporkKey() const { return nRejectOldSporkKey; }
+    // std::string SporkKeyOld() const { return strSporkKeyOld; }
+    // int64_t NewSporkStart() const { return nEnforceNewSporkKey; }
+    // int64_t RejectOldSporkKey() const { return nRejectOldSporkKey; }
     std::string ObfuscationPoolDummyAddress() const { return strObfuscationPoolDummyAddress; }
     int64_t StartMasternodePayments() const { return nStartMasternodePayments; }
     int64_t Budget_Fee_Confirmations() const { return nBudget_Fee_Confirmations; }
@@ -194,9 +194,9 @@ protected:
     int nPoolMaxTransactions;
     int nBudgetCycleBlocks;
     std::string strSporkKey;
-    std::string strSporkKeyOld;
-    int64_t nEnforceNewSporkKey;
-    int64_t nRejectOldSporkKey;
+    // std::string strSporkKeyOld;
+    // int64_t nEnforceNewSporkKey;
+    // int64_t nRejectOldSporkKey;
     std::string strObfuscationPoolDummyAddress;
     int64_t nStartMasternodePayments;
     std::string zerocoinModulus;

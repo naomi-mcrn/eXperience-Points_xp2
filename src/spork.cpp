@@ -82,7 +82,7 @@ void ProcessSpork(CNode* pfrom, std::string& strCommand, CDataStream& vRecv)
 
         LogPrintf("%s : new %s ID %d Time %d bestHeight %d\n", __func__, hash.ToString(), spork.nSporkID, spork.nValue, chainActive.Tip()->nHeight);
 
-        bool fRequireNew = spork.nTimeSigned >= Params().NewSporkStart();
+        bool fRequireNew = true;
         if (!sporkManager.CheckSignature(spork, fRequireNew)) {
             LogPrintf("%s : Invalid Signature\n", __func__);
             Misbehaving(pfrom->GetId(), 100);
@@ -186,10 +186,10 @@ bool CSporkManager::CheckSignature(CSporkMessage& spork, bool fRequireNew)
         return false;
 
     // See if window is open that allows for old spork key to sign messages
-    if (!fValidWithNewKey && GetAdjustedTime() < Params().RejectOldSporkKey()) {
-        CPubKey pubkeyold(ParseHex(Params().SporkKeyOld()));
-        return obfuScationSigner.VerifyMessage(pubkeyold, spork.vchSig, strMessage, errorMessage);
-    }
+    // if (!fValidWithNewKey && GetAdjustedTime() < Params().RejectOldSporkKey()) {
+    //    CPubKey pubkeyold(ParseHex(Params().SporkKeyOld()));
+    //    return obfuScationSigner.VerifyMessage(pubkeyold, spork.vchSig, strMessage, errorMessage);
+    // }
 
     return fValidWithNewKey;
 }
@@ -252,7 +252,8 @@ bool CSporkManager::SetPrivKey(std::string strPrivKey)
 
     Sign(msg);
 
-    bool fRequireNew = GetTime() >= Params().NewSporkStart();
+    // bool fRequireNew = GetTime() >= Params().NewSporkStart();
+    bool fRequireNew = true;
     if (CheckSignature(msg, fRequireNew)) {
         LogPrintf("CSporkManager::SetPrivKey - Successfully initialized as spork signer\n");
         return true;
