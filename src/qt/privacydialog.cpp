@@ -35,7 +35,7 @@ PrivacyDialog::PrivacyDialog(QWidget* parent) : QDialog(parent, Qt::WindowSystem
     ui->setupUi(this);
 
     // "Spending 999999 zPIV ought to be enough for anybody." - Bill Gates, 2017
-    ui->zPIVpayAmount->setValidator( new QDoubleValidator(0.0, 21000000.0, 20, this) );
+    ui->zPIVpayAmount->setValidator( new QDoubleValidator(0.0, 20000000000.0, 20, this) );
     //ui->labelMintAmountValue->setValidator( new QIntValidator(0, 999999, this) );     // disable MINT
 
     // Default texts for (mini-) coincontrol
