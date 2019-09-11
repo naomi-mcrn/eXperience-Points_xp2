@@ -33,8 +33,6 @@
 #include <boost/thread.hpp>
 #include <boost/tuple/tuple.hpp>
 
-using namespace std;
-
 //////////////////////////////////////////////////////////////////////////////
 //
 // PIVXMiner
@@ -208,9 +206,9 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn, CWallet* pwallet, 
         bool fPrintPriority = GetBoolArg("-printpriority", false);
 
         // Setup temporary vectors for delaying Coinstake till after tx evalaution
-        vector<CTransaction> vecXPtx;
-        vector<CAmount> vecXPnTxFees;
-        vector<unsigned int> vecXPnTxSigOps;
+	std::vector<CTransaction> vecXPtx;
+	std::vector<CAmount> vecXPnTxFees;
+	std::vector<unsigned int> vecXPnTxSigOps;
 
         // This vector will be sorted into a priority queue:
         std::vector<TxPriority> vecPriority;
