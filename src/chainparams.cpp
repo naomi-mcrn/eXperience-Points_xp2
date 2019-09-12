@@ -145,20 +145,20 @@ public:
         // nPivxBadBlockTime = 1471401614; // Skip nBit validation of Block 259201 per PR #915
         // nPivxBadBlocknBits = 0x1c056dac; // Skip nBit validation of Block 259201 per PR #915
         nModifierUpdateBlock = 0;
-        nZerocoinStartHeight = 999999999;
-        nZerocoinStartTime = 4294967295;
+        nZerocoinStartHeight = 20;
+        nZerocoinStartTime = 1568063714;
         nBlockEnforceSerialRange = 0; //Enforce serial range starting this block
         nBlockRecalculateAccumulators = 999999999; //Trigger a recalculation of accumulators
         nBlockFirstFraudulent = 0; //First block that bad serials emerged
         nBlockLastGoodCheckpoint = 0; //Last valid accumulator checkpoint
         nBlockEnforceInvalidUTXO = 0; //Start enforcing the invalid UTXO's
         nInvalidAmountFiltered = 0 * COIN; //Amount of invalid coins filtered through exchanges, that should be considered valid
-        nBlockZerocoinV2 = 999999999; //!> The block that zerocoin v2 becomes active
+        nBlockZerocoinV2 = 40; //!> The block that zerocoin v2 becomes active
         nBlockDoubleAccumulated = 0;
         // nEnforceNewSporkKey = 1566860400; //!> Sporks signed after Monday, August 26, 2019 11:00:00 PM GMT must use the new spork key
         // nRejectOldSporkKey = 1569538800; //!> Fully reject old spork key after Thursday, September 26, 2019 11:00:00 PM GMT
 
-        nBlockStakeModifierlV2 = 0;
+        nBlockStakeModifierlV2 = 801;
         // Public coin spend enforcement
         nPublicZCSpends = 0;
 
@@ -305,7 +305,7 @@ public:
         nModifierUpdateBlock = 0;
         nMaxMoneyOut = 20000000000  * COIN;
         nZerocoinStartHeight = 999999999;
-        nZerocoinStartTime = 4294967295;
+        nZerocoinStartTime = 2147483647;
         nBlockEnforceSerialRange = 0; //Enforce serial range starting this block
         nBlockRecalculateAccumulators = 999999999; //Trigger a recalculation of accumulators
         nBlockFirstFraudulent = 0; //First block that bad serials emerged
@@ -426,7 +426,7 @@ public:
         nMaxMoneyOut = 20000000000 * COIN;
         nZerocoinStartHeight = 999999999;
         nBlockZerocoinV2 = 999999999;
-        nZerocoinStartTime = 4294967295;
+        nZerocoinStartTime = 2147483647;
         nBlockEnforceSerialRange = 0; //Enforce serial range starting this block
         nBlockRecalculateAccumulators = 999999999; //Trigger a recalculation of accumulators
         nBlockFirstFraudulent = 0; //First block that bad serials emerged
