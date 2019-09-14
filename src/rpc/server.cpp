@@ -226,9 +226,17 @@ std::string CRPCTable::help(std::string strCommand) const
                     if (!category.empty())
                         strRet += "\n";
                     category = pcmd->category;
-                    std::string firstLetter = category.substr(0, 1);
-                    boost::to_upper(firstLetter);
-                    strRet += "== " + firstLetter + category.substr(1) + " ==\n";
+                    if (pcmd->category == "experiencepoints") {
+                        strRet += "== eXperience Points ==\n";
+                    } else if (pcmd->category == "util") {
+                        strRet += "== Utility ==\n";
+                    } else if (pcmd->category == "rawtransactions") {
+                        strRet += "== Raw Transactions ==\n";
+                    } else {
+			std::string firstLetter = category.substr(0, 1);
+                        boost::to_upper(firstLetter);
+                        strRet += "== " + firstLetter + category.substr(1) + " ==\n";
+                    }
                 }
             }
             strRet += strHelp + "\n";
@@ -265,11 +273,11 @@ UniValue stop(const UniValue& params, bool fHelp)
     if (fHelp || params.size() > 1)
         throw std::runtime_error(
             "stop\n"
-            "\nStop PIVX server.");
+            "\nStop eXperience Points server.");
     // Event loop will exit after current HTTP requests have been handled, so
     // this reply will get back to the client.
     StartShutdown();
-    return "PIVX server stopping";
+    return "eXperience Points server stopping";
 }
 
 
@@ -363,34 +371,34 @@ static const CRPCCommand vRPCCommands[] =
         { "hidden",             "waitforblockheight",     &waitforblockheight,     true,  true,  false  },
 
         /* PIVX features */
-        {"pivx", "listmasternodes", &listmasternodes, true, true, false},
-        {"pivx", "getmasternodecount", &getmasternodecount, true, true, false},
-        {"pivx", "masternodeconnect", &masternodeconnect, true, true, false},
-        {"pivx", "createmasternodebroadcast", &createmasternodebroadcast, true, true, false},
-        {"pivx", "decodemasternodebroadcast", &decodemasternodebroadcast, true, true, false},
-        {"pivx", "relaymasternodebroadcast", &relaymasternodebroadcast, true, true, false},
-        {"pivx", "masternodecurrent", &masternodecurrent, true, true, false},
-        {"pivx", "masternodedebug", &masternodedebug, true, true, false},
-        {"pivx", "startmasternode", &startmasternode, true, true, false},
-        {"pivx", "createmasternodekey", &createmasternodekey, true, true, false},
-        {"pivx", "getmasternodeoutputs", &getmasternodeoutputs, true, true, false},
-        {"pivx", "listmasternodeconf", &listmasternodeconf, true, true, false},
-        {"pivx", "getmasternodestatus", &getmasternodestatus, true, true, false},
-        {"pivx", "getmasternodewinners", &getmasternodewinners, true, true, false},
-        {"pivx", "getmasternodescores", &getmasternodescores, true, true, false},
-        {"pivx", "preparebudget", &preparebudget, true, true, false},
-        {"pivx", "submitbudget", &submitbudget, true, true, false},
-        {"pivx", "mnbudgetvote", &mnbudgetvote, true, true, false},
-        {"pivx", "getbudgetvotes", &getbudgetvotes, true, true, false},
-        {"pivx", "getnextsuperblock", &getnextsuperblock, true, true, false},
-        {"pivx", "getbudgetprojection", &getbudgetprojection, true, true, false},
-        {"pivx", "getbudgetinfo", &getbudgetinfo, true, true, false},
-        {"pivx", "mnbudgetrawvote", &mnbudgetrawvote, true, true, false},
-        {"pivx", "mnfinalbudget", &mnfinalbudget, true, true, false},
-        {"pivx", "checkbudgets", &checkbudgets, true, true, false},
-        {"pivx", "mnsync", &mnsync, true, true, false},
-        {"pivx", "spork", &spork, true, true, false},
-        {"pivx", "getpoolinfo", &getpoolinfo, true, true, false},
+        {"experiencepoints", "listmasternodes", &listmasternodes, true, true, false},
+        {"experiencepoints", "getmasternodecount", &getmasternodecount, true, true, false},
+        {"experiencepoints", "masternodeconnect", &masternodeconnect, true, true, false},
+        {"experiencepoints", "createmasternodebroadcast", &createmasternodebroadcast, true, true, false},
+        {"experiencepoints", "decodemasternodebroadcast", &decodemasternodebroadcast, true, true, false},
+        {"experiencepoints", "relaymasternodebroadcast", &relaymasternodebroadcast, true, true, false},
+        {"experiencepoints", "masternodecurrent", &masternodecurrent, true, true, false},
+        {"experiencepoints", "masternodedebug", &masternodedebug, true, true, false},
+        {"experiencepoints", "startmasternode", &startmasternode, true, true, false},
+        {"experiencepoints", "createmasternodekey", &createmasternodekey, true, true, false},
+        {"experiencepoints", "getmasternodeoutputs", &getmasternodeoutputs, true, true, false},
+        {"experiencepoints", "listmasternodeconf", &listmasternodeconf, true, true, false},
+        {"experiencepoints", "getmasternodestatus", &getmasternodestatus, true, true, false},
+        {"experiencepoints", "getmasternodewinners", &getmasternodewinners, true, true, false},
+        {"experiencepoints", "getmasternodescores", &getmasternodescores, true, true, false},
+        {"experiencepoints", "preparebudget", &preparebudget, true, true, false},
+        {"experiencepoints", "submitbudget", &submitbudget, true, true, false},
+        {"experiencepoints", "mnbudgetvote", &mnbudgetvote, true, true, false},
+        {"experiencepoints", "getbudgetvotes", &getbudgetvotes, true, true, false},
+        {"experiencepoints", "getnextsuperblock", &getnextsuperblock, true, true, false},
+        {"experiencepoints", "getbudgetprojection", &getbudgetprojection, true, true, false},
+        {"experiencepoints", "getbudgetinfo", &getbudgetinfo, true, true, false},
+        {"experiencepoints", "mnbudgetrawvote", &mnbudgetrawvote, true, true, false},
+        {"experiencepoints", "mnfinalbudget", &mnfinalbudget, true, true, false},
+        {"experiencepoints", "checkbudgets", &checkbudgets, true, true, false},
+        {"experiencepoints", "mnsync", &mnsync, true, true, false},
+        {"experiencepoints", "spork", &spork, true, true, false},
+        {"experiencepoints", "getpoolinfo", &getpoolinfo, true, true, false},
 
 #ifdef ENABLE_WALLET
         /* Wallet */
@@ -461,11 +469,11 @@ static const CRPCCommand vRPCCommands[] =
         {"zerocoin", "exportzerocoins", &exportzerocoins, false, false, true},
         {"zerocoin", "reconsiderzerocoins", &reconsiderzerocoins, false, false, true},
         {"zerocoin", "getspentzerocoinamount", &getspentzerocoinamount, false, false, false},
-        {"zerocoin", "getzpivseed", &getzpivseed, false, false, true},
-        {"zerocoin", "setzpivseed", &setzpivseed, false, false, true},
+        {"zerocoin", "getzxpseed", &getzpivseed, false, false, true},
+        {"zerocoin", "setzxpseed", &setzpivseed, false, false, true},
         {"zerocoin", "generatemintlist", &generatemintlist, false, false, true},
-        {"zerocoin", "searchdzpiv", &searchdzpiv, false, false, true},
-        {"zerocoin", "dzpivstate", &dzpivstate, false, false, true},
+        {"zerocoin", "searchdzxp", &searchdzpiv, false, false, true},
+        {"zerocoin", "dzxpstate", &dzpivstate, false, false, true},
         {"zerocoin", "clearspendcache", &clearspendcache, false, false, true}
 
 #endif // ENABLE_WALLET
@@ -630,7 +638,7 @@ std::vector<std::string> CRPCTable::listCommands() const
 
 std::string HelpExampleCli(std::string methodname, std::string args)
 {
-    return "> pivx-cli " + methodname + " " + args + "\n";
+    return "> eXperiencePoints-cli " + methodname + " " + args + "\n";
 }
 
 std::string HelpExampleRpc(std::string methodname, std::string args)
