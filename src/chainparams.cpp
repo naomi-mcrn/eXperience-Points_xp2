@@ -53,7 +53,9 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
     (0, uint256("0x0000077e296b47aa3003520719b8aafcba7c3975d39b4e19b899f14a70abe5f6"))
-    (850, uint256("0x11b21800ad2b1323d57528bbc64a9518ee67d3ca2378fdee8cb4de387ab6b28a"));
+    (850, uint256("0x11b21800ad2b1323d57528bbc64a9518ee67d3ca2378fdee8cb4de387ab6b28a"))
+    (5051, uint256("0x1766163ec2596b18aa8762e2dc4a7d86a06249cf569007e9c2f3da0b1431144f"))
+    (10431, uint256("0xcb542ae5eaf1cb8d9872c205bf28bbd102dd1c29a708888bc43357491247c673"));
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
     1568829600, // * UNIX timestamp of last checkpoint block

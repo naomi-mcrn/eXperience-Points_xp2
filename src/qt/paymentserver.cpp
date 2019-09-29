@@ -44,14 +44,14 @@
 
 
 const int BITCOIN_IPC_CONNECT_TIMEOUT = 1000; // milliseconds
-const QString BITCOIN_IPC_PREFIX("pivx:");
+const QString BITCOIN_IPC_PREFIX("xp:");
 // BIP70 payment protocol messages
 const char* BIP70_MESSAGE_PAYMENTACK = "PaymentACK";
 const char* BIP70_MESSAGE_PAYMENTREQUEST = "PaymentRequest";
 // BIP71 payment protocol media types
-const char* BIP71_MIMETYPE_PAYMENT = "application/pivx-payment";
-const char* BIP71_MIMETYPE_PAYMENTACK = "application/pivx-paymentack";
-const char* BIP71_MIMETYPE_PAYMENTREQUEST = "application/pivx-paymentrequest";
+const char* BIP71_MIMETYPE_PAYMENT = "application/xp-payment";
+const char* BIP71_MIMETYPE_PAYMENTACK = "application/xp-paymentack";
+const char* BIP71_MIMETYPE_PAYMENTREQUEST = "application/xp-paymentrequest";
 // BIP70 max payment request size in bytes (DoS protection)
 const qint64 BIP70_MAX_PAYMENTREQUEST_SIZE = 50000;
 
@@ -287,7 +287,7 @@ PaymentServer::PaymentServer(QObject* parent, bool startLocalServer) : QObject(p
         if (!uriServer->listen(name)) {
             // constructor is called early in init, so don't use "emit message()" here
             QMessageBox::critical(0, tr("Payment request error"),
-                tr("Cannot start pivx: click-to-pay handler"));
+                tr("Cannot start xp: click-to-pay handler"));
         } else {
             connect(uriServer, SIGNAL(newConnection()), this, SLOT(handleURIConnection()));
             connect(this, SIGNAL(receivedPaymentACK(QString)), this, SLOT(handlePaymentACK(QString)));
@@ -397,7 +397,7 @@ void PaymentServer::handleURIOrFile(const QString& s)
                     emit receivedPaymentRequest(recipient);
             } else
                 emit message(tr("URI handling"),
-                    tr("URI cannot be parsed! This can be caused by an invalid PIVX address or malformed URI parameters."),
+                    tr("URI cannot be parsed! This can be caused by an invalid address or malformed URI parameters."),
                     CClientUIInterface::ICON_WARNING);
 
             return;
