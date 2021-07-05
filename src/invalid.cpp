@@ -28,9 +28,6 @@ namespace invalid_out
     {
         UniValue v = read_json(LoadInvalidOutPoints());
 
-        if (v.empty())
-            return false;
-
         for (unsigned int idx = 0; idx < v.size(); idx++) {
             const UniValue &val = v[idx];
             const UniValue &o = val.get_obj();
