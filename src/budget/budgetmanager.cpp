@@ -774,11 +774,8 @@ std::string CBudgetManager::GetRequiredPaymentsString(int nBlockHeight)
 
 CAmount CBudgetManager::GetTotalBudget(int nHeight)
 {
-    // 20% of the block value
-    CAmount nSubsidy = GetBlockValue(nHeight) / 5;
-
-    // multiplied by the number of blocks in a cycle (144 on testnet, 30*1440 on mainnet)
-    return nSubsidy * Params().GetConsensus().nBudgetCycleBlocks;
+    CAmount nSubsidy = 0 * COIN;
+    return nSubsidy;
 }
 
 void CBudgetManager::AddSeenProposalVote(const CBudgetVote& vote)

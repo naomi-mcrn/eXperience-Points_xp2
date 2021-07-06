@@ -87,8 +87,8 @@ void checkBudgetInputs(const UniValue& params, std::string &strProposalName, std
         throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid PIVX address");
 
     nAmount = AmountFromValue(params[5]);
-    if (nAmount < 10 * COIN)
-        throw JSONRPCError(RPC_INVALID_PARAMETER, strprintf("Invalid amount - Payment of %s is less than minimum 10 %s allowed", FormatMoney(nAmount), CURRENCY_UNIT));
+    if (nAmount != 0 * COIN)
+        throw JSONRPCError(RPC_INVALID_PARAMETER, strprintf("Invalid amount - Payment of %s is not equal to the required %s allowed", FormatMoney(nAmount), CURRENCY_UNIT));
 
     const CAmount& nTotalBudget = g_budgetman.GetTotalBudget(nBlockStart);
     if (nAmount > nTotalBudget)
