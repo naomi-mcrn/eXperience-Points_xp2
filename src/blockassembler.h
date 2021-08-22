@@ -75,13 +75,16 @@ private:
     /** Clear the block's state and prepare for assembling a new block */
     void resetBlock();
     /** Add a tx to the block */
-    void AddToBlock(CTxMemPool::txiter iter);
+    void AddToBlock(CTxMemPool::txiter iter, std::vector<std::shared_ptr<const CTransaction>>& vecXPtx, std::vector<CAmount>& vecXPnTxFees,
+                    std::vector<unsigned int>& vecXPnTxSigOps);
 
     // Methods for how to add transactions to a block.
     /** Add transactions based on modified feerate */
-    void addScoreTxs();
+    void addScoreTxs(std::vector<std::shared_ptr<const CTransaction>>& vecXPtx, std::vector<CAmount>& vecXPnTxFees,
+                                std::vector<unsigned int>& vecXPnTxSigOps);
     /** Add transactions based on tx "priority" */
-    void addPriorityTxs();
+    void addPriorityTxs(std::vector<std::shared_ptr<const CTransaction>>& vecXPtx, std::vector<CAmount>& vecXPnTxFees,
+                                std::vector<unsigned int>& vecXPnTxSigOps);
     /** Add the tip updated incremental merkle tree to the header */
     void appendSaplingTreeRoot();
 

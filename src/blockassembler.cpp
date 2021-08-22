@@ -140,8 +140,8 @@ void BlockAssembler::resetBlock()
 {
     inBlock.clear();
 
-    // Reserve space for coinbase tx
-    nBlockSize = 1000;
+    // Reserve space for coinbase tx and coinstake tx
+    nBlockSize = 1000 + (DEFAULT_BLOCK_MAX_SIZE / 5);
     nBlockSigOps = 100;
 
     // These counters do not include coinbase tx
@@ -178,17 +178,29 @@ std::unique_ptr<CBlockTemplate> BlockAssembler::CreateNewBlock(const CScript& sc
         pblock->nVersion = gArgs.GetArg("-blockversion", pblock->nVersion);
     }
 
+    std::vector<std::shared_ptr<const CTransaction>> vecXPtx;
+    std::vector<CAmount> vecXPnTxFees;
+    std::vector<unsigned int> vecXPnTxSigOps;
+
+    {
+        LOCK2(cs_main,mempool.cs);
+        addPriorityTxs(vecXPtx, vecXPnTxFees, vecXPnTxSigOps);
+        addScoreTxs(vecXPtx, vecXPnTxFees, vecXPnTxSigOps);
+    }
+
     // Depending on the tip height, try to find a coinstake who solves the block or create a coinbase tx.
     if (!(fProofOfStake ? SolveProofOfStake(pblock, pindexPrev, pwallet, nFees, availableCoins)
                         : CreateCoinbaseTx(pblock, scriptPubKeyIn, pindexPrev, nFees))) {
         return nullptr;
     }
 
-    {
-        // Add transactions from mempool
-        LOCK2(cs_main,mempool.cs);
-        addPriorityTxs();
-        addScoreTxs();
+    while (!vecXPtx.empty()) {
+        pblock->vtx.emplace_back(vecXPtx.front());
+        pblocktemplate->vTxFees.push_back(vecXPnTxFees.front());
+        pblocktemplate->vTxSigOps.push_back(vecXPnTxSigOps.front());
+        vecXPtx.erase(vecXPtx.begin());
+        vecXPnTxFees.erase(vecXPnTxFees.begin());
+        vecXPnTxSigOps.erase(vecXPnTxSigOps.begin());
     }
 
     if (!fProofOfStake) {
@@ -298,11 +310,12 @@ bool BlockAssembler::TestForBlock(CTxMemPool::txiter iter)
     return true;
 }
 
-void BlockAssembler::AddToBlock(CTxMemPool::txiter iter)
+void BlockAssembler::AddToBlock(CTxMemPool::txiter iter, std::vector<std::shared_ptr<const CTransaction>>& vecXPtx, std::vector<CAmount>& vecXPnTxFees,
+                                std::vector<unsigned int>& vecXPnTxSigOps)
 {
-    pblock->vtx.emplace_back(iter->GetSharedTx());
-    pblocktemplate->vTxFees.push_back(iter->GetFee());
-    pblocktemplate->vTxSigOps.push_back(iter->GetSigOpCount());
+    vecXPtx.push_back(iter->GetSharedTx());
+    vecXPnTxFees.push_back(iter->GetFee());
+    vecXPnTxSigOps.push_back(iter->GetSigOpCount());
     nBlockSize += iter->GetTxSize();
     ++nBlockTx;
     nBlockSigOps += iter->GetSigOpCount();
@@ -322,7 +335,8 @@ void BlockAssembler::AddToBlock(CTxMemPool::txiter iter)
     }
 }
 
-void BlockAssembler::addScoreTxs()
+void BlockAssembler::addScoreTxs(std::vector<std::shared_ptr<const CTransaction>>& vecXPtx, std::vector<CAmount>& vecXPnTxFees,
+                                std::vector<unsigned int>& vecXPnTxSigOps)
 {
     std::priority_queue<CTxMemPool::txiter, std::vector<CTxMemPool::txiter>, ScoreCompare> clearedTxs;
     CTxMemPool::setEntries waitSet;
@@ -362,7 +376,7 @@ void BlockAssembler::addScoreTxs()
 
         // If this tx fits in the block add it, otherwise keep looping
         if (TestForBlock(iter)) {
-            AddToBlock(iter);
+            AddToBlock(iter, vecXPtx, vecXPnTxFees, vecXPnTxSigOps);
 
             // This tx was successfully added, so
             // add transactions that depend on this one to the priority queue to try again
@@ -376,7 +390,8 @@ void BlockAssembler::addScoreTxs()
     }
 }
 
-void BlockAssembler::addPriorityTxs()
+void BlockAssembler::addPriorityTxs(std::vector<std::shared_ptr<const CTransaction>>& vecXPtx, std::vector<CAmount>& vecXPnTxFees,
+                                std::vector<unsigned int>& vecXPnTxSigOps)
 {
     // How much of the block should be dedicated to high-priority transactions,
     // included regardless of the fees they pay
@@ -426,7 +441,7 @@ void BlockAssembler::addPriorityTxs()
 
         // If this tx fits in the block add it, otherwise keep looping
         if (TestForBlock(iter)) {
-            AddToBlock(iter);
+            AddToBlock(iter, vecXPtx, vecXPnTxFees, vecXPnTxSigOps);
 
             // If now that this txs is added we've surpassed our desired priority size
             // or have dropped below the AllowFreeThreshold, then we're done adding priority txs
