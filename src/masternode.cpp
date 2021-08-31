@@ -281,6 +281,12 @@ bool CMasternodeBroadcast::Create(const CTxIn& txin,
     // wait for reindex and/or import to finish
     if (fImporting || fReindex) return false;
 
+    bool fNewSigs = false;
+    {
+        LOCK(cs_main);
+        fNewSigs = chainActive.NewSigsActive();
+    }
+
     LogPrint(BCLog::MASTERNODE, "CMasternodeBroadcast::Create -- pubKeyCollateralAddressNew = %s, pubKeyMasternodeNew.GetID() = %s\n",
              EncodeDestination(pubKeyCollateralAddressNew.GetID()),
         pubKeyMasternodeNew.GetID().ToString());
@@ -288,7 +294,7 @@ bool CMasternodeBroadcast::Create(const CTxIn& txin,
     // Get block hash to ping (TODO: move outside of this function)
     const uint256& nBlockHashToPing = mnodeman.GetBlockHashToPing();
     CMasternodePing mnp(txin, nBlockHashToPing, GetAdjustedTime());
-    if (!mnp.Sign(keyMasternodeNew, pubKeyMasternodeNew.GetID())) {
+    if (!mnp.Sign(keyMasternodeNew, pubKeyMasternodeNew.GetID(), fNewSigs)) {
         strErrorRet = strprintf("Failed to sign ping, masternode=%s", txin.prevout.hash.ToString());
         LogPrint(BCLog::MASTERNODE,"CMasternodeBroadcast::Create -- %s\n", strErrorRet);
         mnbRet = CMasternodeBroadcast();
@@ -304,7 +310,7 @@ bool CMasternodeBroadcast::Create(const CTxIn& txin,
         return false;
     }
 
-    if (!mnbRet.Sign(keyCollateralAddressNew, pubKeyCollateralAddressNew)) {
+    if (!mnbRet.Sign(keyCollateralAddressNew, pubKeyCollateralAddressNew, fNewSigs)) {
         strErrorRet = strprintf("Failed to sign broadcast, masternode=%s", txin.prevout.hash.ToString());
         LogPrint(BCLog::MASTERNODE,"CMasternodeBroadcast::Create -- %s\n", strErrorRet);
         mnbRet = CMasternodeBroadcast();
@@ -314,11 +320,18 @@ bool CMasternodeBroadcast::Create(const CTxIn& txin,
     return true;
 }
 
-bool CMasternodeBroadcast::Sign(const CKey& key, const CPubKey& pubKey)
+bool CMasternodeBroadcast::Sign(const CKey& key, const CPubKey& pubKey, const bool fNewSigs)
 {
     std::string strError = "";
-    nMessVersion = MessageVersion::MESS_VER_HASH;
-    const std::string strMessage = GetSignatureHash().GetHex();
+    std::string strMessage;
+
+    if (fNewSigs) {
+        nMessVersion = MessageVersion::MESS_VER_HASH;
+        strMessage = GetSignatureHash().GetHex();
+    } else {
+        nMessVersion = MessageVersion::MESS_VER_STRMESS;
+        strMessage = GetStrMessage();
+    }
 
     if (!CMessageSigner::SignMessage(strMessage, vchSig, key)) {
         return error("%s : SignMessage() (nMessVersion=%d) failed", __func__, nMessVersion);
@@ -332,7 +345,7 @@ bool CMasternodeBroadcast::Sign(const CKey& key, const CPubKey& pubKey)
     return true;
 }
 
-bool CMasternodeBroadcast::Sign(const std::string strSignKey)
+bool CMasternodeBroadcast::Sign(const std::string strSignKey, const bool fNewSigs)
 {
     CKey key;
     CPubKey pubkey;
@@ -341,7 +354,7 @@ bool CMasternodeBroadcast::Sign(const std::string strSignKey)
         return error("%s : Invalid strSignKey", __func__);
     }
 
-    return Sign(key, pubkey);
+    return Sign(key, pubkey, fNewSigs);
 }
 
 bool CMasternodeBroadcast::CheckSignature() const

@@ -237,8 +237,14 @@ bool voteProposal(CPubKey& pubKeyMasternode, CKey& keyMasternode, const std::str
         return false;
     }
 
+    bool fNewSigs = false;
+    {
+        LOCK(cs_main);
+        fNewSigs = chainActive.NewSigsActive();
+    }
+
     CBudgetVote vote(pmn->vin, propHash, nVote);
-    if (!vote.Sign(keyMasternode, pubKeyMasternode.GetID())) {
+    if (!vote.Sign(keyMasternode, pubKeyMasternode.GetID(), fNewSigs)) {
         resultsObj.push_back(packErrorRetStatus(mnAlias, "Failure to sign."));
         return false;
     }
@@ -728,6 +734,12 @@ UniValue mnfinalbudget(const JSONRPCRequest& request)
             "  show        - Show existing finalized budgets\n"
             "  getvotes     - Get vote information for each finalized budget\n");
 
+    bool fNewSigs = false;
+    {
+        LOCK(cs_main);
+        fNewSigs = chainActive.NewSigsActive();
+    }
+
     if (strCommand == "vote-many") {
         if (request.params.size() != 2)
             throw std::runtime_error("Correct usage is 'mnfinalbudget vote-many BUDGET_HASH'");
@@ -770,7 +782,7 @@ UniValue mnfinalbudget(const JSONRPCRequest& request)
 
 
             CFinalizedBudgetVote vote(pmn->vin, hash);
-            if (!vote.Sign(keyMasternode, pubKeyMasternode.GetID())) {
+            if (!vote.Sign(keyMasternode, pubKeyMasternode.GetID(), fNewSigs)) {
                 failed++;
                 statusObj.pushKV("result", "failed");
                 statusObj.pushKV("errorMessage", "Failure to sign.");
@@ -821,7 +833,7 @@ UniValue mnfinalbudget(const JSONRPCRequest& request)
         }
 
         CFinalizedBudgetVote vote(*(activeMasternode.vin), hash);
-        if (!vote.Sign(keyMasternode, pubKeyMasternode.GetID())) {
+        if (!vote.Sign(keyMasternode, pubKeyMasternode.GetID(), fNewSigs)) {
             return "Failure to sign.";
         }
 

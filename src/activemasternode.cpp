@@ -185,9 +185,15 @@ bool CActiveMasternode::SendMasternodePing(std::string& errorMessage)
 
     LogPrintf("CActiveMasternode::SendMasternodePing() - Relay Masternode Ping vin = %s\n", vin->ToString());
 
+    bool fNewSigs = false;
+    {
+        LOCK(cs_main);
+        fNewSigs = chainActive.NewSigsActive();
+    }
+
     const uint256& nBlockHash = mnodeman.GetBlockHashToPing();
     CMasternodePing mnp(*vin, nBlockHash, GetAdjustedTime());
-    if (!mnp.Sign(privKeyMasternode, pubKeyMasternode.GetID())) {
+    if (!mnp.Sign(privKeyMasternode, pubKeyMasternode.GetID(), fNewSigs)) {
         errorMessage = "Couldn't sign Masternode Ping";
         return false;
     }

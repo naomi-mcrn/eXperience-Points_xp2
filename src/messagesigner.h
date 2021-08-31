@@ -63,8 +63,8 @@ public:
     virtual ~CSignedMessage() {};
 
     // Sign-Verify message
-    bool Sign(const CKey& key, const CKeyID& keyID);
-    bool Sign(const std::string strSignKey);
+    bool Sign(const CKey& key, const CKeyID& keyID, const bool fNewSigs);
+    bool Sign(const std::string strSignKey, const bool fNewSigs);
     bool CheckSignature(const CKeyID& keyID) const;
 
     // Pure virtual functions (used in Sign-Verify functions)

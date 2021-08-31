@@ -114,6 +114,14 @@ int CSporkManager::ProcessSporkMsg(CDataStream& vRecv)
 
 int CSporkManager::ProcessSporkMsg(CSporkMessage& spork)
 {
+    int nChainHeight = 0;
+    {
+        LOCK(cs_main);
+        if (chainActive.Tip() == nullptr)
+            return 0;
+        nChainHeight = chainActive.Height();
+    }
+
     // Ignore spork messages about unknown/deleted sporks
     std::string strSpork = sporkManager.GetSporkNameByID(spork.nSporkID);
     if (strSpork == "Unknown") return 0;
@@ -124,10 +132,12 @@ int CSporkManager::ProcessSporkMsg(CSporkMessage& spork)
         return 100;
     }
 
-    // reject old signature version
+    // reject old signatures 600 blocks after hard-fork
     if (spork.nMessVersion != MessageVersion::MESS_VER_HASH) {
-        LogPrint(BCLog::SPORKS, "%s : nMessVersion=%d not accepted anymore\n", __func__, spork.nMessVersion);
-        return 0;
+        if (Params().GetConsensus().IsMessSigV2(nChainHeight - 600)) {
+            LogPrint(BCLog::SPORKS, "%s : nMessVersion=%d not accepted anymore at block %d\n", __func__, spork.nMessVersion, nChainHeight);
+            return 0;
+        }
     }
 
     uint256 hash = spork.GetHash();
@@ -197,9 +207,15 @@ void CSporkManager::ProcessGetSporks(CNode* pfrom, std::string& strCommand, CDat
 
 bool CSporkManager::UpdateSpork(SporkId nSporkID, int64_t nValue)
 {
+    bool fNewSigs = false;
+    {
+        LOCK(cs_main);
+        fNewSigs = chainActive.NewSigsActive();
+    }
+
     CSporkMessage spork = CSporkMessage(nSporkID, nValue, GetTime());
 
-    if(spork.Sign(strMasterPrivKey)){
+    if(spork.Sign(strMasterPrivKey, fNewSigs)){
         spork.Relay();
         LOCK(cs);
         mapSporks[spork.GetHash()] = spork;
@@ -260,7 +276,7 @@ bool CSporkManager::SetPrivKey(std::string strPrivKey)
 {
     CSporkMessage spork;
 
-    spork.Sign(strPrivKey);
+    spork.Sign(strPrivKey, true);
 
     bool fValidSig = spork.CheckSignature(spork.GetPublicKey().GetID());
     if (fValidSig) {

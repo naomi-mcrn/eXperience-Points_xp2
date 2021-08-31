@@ -522,10 +522,16 @@ void CBudgetManager::VoteOnFinalizedBudgets()
     CKey keyMasternode;
     activeMasternode.GetKeys(keyMasternode, pubKeyMasternode);
 
+    bool fNewSigs = false;
+    {
+        LOCK(cs_main);
+        fNewSigs = chainActive.NewSigsActive();
+    }
+
     // Sign finalized budgets
     for (const uint256& budgetHash: vBudgetHashes) {
         CFinalizedBudgetVote vote(*(activeMasternode.vin), budgetHash);
-        if (!vote.Sign(keyMasternode, pubKeyMasternode.GetID())) {
+        if (!vote.Sign(keyMasternode, pubKeyMasternode.GetID(), fNewSigs)) {
             LogPrintf("%s: Failure to sign budget %s", __func__, budgetHash.ToString());
             continue;
         }
