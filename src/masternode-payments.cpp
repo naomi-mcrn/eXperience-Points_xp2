@@ -438,8 +438,10 @@ void CMasternodePayments::ProcessMessageMasternodePayments(CNode* pfrom, std::st
         if (!pmn || !winner.CheckSignature(pmn->pubKeyMasternode.GetID())) {
             if (masternodeSync.IsSynced()) {
                 LogPrintf("CMasternodePayments::ProcessMessageMasternodePayments() : mnw - invalid signature\n");
-                LOCK(cs_main);
-                Misbehaving(pfrom->GetId(), 20);
+                if (Params().GetConsensus().NetworkUpgradeActive(nHeight, Consensus::UPGRADE_V5_2)) {
+                    LOCK(cs_main);
+                    Misbehaving(pfrom->GetId(), 20);
+                }
             }
             // it could just be a non-synced masternode
             mnodeman.AskForMN(pfrom, winner.vinMasternode);

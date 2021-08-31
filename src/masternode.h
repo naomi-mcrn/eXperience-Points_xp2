@@ -72,7 +72,7 @@ public:
     const CTxIn GetVin() const { return vin; };
     bool IsNull() const { return blockHash.IsNull() || vin.prevout.IsNull(); }
 
-    bool CheckAndUpdate(int& nDos, bool fRequireAvailable = true, bool fCheckSigTimeOnly = false);
+    bool CheckAndUpdate(int nChainHeight, int& nDos, bool fRequireAvailable = true, bool fCheckSigTimeOnly = false);
     void Relay();
 
     CMasternodePing& operator=(const CMasternodePing& other) = default;

@@ -130,7 +130,7 @@ bool CMasternode::UpdateFromNewBroadcast(CMasternodeBroadcast& mnb)
         protocolVersion = mnb.protocolVersion;
         addr = mnb.addr;
         int nDoS = 0;
-        if (mnb.lastPing.IsNull() || (!mnb.lastPing.IsNull() && mnb.lastPing.CheckAndUpdate(nDoS, false))) {
+        if (mnb.lastPing.IsNull() || (!mnb.lastPing.IsNull() && mnb.lastPing.CheckAndUpdate(chainActive.Height(), nDoS, false))) {
             lastPing = mnb.lastPing;
             mnodeman.mapSeenMasternodePing.emplace(lastPing.GetHash(), lastPing);
         }
@@ -437,7 +437,7 @@ bool CMasternodeBroadcast::CheckAndUpdate(int& nDos)
         return false;
 
     // incorrect ping or its sigTime
-    if(lastPing.IsNull() || !lastPing.CheckAndUpdate(nDos, false, true)) {
+    if(lastPing.IsNull() || !lastPing.CheckAndUpdate(chainActive.Height(), nDos, false, true)) {
         return false;
     }
 
@@ -484,7 +484,7 @@ bool CMasternodeBroadcast::CheckInputsAndAdd(int nChainHeight, int& nDoS)
     }
 
     // incorrect ping or its sigTime
-    if(lastPing.IsNull() || !lastPing.CheckAndUpdate(nDoS, false, true)) {
+    if(lastPing.IsNull() || !lastPing.CheckAndUpdate(chainActive.Height(), nDoS, false, true)) {
         return false;
     }
 
@@ -582,7 +582,7 @@ std::string CMasternodePing::GetStrMessage() const
     return vin.ToString() + blockHash.ToString() + std::to_string(sigTime);
 }
 
-bool CMasternodePing::CheckAndUpdate(int& nDos, bool fRequireAvailable, bool fCheckSigTimeOnly)
+bool CMasternodePing::CheckAndUpdate(int nChainHeight, int& nDos, bool fRequireAvailable, bool fCheckSigTimeOnly)
 {
     if (sigTime > GetAdjustedTime() + 60 * 60) {
         LogPrint(BCLog::MNPING,"%s: Signature rejected, too far into the future %s\n", __func__, vin.prevout.hash.ToString());
@@ -612,7 +612,11 @@ bool CMasternodePing::CheckAndUpdate(int& nDos, bool fRequireAvailable, bool fCh
 
     if(fCheckSigTimeOnly) {
         if (isMasternodeFound && !isSignatureValid) {
-            nDos = 33;
+            if (Params().GetConsensus().NetworkUpgradeActive(nChainHeight, Consensus::UPGRADE_V5_2)) {
+                nDos = 33;
+            } else {
+                nDos = 0;
+            }
             return false;
         }
         return true;
@@ -624,7 +628,11 @@ bool CMasternodePing::CheckAndUpdate(int& nDos, bool fRequireAvailable, bool fCh
 
         // Update ping only if the masternode is in available state (pre-enabled or enabled)
         if (fRequireAvailable && !pmn->IsAvailableState()) {
-            nDos = 20;
+            if (Params().GetConsensus().NetworkUpgradeActive(nChainHeight, Consensus::UPGRADE_V5_2)) {
+                nDos = 20;
+            } else {
+                nDos = 0;
+            }
             return false;
         }
 
@@ -632,7 +640,11 @@ bool CMasternodePing::CheckAndUpdate(int& nDos, bool fRequireAvailable, bool fCh
         // last ping was more then MASTERNODE_MIN_MNP_SECONDS-60 ago comparing to this one
         if (!pmn->IsPingedWithin(MasternodeMinPingSeconds() - 60, sigTime)) {
             if (!isSignatureValid) {
-                nDos = 33;
+                if (Params().GetConsensus().NetworkUpgradeActive(nChainHeight, Consensus::UPGRADE_V5_2)) {
+                    nDos = 33;
+                } else {
+                    nDos = 0;
+                }
                 return false;
             }
 

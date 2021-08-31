@@ -693,7 +693,7 @@ int CMasternodeMan::ProcessMNPing(CNode* pfrom, CMasternodePing& mnp)
     if (mapSeenMasternodePing.count(mnpHash)) return 0; //seen
 
     int nDoS = 0;
-    if (mnp.CheckAndUpdate(nDoS)) return 0;
+    if (mnp.CheckAndUpdate(GetBestHeight(), nDoS)) return 0;
 
     if (nDoS > 0) {
         // if anything significant failed, mark that node
