@@ -1721,7 +1721,7 @@ static bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockInd
 
     if (!fInitialBlockDownload) {
         // check masternode/budget payment
-        if (!IsBlockPayeeValid(block, pindex->nHeight)) {
+        if (!IsBlockPayeeValid(block, pindex->nHeight, nFees)) {
             mapRejectedBlocks.emplace(block.GetHash(), GetTime());
             return state.DoS(0, false, REJECT_INVALID, "bad-cb-payee", false, "Couldn't find masternode/budget payment");
         }
