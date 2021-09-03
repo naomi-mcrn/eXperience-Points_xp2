@@ -83,8 +83,8 @@
 #include <openssl/crypto.h>
 #include <openssl/rand.h>
 
-const char * const PIVX_CONF_FILENAME = "pivx.conf";
-const char * const PIVX_PID_FILENAME = "pivx.pid";
+const char * const PIVX_CONF_FILENAME = "eXperiencePoints.conf";
+const char * const PIVX_PID_FILENAME = "eXperiencePoints.pid";
 const char * const PIVX_MASTERNODE_CONF_FILENAME = "masternode.conf";
 
 
@@ -352,7 +352,7 @@ fs::path GetDefaultDataDir()
 // Unix: ~/.pivx
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "PIVX";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "eXperiencePoints";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -364,10 +364,10 @@ fs::path GetDefaultDataDir()
     // Mac
     pathRet /= "Library/Application Support";
     TryCreateDirectory(pathRet);
-    return pathRet / "PIVX";
+    return pathRet / "eXperiencePoints";
 #else
     // Unix
-    return pathRet / ".pivx";
+    return pathRet / ".eXperiencePoints";
 #endif
 #endif
 }
@@ -386,7 +386,7 @@ static fs::path ZC_GetBaseParamsDir()
     // Unix: ~/.pivx-params
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "PIVXParams";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "eXperiencePoints";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -398,10 +398,10 @@ static fs::path ZC_GetBaseParamsDir()
     // Mac
     pathRet /= "Library/Application Support";
     TryCreateDirectory(pathRet);
-    return pathRet / "PIVXParams";
+    return pathRet / "eXperiencePoints";
 #else
     // Unix
-    return pathRet / ".pivx-params";
+    return pathRet / ".eXperiencePoints";
 #endif
 #endif
 }
@@ -467,14 +467,14 @@ void initZKSNARKS()
         CFRelease(mainBundle);
 #else
         // Linux fallback path for debuild/ppa based installs
-        sapling_spend = "/usr/share/pivx/sapling-spend.params";
-        sapling_output = "/usr/share/pivx/sapling-output.params";
+        sapling_spend = "/usr/share/eXperiencePoints/sapling-spend.params";
+        sapling_output = "/usr/share/eXperiencePoints/sapling-output.params";
         if (fs::exists(sapling_spend) && fs::exists(sapling_output)) {
             fParamsFound = true;
         } else {
             // Linux fallback for local installs
-            sapling_spend = "/usr/local/share/pivx/sapling-spend.params";
-            sapling_output = "/usr/local/share/pivx/sapling-output.params";
+            sapling_spend = "/usr/local/share/eXperiencePoints/sapling-spend.params";
+            sapling_output = "/usr/local/share/eXperiencePoints/sapling-output.params";
         }
 #endif
         if (fs::exists(sapling_spend) && fs::exists(sapling_output))
