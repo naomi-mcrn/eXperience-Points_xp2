@@ -107,7 +107,7 @@ SettingsFaqWidget::SettingsFaqWidget(PIVXGUI *parent) :
     QString supportContent = formatFAQContent(
         formatFAQParagraph(
             tr("We have support channels in most of our official chat groups, for example %1")
-                .arg("<a style='color: #b088ff' href='https://discord.PIVX.org'>" + tr("#support in our Discord") + "</a>.")));
+                .arg("<a style='color: #ace1a5' href='https://discord.PIVX.org'>" + tr("#support in our Discord") + "</a>.")));
     ui->labelContent_Support->setText(supportContent);
 
     QString masternodeContent = formatFAQContent(
