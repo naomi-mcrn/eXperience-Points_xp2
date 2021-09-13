@@ -61,13 +61,13 @@ bool AppInit(int argc, char* argv[])
 
     // Process help and version before taking care about datadir
     if (gArgs.IsArgSet("-?") || gArgs.IsArgSet("-h") || gArgs.IsArgSet("-help") || gArgs.IsArgSet("-version")) {
-        std::string strUsage = _("Pivx Core Daemon") + " " + _("version") + " " + FormatFullVersion() + "\n";
+        std::string strUsage = _("eXperience Points Core Daemon") + " " + _("version") + " " + FormatFullVersion() + "\n";
 
         if (gArgs.IsArgSet("-version")) {
             strUsage += LicenseInfo();
         } else {
             strUsage += "\n" + _("Usage:") + "\n" +
-                        "  pivxd [options]                     " + _("Start Pivx Core Daemon") + "\n";
+                        "  eXperiencePointsd [options]                     " + _("Start eXperience Points Core Daemon") + "\n";
 
             strUsage += "\n" + HelpMessage(HMM_BITCOIND);
         }
@@ -105,7 +105,7 @@ bool AppInit(int argc, char* argv[])
         // Error out when loose non-argument tokens are encountered on command line
         for (int i = 1; i < argc; i++) {
             if (!IsSwitchChar(argv[i][0])) {
-                fprintf(stderr, "Error: Command line contains unexpected token '%s', see bitcoind -h for a list of options.\n", argv[i]);
+                fprintf(stderr, "Error: Command line contains unexpected token '%s', see eXperiencePointsd -h for a list of options.\n", argv[i]);
                 exit(EXIT_FAILURE);
             }
         }
@@ -131,7 +131,7 @@ bool AppInit(int argc, char* argv[])
 #ifndef WIN32
         fDaemon = gArgs.GetBoolArg("-daemon", false);
         if (fDaemon) {
-            fprintf(stdout, "PIVX server starting\n");
+            fprintf(stdout, "eXperience Points server starting\n");
 
             // Daemonize
             pid_t pid = fork();

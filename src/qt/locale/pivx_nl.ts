@@ -122,12 +122,12 @@
         <translation>Ontvangstadressen</translation>
     </message>
     <message>
-        <source>These are your PIVX addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Dit zijn uw PIVX adressen om betalingen mee te verzenden. Controleer altijd zowel het bedrag als het ontvangstadres voor het verzenden van geld.</translation>
+        <source>These are your eXperience Points addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Dit zijn uw eXperience Points adressen om betalingen mee te verzenden. Controleer altijd zowel het bedrag als het ontvangstadres voor het verzenden van geld.</translation>
     </message>
     <message>
-        <source>These are your PIVX addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Dit zijn uw PIVX adressen waarop betalingen kunnen worden ontvangen. Het wordt aangeraden om een nieuw ontvangstadres voor elke transactie te gebruiken.</translation>
+        <source>These are your eXperience Points addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Dit zijn uw eXperience Points adressen waarop betalingen kunnen worden ontvangen. Het wordt aangeraden om een nieuw ontvangstadres voor elke transactie te gebruiken.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -364,8 +364,8 @@ voor bewijs van Inzet</translation>
         <translation>Annuleren</translation>
     </message>
     <message>
-        <source>PIVX will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your PIVs from being stolen by malware infecting your computer.</source>
-        <translation>PIVX zal nu afsluiten om het versleutelingsproces te voltooien. Onthoud dat het versleutelen van uw portemonnee u niet volledig kan beschermen tegen malware infecties op uw computer die uw PIV's kunnen stelen.</translation>
+        <source>eXperience Points will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your XPs from being stolen by malware infecting your computer.</source>
+        <translation>eXperience Points zal nu afsluiten om het versleutelingsproces te voltooien. Onthoud dat het versleutelen van uw portemonnee u niet volledig kan beschermen tegen malware infecties op uw computer die uw XP's kunnen stelen.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -439,8 +439,8 @@ voor bewijs van Inzet</translation>
         <translation>Transparant</translation>
     </message>
     <message>
-        <source>0.00 pivx</source>
-        <translation>0.00 pivx</translation>
+        <source>0.00 XP</source>
+        <translation>0.00 XP</translation>
     </message>
     <message>
         <source>Shielded</source>
@@ -469,8 +469,8 @@ voor bewijs van Inzet</translation>
         <translation>Besparingen</translation>
     </message>
     <message>
-        <source>0,00 PIV</source>
-        <translation>0,00 PIV</translation>
+        <source>0,00 XP</source>
+        <translation>0,00 XP</translation>
     </message>
     <message>
         <source>address</source>
@@ -511,8 +511,8 @@ voor bewijs van Inzet</translation>
         <translation>Munt Selectie</translation>
     </message>
     <message>
-        <source>Select PIV Outputs to Spend</source>
-        <translation>Selecteer PIV Outputs om te besteden</translation>
+        <source>Select XP Outputs to Spend</source>
+        <translation>Selecteer XP Outputs om te besteden</translation>
     </message>
     <message>
         <source>Dust:</source>
@@ -539,8 +539,8 @@ voor bewijs van Inzet</translation>
         <translation>Bedrag</translation>
     </message>
     <message>
-        <source>0.00 PIV</source>
-        <translation>0.00 PIV</translation>
+        <source>0.00 XP</source>
+        <translation>0.00 XP</translation>
     </message>
     <message>
         <source>0</source>
@@ -738,9 +738,9 @@ voor bewijs van Inzet</translation>
         <translation>Fout bij laden delegaties: %1</translation>
     </message>
     <message>
-        <source>You can delegate your PIVs, letting a hot node (24/7 online node)
+        <source>You can delegate your XPs, letting a hot node (24/7 online node)
 stake on your behalf, while you keep the keys securely offline.</source>
-        <translation>Je kan jouw PIVs delegeren en een hot node (24/7 online node)
+        <translation>Je kan jouw XPs delegeren en een hot node (24/7 online node)
 voor je laten staken, terwijl je de sleutels veilig offline opslag bewaart.</translation>
     </message>
     <message>
@@ -748,8 +748,8 @@ voor je laten staken, terwijl je de sleutels veilig offline opslag bewaart.</tra
         <translation>Voer eigenaarsadres in</translation>
     </message>
     <message>
-        <source>Accept PIV delegation / Delegate PIV</source>
-        <translation>Accepteer PIV delegatie / Delegeer PIV</translation>
+        <source>Accept XP delegation / Delegate XP</source>
+        <translation>Accepteer XP delegatie / Delegeer XP</translation>
     </message>
     <message>
         <source>Cold Staking address</source>
@@ -953,8 +953,8 @@ address</source>
         <translation>Bekijk de geschiedenis van uw account</translation>
     </message>
     <message>
-        <source>How to get PIV</source>
-        <translation>Hoe PIV verkrijgen</translation>
+        <source>How to get XP</source>
+        <translation>Hoe XP verkrijgen</translation>
     </message>
     <message>
         <source>Sort by</source>
@@ -1069,8 +1069,8 @@ Het zal automatisch starten zodra de portemonnee voldoende bevestigingen heeft o
         <translation>Wijzig verzend adres</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid PIVX address.</source>
-        <translation>Het ingevoerde adres: "%1" is geen geldig PIVX adres.</translation>
+        <source>The entered address "%1" is not a valid eXperience Points address.</source>
+        <translation>Het ingevoerde adres: "%1" is geen geldig eXperience Points adres.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1122,16 +1122,16 @@ Het zal automatisch starten zodra de portemonnee voldoende bevestigingen heeft o
         <translation>versie</translation>
     </message>
     <message>
-        <source>PIVX Core</source>
-        <translation>PIVX Core</translation>
+        <source>eXperience Points Core</source>
+        <translation>eXperience Points Core</translation>
     </message>
     <message>
         <source>(%1-bit)</source>
         <translation>(%1-bit)</translation>
     </message>
     <message>
-        <source>About PIVX Core</source>
-        <translation>Over PIVX Core</translation>
+        <source>About eXperience Points Core</source>
+        <translation>Over eXperience Points Core</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -1185,16 +1185,16 @@ Het zal automatisch starten zodra de portemonnee voldoende bevestigingen heeft o
         <translation>Welkom</translation>
     </message>
     <message>
-        <source>Welcome to PIVX Core.</source>
-        <translation>Welkom bij PIVX Core.</translation>
+        <source>Welcome to eXperience Points Core.</source>
+        <translation>Welkom bij eXperience Points Core.</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where PIVX Core will store its data.</source>
-        <translation>Aangezien dit de eerste keer is dat het programma is gestart, kun je kiezen waar PIVX Core zijn data opslaat.</translation>
+        <source>As this is the first time the program is launched, you can choose where eXperience Points Core will store its data.</source>
+        <translation>Aangezien dit de eerste keer is dat het programma is gestart, kun je kiezen waar eXperience Points Core zijn data opslaat.</translation>
     </message>
     <message>
-        <source>PIVX Core will download and store a copy of the PIVX block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>PIVX Core zal een kopie van de PIVX blockchain downloaden en opslaan. Tenminste %1GB aan data zal worden opgeslagen in deze map en het zal over de tijd groeien. De portemonnee zal ook in deze map worden opgeslagen.</translation>
+        <source>eXperience Points Core will download and store a copy of the eXperience Points block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>eXperience Points Core zal een kopie van de eXperience Points blockchain downloaden en opslaan. Tenminste %1GB aan data zal worden opgeslagen in deze map en het zal over de tijd groeien. De portemonnee zal ook in deze map worden opgeslagen.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1213,8 +1213,8 @@ Het zal automatisch starten zodra de portemonnee voldoende bevestigingen heeft o
         <translation>Akkoord</translation>
     </message>
     <message>
-        <source>PIVX Core</source>
-        <translation>PIVX Core</translation>
+        <source>eXperience Points Core</source>
+        <translation>eXperience Points Core</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -1321,8 +1321,8 @@ Het zal automatisch starten zodra de portemonnee voldoende bevestigingen heeft o
         <translation>Creëer Nieuwe Masternode Controller</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To create a PIVX Masternode you must dedicate 10,000 PIV (the unit of PIVX) to the network (however, these coins are still yours and will never leave your possession). &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;You can deactivate the node and unlock the coins at any time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Om een PIVX Masternode te creëren moet u 10.000 PIV (de eenheid van PIVX) aan het netwerk wijden (deze munten zijn echter nog steeds van u en zullen nooit uw bezit verlaten). &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;U kunt de node op elk gewenst moment deactiveren en de munten ontgrendelen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To create a eXperience Points Masternode you must dedicate 500,000 XP (the unit of eXperience Points) to the network (however, these coins are still yours and will never leave your possession). &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;You can deactivate the node and unlock the coins at any time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Om een eXperience Points Masternode te creëren moet u 10.000 XP (de eenheid van eXperience Points) aan het netwerk wijden (deze munten zijn echter nog steeds van u en zullen nooit uw bezit verlaten). &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;U kunt de node op elk gewenst moment deactiveren en de munten ontgrendelen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Set Masternode Name</source>
@@ -1341,8 +1341,8 @@ Het zal automatisch starten zodra de portemonnee voldoende bevestigingen heeft o
         <translation>Zorg ervoor dat je deze hoeveelheid munten hebt.</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A transaction of 10,000 PIV will be made&lt;/p&gt;&lt;p&gt;to a new empty address in your wallet.&lt;/p&gt;&lt;p&gt;The Address is labeled under the master node's name.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Een transactie van 10,000 PIV zal gemaakt worden&lt;/p&gt;&lt;p&gt;naar een nieuw leeg adres in uw portemonnee.&lt;/p&gt;&lt;p&gt;Het adres is gelabeld onder de masternode's naam.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A transaction of 500,000 XP will be made&lt;/p&gt;&lt;p&gt;to a new empty address in your wallet.&lt;/p&gt;&lt;p&gt;The Address is labeled under the master node's name.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Een transactie van 500,000 XP zal gemaakt worden&lt;/p&gt;&lt;p&gt;naar een nieuw leeg adres in uw portemonnee.&lt;/p&gt;&lt;p&gt;Het adres is gelabeld onder de masternode's naam.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Address of the node that must always be online running the actual master node.</source>
@@ -1520,8 +1520,8 @@ Gelieve nog enkele minuten te wachten (het onderpand van een masternode vereist 
         <translation>Masternodegegevens gekopieerd naar het klembord</translation>
     </message>
     <message>
-        <source>Not enough balance to create a masternode, 10,000 %1 required.</source>
-        <translation>Niet genoeg balans om een masternode te creëren, 10,000 %1 vereist.</translation>
+        <source>Not enough balance to create a masternode, 500,000 %1 required.</source>
+        <translation>Niet genoeg balans om een masternode te creëren, 500,000 %1 vereist.</translation>
     </message>
     <message>
         <source>Remote Masternode Data</source>
@@ -1548,7 +1548,7 @@ Gelieve nog enkele minuten te wachten (het onderpand van een masternode vereist 
 on a remote server to your clipboard.
 
 
-You will only have to paste the data in the pivx.conf file
+You will only have to paste the data in the eXperiencePoints.conf file
 of your remote server and start it, then start the Masternode using
 this controller wallet (select the Masternode in the list and press "start").
 </source>
@@ -1556,7 +1556,7 @@ this controller wallet (select the Masternode in the list and press "start").
 op een externe server aan uw klembord.
 
 
-U hoeft alleen de gegevens in het pivx.conf bestand te plakken
+U hoeft alleen de gegevens in het eXperiencePoints.conf bestand te plakken
 van uw externe server en start deze vervolgens de Masternode met
 deze controller portemonnee (selecteer de Masternode in de lijst en druk op "start").
 </translation>
@@ -1746,8 +1746,8 @@ STAKING</translation>
         <translation>Ingelezen data te groot</translation>
     </message>
     <message>
-        <source>Invalid URI, not starting with "pivx" prefix</source>
-        <translation>Ongeldige URI, begint niet met de "pivx" prefix</translation>
+        <source>Invalid URI, not starting with "xp" prefix</source>
+        <translation>Ongeldige URI, begint niet met de "xp" prefix</translation>
     </message>
 </context>
 <context>
@@ -1792,8 +1792,8 @@ STAKING</translation>
         <translation>Als je de uitgaven van onbevestigde wijzigingen uitschakelt, de wijziging van een transactie&lt;br/&gt;kan niet worden gebruikt tot die transactie tenminste één bevestiging heeft.&lt;br/&gt;Dit beïnvloedt ook hoe uw saldo is berekend.</translation>
     </message>
     <message>
-        <source>Automatically open the PIVX client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Open de PIVX client poort automatisch op de router. Dit werkt alleen als je router UPnP ondersteunt en het is ingeschakeld.</translation>
+        <source>Automatically open the eXperience Points client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Open de eXperience Points client poort automatisch op de router. Dit werkt alleen als je router UPnP ondersteunt en het is ingeschakeld.</translation>
     </message>
     <message>
         <source>Accept connections from outside</source>
@@ -1812,12 +1812,12 @@ STAKING</translation>
         <translation>Expert</translation>
     </message>
     <message>
-        <source>Automatically start PIVX after logging in to the system.</source>
-        <translation>PIVX automatisch opstarten na inloggen op het systeem.</translation>
+        <source>Automatically start eXperience Points after logging in to the system.</source>
+        <translation>eXperience Points automatisch opstarten na inloggen op het systeem.</translation>
     </message>
     <message>
-        <source>&amp;Start PIVX on system login</source>
-        <translation>&amp;PIVX starten bij systeemlogin</translation>
+        <source>&amp;Start eXperience Points on system login</source>
+        <translation>&amp;eXperience Points starten bij systeemlogin</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1844,58 +1844,58 @@ STAKING</translation>
         <translation>&amp;Netwerk</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting PIVX.</source>
-        <translation>De gebruikersinterface taal kan hier ingesteld worden. Deze instelling zal uitgevoerd na herstart van PIVX.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting eXperience Points.</source>
+        <translation>De gebruikersinterface taal kan hier ingesteld worden. Deze instelling zal uitgevoerd na herstart van eXperience Points.</translation>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/pivx-project/pivx-project-translations</source>
+https://github.com/experience-points-development/eXperience-Points/issues</source>
         <translation>Taal ontbreekt of vertaling onvolledig? Help om bij te dragen aan vertalingen:
-https://www.transifex.com/pivx-project/pivx-project-translations</translation>
+https://github.com/experience-points-development/eXperience-Points/issues</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Map poort gebruikt &amp;UPnP</translation>
     </message>
     <message>
-        <source>Enable automatic minting of PIV units to zPIV</source>
-        <translation>Schakel automatisch slaan van PIV-eenheden in op zPIV</translation>
+        <source>Enable automatic minting of XP units to zXP</source>
+        <translation>Schakel automatisch slaan van XP-eenheden in op zXP</translation>
     </message>
     <message>
-        <source>Enable zPIV Automint</source>
-        <translation>Schakel zPIV Automint in</translation>
+        <source>Enable zXP Automint</source>
+        <translation>Schakel zXP Automint in</translation>
     </message>
     <message>
-        <source>Enable automatic zPIV minting from specific addresses</source>
-        <translation>Automatische zPIV munting inschakelen vanuit specifiek adres</translation>
+        <source>Enable automatic zXP minting from specific addresses</source>
+        <translation>Automatische zXP munting inschakelen vanuit specifiek adres</translation>
     </message>
     <message>
         <source>Enable Automint Addresses</source>
         <translation>Automint Adressen Inschakelen</translation>
     </message>
     <message>
-        <source>Percentage of incoming PIV which get automatically converted to zPIV via Zerocoin Protocol (min: 10%)</source>
-        <translation>Percentage inkomende PIV die automatisch wordt omgezet naar zPIV via Zerocoin Protocol (min: 10%)</translation>
+        <source>Percentage of incoming XP which get automatically converted to zXP via Zerocoin Protocol (min: 10%)</source>
+        <translation>Percentage inkomende XP die automatisch wordt omgezet naar zXP via Zerocoin Protocol (min: 10%)</translation>
     </message>
     <message>
-        <source>Percentage of autominted zPIV</source>
-        <translation>Percentage autominted zPIV</translation>
+        <source>Percentage of autominted zXP</source>
+        <translation>Percentage autominted zXP</translation>
     </message>
     <message>
-        <source>Wait with automatic conversion to Zerocoin until enough PIV for this denomination is available</source>
-        <translation>Wacht met automatische omzetting naar Zerocoin totdat er genoeg PIV voor deze denominatie beschikbaar is</translation>
+        <source>Wait with automatic conversion to Zerocoin until enough XP for this denomination is available</source>
+        <translation>Wacht met automatische omzetting naar Zerocoin totdat er genoeg XP voor deze denominatie beschikbaar is</translation>
     </message>
     <message>
-        <source>Preferred Automint zPIV Denomination</source>
-        <translation>Gewenste Automint zPIV denominatie</translation>
+        <source>Preferred Automint zXP Denomination</source>
+        <translation>Gewenste Automint zXP denominatie</translation>
     </message>
     <message>
         <source>Stake split threshold:</source>
         <translation>Stake splitsdrempel:</translation>
     </message>
     <message>
-        <source>Connect to the PIVX network through a SOCKS5 proxy.</source>
-        <translation>Maak verbinding met het PIVX netwerk via een SOCKS5 proxy.</translation>
+        <source>Connect to the eXperience Points network through a SOCKS5 proxy.</source>
+        <translation>Maak verbinding met het eXperience Points netwerk via een SOCKS5 proxy.</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -2041,8 +2041,8 @@ https://www.transifex.com/pivx-project/pivx-project-translations</translation>
 <context>
     <name>PIVXGUI</name>
     <message>
-        <source>PIVX Core</source>
-        <translation>PIVX Core</translation>
+        <source>eXperience Points Core</source>
+        <translation>eXperience Points Core</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -2069,8 +2069,8 @@ https://www.transifex.com/pivx-project/pivx-project-translations</translation>
         <translation>Programma afsluiten</translation>
     </message>
     <message>
-        <source>PIVX Core client</source>
-        <translation>PIVX Core client</translation>
+        <source>eXperience Points Core client</source>
+        <translation>eXperience Points Core client</translation>
     </message>
     <message>
         <source>Alert!</source>
@@ -2140,12 +2140,12 @@ Adres: %4
         <translation>Ongeldig betalingsadres %1</translation>
     </message>
     <message>
-        <source>Cannot start pivx: click-to-pay handler</source>
-        <translation>Kan pivx niet starten: click-to-pay handler</translation>
+        <source>Cannot start xp: click-to-pay handler</source>
+        <translation>Kan xp niet starten: click-to-pay handler</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid PIVX address or malformed URI parameters.</source>
-        <translation>URL kan niet ontleed worden! Dit kan worden veroorzaakt door een ongeldig PIVX adres of misvormde URL parameters.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid eXperience Points address or malformed URI parameters.</source>
+        <translation>URL kan niet ontleed worden! Dit kan worden veroorzaakt door een ongeldig eXperience Points adres of misvormde URL parameters.</translation>
     </message>
     <message>
         <source>Payment request file cannot be read! This can be caused by an invalid payment request file.</source>
@@ -2234,8 +2234,8 @@ Adres: %4
         <translation>Bedrag</translation>
     </message>
     <message>
-        <source>Enter PIVX address (e.g. %1)</source>
-        <translation>Voer een PIVX adres in (b.v. %1)</translation>
+        <source>Enter eXperience Points address (e.g. %1)</source>
+        <translation>Voer een eXperience Points adres in (b.v. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -2278,12 +2278,12 @@ Adres: %4
         <translation>%1 ms</translation>
     </message>
     <message>
-        <source>A fatal error occurred. PIVX can no longer continue safely and will quit.</source>
-        <translation>Een kritieke fout is opgelopen. PIVX kan niet langer veilig uitgevoerd worden en zal afsluiten.</translation>
+        <source>A fatal error occurred. eXperience Points can no longer continue safely and will quit.</source>
+        <translation>Een kritieke fout is opgelopen. eXperience Points kan niet langer veilig uitgevoerd worden en zal afsluiten.</translation>
     </message>
     <message>
-        <source>PIVX Core</source>
-        <translation>PIVX Core</translation>
+        <source>eXperience Points Core</source>
+        <translation>eXperience Points Core</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" does not exist.</source>
@@ -2537,8 +2537,8 @@ Adres: %4
         <translation>Blockchain</translation>
     </message>
     <message>
-        <source>Open the PIVX debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Open het PIVX debug log bestand uit de huidige data directory. Dit kan enkele seconden duren voor grote logbestanden.</translation>
+        <source>Open the eXperience Points debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Open het eXperience Points debug log bestand uit de huidige data directory. Dit kan enkele seconden duren voor grote logbestanden.</translation>
     </message>
     <message>
         <source>Number of Masternodes</source>
@@ -2681,8 +2681,8 @@ Adres: %4
         <translation>Aangepast back-up pad:</translation>
     </message>
     <message>
-        <source>Custom zPIV Backup Path:</source>
-        <translation>Aangepast zPIV back-up pad:</translation>
+        <source>Custom zXP Backup Path:</source>
+        <translation>Aangepast zXP back-up pad:</translation>
     </message>
     <message>
         <source>Custom Backups Threshold:</source>
@@ -2761,8 +2761,8 @@ Adres: %4
         <translation>Uit:</translation>
     </message>
     <message>
-        <source>Welcome to the PIVX RPC console.</source>
-        <translation>Welkom bij de PIVX RPC console.</translation>
+        <source>Welcome to the eXperience Points RPC console.</source>
+        <translation>Welkom bij de eXperience Points RPC console.</translation>
     </message>
     <message>
         <source>&amp;Disconnect Node</source>
@@ -2899,8 +2899,8 @@ Adres: %4
         <translation>Formulier</translation>
     </message>
     <message>
-        <source>Scan the QR code or copy the address to receive PIV</source>
-        <translation>Scan de QR code of kopieer het adres om PIV te ontvangen</translation>
+        <source>Scan the QR code or copy the address to receive XP</source>
+        <translation>Scan de QR code of kopieer het adres om XP te ontvangen</translation>
     </message>
     <message>
         <source>Transparent</source>
@@ -3033,12 +3033,12 @@ Adres: %4
         <translation>Bedrag</translation>
     </message>
     <message>
-        <source>PIV</source>
-        <translation>PIV</translation>
+        <source>XP</source>
+        <translation>XP</translation>
     </message>
     <message>
-        <source>Instead of sharing only a PIVX address, you can create a payment request, bundling up more information</source>
-        <translation>In plaats van een PIVX-adres te delen, kunt u een betalingsverzoek creëren dat meer informatie bundelt.</translation>
+        <source>Instead of sharing only a eXperience Points address, you can create a payment request, bundling up more information</source>
+        <translation>In plaats van een eXperience Points-adres te delen, kunt u een betalingsverzoek creëren dat meer informatie bundelt.</translation>
     </message>
     <message>
         <source>D7VFR83SQbiezrW72hjcWJtcfip5krte2Z </source>
@@ -3128,8 +3128,8 @@ Adres: %4
         <translation>Aangepast wijzigingsadres</translation>
     </message>
     <message>
-        <source>The remainder of the value resultant from the inputs minus the outputs value goes to the "change" PIVX address</source>
-        <translation>De rest van de waarde die resulteert uit de ingangen minus de waarde van de uitgangen gaat naar het "wijzig" PIVX-adres</translation>
+        <source>The remainder of the value resultant from the inputs minus the outputs value goes to the "change" eXperience Points address</source>
+        <translation>De rest van de waarde die resulteert uit de ingangen minus de waarde van de uitgangen gaat naar het "wijzig" eXperience Points-adres</translation>
     </message>
     <message>
         <source>SAVE</source>
@@ -3159,8 +3159,8 @@ Adres: %4
         <translation>Aanbevolen</translation>
     </message>
     <message>
-        <source>PIV/kilobyte</source>
-        <translation>PIV/kilobyte</translation>
+        <source>XP/kilobyte</source>
+        <translation>XP/kilobyte</translation>
     </message>
     <message>
         <source>0.00 KB</source>
@@ -3458,9 +3458,9 @@ Vergeet deze niet op te schrijven en veilig te bewaren, anders verlies je mogeli
         <translation>BIP38 Tool</translation>
     </message>
     <message>
-        <source>Encrypt your PIVX addresses (key pair actually) using BIP38 encryption.
+        <source>Encrypt your eXperience Points addresses (key pair actually) using BIP38 encryption.
 Using this mechanism you can share your keys without middle-man risk, only need to store your passphrase safely</source>
-        <translation>Encrypteer uw PIVX-adressen (met key pair) gebruikmakende van BIP38 versleuteling.
+        <translation>Encrypteer uw eXperience Points-adressen (met key pair) gebruikmakende van BIP38 versleuteling.
 Door gebruik te maken van dit mechanisme kan je jouw sleutels delen zonder het risico van een tussenpersoon, je moet enkel je wachtwoordzin veilig opbergen</translation>
     </message>
     <message>
@@ -3496,8 +3496,8 @@ Door gebruik te maken van dit mechanisme kan je jouw sleutels delen zonder het r
         <translation>DECRYPTEER SLEUTEL</translation>
     </message>
     <message>
-        <source>PIVX address</source>
-        <translation>PIVX adres</translation>
+        <source>eXperience Points address</source>
+        <translation>eXperience Points adres</translation>
     </message>
     <message>
         <source>Enter address</source>
@@ -3629,8 +3629,8 @@ Verify that you have installed a predetermined text editor.</source>
 Controleer of u een vooraf bepaalde teksteditor hebt geïnstalleerd.</translation>
     </message>
     <message>
-        <source>Welcome to the PIVX RPC console.</source>
-        <translation>Welkom bij de PIVX RPC console.</translation>
+        <source>Welcome to the eXperience Points RPC console.</source>
+        <translation>Welkom bij de eXperience Points RPC console.</translation>
     </message>
     <message>
         <source>Use up and down arrows to navigate history, and %1 to clear screen.</source>
@@ -3739,12 +3739,12 @@ Controleer of u een vooraf bepaalde teksteditor hebt geïnstalleerd.</translatio
         <translation>Exporteer Adreslijst</translation>
     </message>
     <message>
-        <source>PIVX_tx_csv_export(*.csv)</source>
-        <translation>PIVX_tx_csv_export(*.csv)</translation>
+        <source>XP_tx_csv_export(*.csv)</source>
+        <translation>XP_tx_csv_export(*.csv)</translation>
     </message>
     <message>
-        <source>PIVX_addresses_csv_export(*.csv)</source>
-        <translation>PIVX_addresses_csv_export(*.csv)</translation>
+        <source>XP_addresses_csv_export(*.csv)</source>
+        <translation>XP_addresses_csv_export(*.csv)</translation>
     </message>
     <message>
         <source>Please select a folder to export the csv file first.</source>
@@ -3814,40 +3814,40 @@ Er was een fout opgetreden tijdens het opslaan van deze adreslijst naar %1. Prob
         <translation>Formulier</translation>
     </message>
     <message>
-        <source>1) What is PIVX?</source>
-        <translation>1) Wat is PIVX?</translation>
+        <source>1) What is eXperience Points?</source>
+        <translation>1) Wat is eXperience Points?</translation>
     </message>
     <message>
-        <source>2) Why are my PIV unspendable?</source>
-        <translation>2) Waarom is mijn PIV niet besteedbaar?</translation>
+        <source>2) Why are my XP unspendable?</source>
+        <translation>2) Waarom is mijn XP niet besteedbaar?</translation>
     </message>
     <message>
-        <source>https://PIVX.org/</source>
-        <translation>https://PIVX.org/</translation>
+        <source>https://eXperiencePoints.io</source>
+        <translation>https://eXperiencePoints.io</translation>
     </message>
     <message>
         <source>1</source>
         <translation>1</translation>
     </message>
     <message>
-        <source>What is PIVX?</source>
-        <translation>Wat is PIVX?</translation>
+        <source>What is eXperience Points?</source>
+        <translation>Wat is eXperience Points?</translation>
     </message>
     <message>
         <source>2</source>
         <translation>2</translation>
     </message>
     <message>
-        <source>Why are my PIV unspendable?</source>
-        <translation>Waarom is mijn PIV niet besteedbaar?</translation>
+        <source>Why are my XP unspendable?</source>
+        <translation>Waarom is mijn XP niet besteedbaar?</translation>
     </message>
     <message>
         <source>3</source>
         <translation>3</translation>
     </message>
     <message>
-        <source>How do I stake PIV?</source>
-        <translation>Hoe stake ik PIV?</translation>
+        <source>How do I stake XP?</source>
+        <translation>Hoe stake ik XP?</translation>
     </message>
     <message>
         <source>4</source>
@@ -3882,8 +3882,8 @@ Er was een fout opgetreden tijdens het opslaan van deze adreslijst naar %1. Prob
         <translation>FAQ Sluiten</translation>
     </message>
     <message>
-        <source>3) How do I stake PIV?</source>
-        <translation>3) Hoe stake ik PIV?</translation>
+        <source>3) How do I stake XP?</source>
+        <translation>3) Hoe stake ik XP?</translation>
     </message>
     <message>
         <source>4) Where I should go if I need support?</source>
@@ -4001,8 +4001,8 @@ Er was een fout opgetreden tijdens het opslaan van deze adreslijst naar %1. Prob
         <translation>Kan de back-upmap niet openen</translation>
     </message>
     <message>
-        <source>Unable to open pivx.conf with default application</source>
-        <translation>Kan pivx.conf niet openen met de standaard applicatie</translation>
+        <source>Unable to open eXperiencePoints.conf with default application</source>
+        <translation>Kan eXperiencePoints.conf niet openen met de standaard applicatie</translation>
     </message>
     <message>
         <source>In:</source>
@@ -4060,8 +4060,8 @@ Er was een fout opgetreden tijdens het opslaan van deze adreslijst naar %1. Prob
         <translation>Aantal van script verificatiethreads</translation>
     </message>
     <message>
-        <source>Start PIVX on system login</source>
-        <translation>Start PIVX bij systeemlogin</translation>
+        <source>Start eXperience Points on system login</source>
+        <translation>Start eXperience Points bij systeemlogin</translation>
     </message>
     <message>
         <source>Minimize to the tray instead of the taskbar</source>
@@ -4148,8 +4148,8 @@ Weet u het zeker?
         <translation>Selectievakje</translation>
     </message>
     <message>
-        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other PIVX addresses after it matures.</source>
-        <translation>Met MultiSend kunt u automatisch tot 100% van uw inzet of masternode beloning naar een lijst met andere PIVX-adressen sturen nadat deze volwaardig zijn geworden.</translation>
+        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other eXperience Points addresses after it matures.</source>
+        <translation>Met MultiSend kunt u automatisch tot 100% van uw inzet of masternode beloning naar een lijst met andere eXperience Points-adressen sturen nadat deze volwaardig zijn geworden.</translation>
     </message>
     <message>
         <source>Active</source>
@@ -4275,8 +4275,8 @@ Vink één of beide selectievakjes aan om beloningen op de inzet en/of masternod
         <translation>Bericht</translation>
     </message>
     <message>
-        <source>PIVX address or contact label</source>
-        <translation>PIVX adres of contactlabel</translation>
+        <source>eXperience Points address or contact label</source>
+        <translation>eXperience Points adres of contactlabel</translation>
     </message>
     <message>
         <source>Enter address</source>
@@ -4596,8 +4596,8 @@ Vink één of beide selectievakjes aan om beloningen op de inzet en/of masternod
         <translation>Veelgestelde vragen</translation>
     </message>
     <message>
-        <source>About PIVX</source>
-        <translation>Over PIVX</translation>
+        <source>About eXperience Points</source>
+        <translation>Over eXperience Points</translation>
     </message>
     <message>
         <source>Settings</source>
@@ -4667,8 +4667,8 @@ Weet je zeker dat?
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>PIVX Core is shutting down...</source>
-        <translation>PIVX Core is aan het afsluiten...</translation>
+        <source>eXperience Points Core is shutting down...</source>
+        <translation>eXperience Points Core is aan het afsluiten...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -4697,8 +4697,8 @@ Weet je zeker dat?
         <translation>Laden...</translation>
     </message>
     <message>
-        <source>PIVX Core</source>
-        <translation>PIVX Core</translation>
+        <source>eXperience Points Core</source>
+        <translation>eXperience Points Core</translation>
     </message>
 </context>
 <context>
@@ -5186,12 +5186,12 @@ nieuwe back-up aangemaakt worden.
         <translation>Formulier</translation>
     </message>
     <message>
-        <source>+0.000585 PIV</source>
-        <translation>+0.000585 PIV</translation>
+        <source>+0.000585 XP</source>
+        <translation>+0.000585 XP</translation>
     </message>
     <message>
-        <source>-0.000585 PIV</source>
-        <translation>-0.000585 PIV</translation>
+        <source>-0.000585 XP</source>
+        <translation>-0.000585 XP</translation>
     </message>
 </context>
 <context>
@@ -5253,25 +5253,25 @@ Selecteer minder invoeren met muntcontrole.</translation>
     </message>
     <message>
         <source>Welcome to
-PIVX Core Wallet</source>
+eXperience Points Core Wallet</source>
         <translation>Welkom bij
-PIVX Core Portemonnee</translation>
+eXperience Points Core Portemonnee</translation>
     </message>
     <message>
-        <source>PIVX is the world’s most innovative Proof of Stake blockchain based technology. Developed by a team of highly experienced developers and cryptographers.</source>
-        <translation>PIVX is 's werelds meest innovatieve Proof of Stake blockchain gebaseerde technologie. Ontwikkeld door een team van zeer ervaren ontwikkelaars en cryptografen.</translation>
+        <source>eXperience Points is the world’s most innovative Proof of Stake blockchain based technology. Developed by a team of highly experienced developers and cryptographers.</source>
+        <translation>eXperience Points is 's werelds meest innovatieve Proof of Stake blockchain gebaseerde technologie. Ontwikkeld door een team van zeer ervaren ontwikkelaars en cryptografen.</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;As our manifesto says: Privacy is a non-negotiable basic human right; it grants users the freedom to share their data whenever and with whomever they want - PIVX believes in self sovereignty.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Zoals ons manifest zegt: Privacy is een niet-onderhandelbaar fundamenteel mensenrecht; het geeft gebruikers de vrijheid om hun gegevens te delen wanneer en met wie ze maar willen - PIVX gelooft in soevereiniteit.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;As our manifesto says: Privacy is a non-negotiable basic human right; it grants users the freedom to share their data whenever and with whomever they want - eXperience Points believes in self sovereignty.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Zoals ons manifest zegt: Privacy is een niet-onderhandelbaar fundamenteel mensenrecht; het geeft gebruikers de vrijheid om hun gegevens te delen wanneer en met wie ze maar willen - eXperience Points gelooft in soevereiniteit.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <source>The masternode network is PIVX's second layer network on top of the blockchain that enables our DAO to provide decentralized governance and a treasury.</source>
-        <translation>Het masternode netwerk is PIVX's tweedelaagse netwerk bovenop de blockchain die onze DAO in staat stelt om gedecentraliseerd bestuur, treasury te leveren</translation>
+        <source>The masternode network is eXperience Points's second layer network on top of the blockchain that enables our DAO to provide decentralized governance and a treasury.</source>
+        <translation>Het masternode netwerk is eXperience Points's tweedelaagse netwerk bovenop de blockchain die onze DAO in staat stelt om gedecentraliseerd bestuur, treasury te leveren</translation>
     </message>
     <message>
-        <source>How PIVX respects your privacy?</source>
-        <translation>Hoe respecteert PIVX uw privacy?</translation>
+        <source>How eXperience Points respects your privacy?</source>
+        <translation>Hoe respecteert eXperience Points uw privacy?</translation>
     </message>
     <message>
         <source>What is a Masternode?</source>
@@ -5437,8 +5437,8 @@ PIVX Core Portemonnee</translation>
         <translation>De totale lengte van de netwerkversie (%i) overschrijdt de maximale lengte (%i). Verminder het aantal of de grootte van uacommentaren.</translation>
     </message>
     <message>
-        <source>Unable to bind to %s on this computer. PIVX Core is probably already running.</source>
-        <translation>Niet mogelijk te binden aan %s op deze computer. PIVX Core loopt waarschijnlijk al.</translation>
+        <source>Unable to bind to %s on this computer. eXperience Points Core is probably already running.</source>
+        <translation>Niet mogelijk te binden aan %s op deze computer. eXperience Points Core loopt waarschijnlijk al.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</source>
@@ -5453,8 +5453,8 @@ PIVX Core Portemonnee</translation>
         <translation>Waarschuwing: -paytxfee is zeer hoog ingesteld! Dit zijn de transactie kosten die je betaalt als je een transactie verstuurt.</translation>
     </message>
     <message>
-        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong PIVX Core will not work properly.</source>
-        <translation>Waarschuwing: Controleer of de datum en tijd van je computer juist zijn! Als je klok verkeerd staat, werkt PIVX Core niet goed.</translation>
+        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong eXperience Points Core will not work properly.</source>
+        <translation>Waarschuwing: Controleer of de datum en tijd van je computer juist zijn! Als je klok verkeerd staat, werkt eXperience Points Core niet goed.</translation>
     </message>
     <message>
         <source>Warning: The network does not appear to fully agree! Some miners appear to be experiencing issues.</source>
@@ -5526,7 +5526,7 @@ PIVX Core Portemonnee</translation>
     </message>
     <message>
         <source>Copyright (C) 2015-%i The PIVX Core Developers</source>
-        <translation>Copyright (C) 2015-%i The PIVX Kernontwikkelaars</translation>
+        <translation>Copyright (C) 2015-%i The eXperience Points Kernontwikkelaars</translation>
     </message>
     <message>
         <source>Corrupted block database detected</source>
@@ -5745,8 +5745,8 @@ Voer alstublieft 'sapling-fetch-params' of './util/fetch-params.sh' uit en herst
         <translation>Error bij het laden van %s: Portemonnee beschadigd</translation>
     </message>
     <message>
-        <source>Error loading %s: Wallet requires newer version of PIVX Core</source>
-        <translation>Error bij het laden van %s: Portemonnee vereist een nieuwere versie van PIVX Core</translation>
+        <source>Error loading %s: Wallet requires newer version of eXperience Points Core</source>
+        <translation>Error bij het laden van %s: Portemonnee vereist een nieuwere versie van eXperience Points Core</translation>
     </message>
     <message>
         <source>Error loading %s
@@ -5939,12 +5939,12 @@ Voer alstublieft 'sapling-fetch-params' of './util/fetch-params.sh' uit en herst
         <translation>Kosten (in %s/Kb) kleiner dan dit worden beschouwd als zero fee voor transactie verrichting (standaard: %s)</translation>
     </message>
     <message>
-        <source>Minimum positive amount (in PIV) allowed by GUI and RPC for the stake split threshold (default: %s)</source>
-        <translation>Minimum geldige waarde (in PIV) toegestaan bij GUI en RPC voor de staking splitsdrempel (standaard: %s)</translation>
+        <source>Minimum positive amount (in XP) allowed by GUI and RPC for the stake split threshold (default: %s)</source>
+        <translation>Minimum geldige waarde (in XP) toegestaan bij GUI en RPC voor de staking splitsdrempel (standaard: %s)</translation>
     </message>
     <message>
-        <source>Please check that your computer's date and time are correct! If your clock is wrong PIVX Core will not work properly.</source>
-        <translation>Controleer of de datum en tijd van je computer juist zijn! Als je klok verkeerd ingesteld staat, werkt PIVX Core niet goed.</translation>
+        <source>Please check that your computer's date and time are correct! If your clock is wrong eXperience Points Core will not work properly.</source>
+        <translation>Controleer of de datum en tijd van je computer juist zijn! Als je klok verkeerd ingesteld staat, werkt eXperience Points Core niet goed.</translation>
     </message>
     <message>
         <source>Query for peer addresses via DNS lookup, if low on addresses (default: 1 unless -connect/-noconnect)</source>
@@ -6297,8 +6297,8 @@ Voer alstublieft 'sapling-fetch-params' of './util/fetch-params.sh' uit en herst
         <translation>Portemonnee verifiëren...</translation>
     </message>
     <message>
-        <source>Wallet needed to be rewritten: restart PIVX Core to complete</source>
-        <translation>Wallet moest worden herschreven: start PIVX Core opnieuw om te voltooien</translation>
+        <source>Wallet needed to be rewritten: restart eXperience Points Core to complete</source>
+        <translation>Wallet moest worden herschreven: start eXperience Points Core opnieuw om te voltooien</translation>
     </message>
     <message>
         <source>Wallet options:</source>
@@ -6360,8 +6360,8 @@ Voer alstublieft 'sapling-fetch-params' of './util/fetch-params.sh' uit en herst
         <translation>Shielded</translation>
     </message>
     <message>
-        <source>PIVX address or contact label</source>
-        <translation>PIVX adres of contactlabel</translation>
+        <source>eXperience Points address or contact label</source>
+        <translation>eXperience Points adres of contactlabel</translation>
     </message>
     <message>
         <source>Amount</source>

@@ -69,12 +69,12 @@ static bool AppInitRPC(int argc, char* argv[])
     //
     gArgs.ParseParameters(argc, argv);
     if (argc < 2 || gArgs.IsArgSet("-?") || gArgs.IsArgSet("-h") || gArgs.IsArgSet("-help") || gArgs.IsArgSet("-version")) {
-        std::string strUsage = _("PIVX Core RPC client version") + " " + FormatFullVersion() + "\n";
+        std::string strUsage = _("eXperience Points Core RPC client version") + " " + FormatFullVersion() + "\n";
         if (!gArgs.IsArgSet("-version")) {
             strUsage += "\n" + _("Usage:") + "\n" +
-                        "  pivx-cli [options] <command> [params]  " + _("Send command to PIVX Core") + "\n" +
-                        "  pivx-cli [options] help                " + _("List commands") + "\n" +
-                        "  pivx-cli [options] help <command>      " + _("Get help for a command") + "\n";
+                        "  eXperiencePoints-cli [options] <command> [params]  " + _("Send command to eXperience Points Core") + "\n" +
+                        "  eXperiencePoints-cli [options] help                " + _("List commands") + "\n" +
+                        "  eXperiencePoints-cli [options] help <command>      " + _("Get help for a command") + "\n";
 
             strUsage += "\n" + HelpMessageCli();
         }

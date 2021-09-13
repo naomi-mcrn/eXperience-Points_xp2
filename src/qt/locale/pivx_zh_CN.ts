@@ -95,11 +95,11 @@
     </message>
     <message>
         <source>Choose the address to send coins to</source>
-        <translation>选择发送PIVX coin的地址</translation>
+        <translation>选择发送eXperience Points coin的地址</translation>
     </message>
     <message>
         <source>Choose the address to receive coins with</source>
-        <translation>选择接收PIVX coin的地址</translation>
+        <translation>选择接收eXperience Points coin的地址</translation>
     </message>
     <message>
         <source>C&amp;hoose</source>
@@ -114,12 +114,12 @@
         <translation>接收地址</translation>
     </message>
     <message>
-        <source>These are your PIVX addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>这是用于发送PIVX的地址。在发送PIVX之前，请认真核查发送金额和接收地址。</translation>
+        <source>These are your eXperience Points addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>这是用于发送eXperience Points的地址。在发送eXperience Points之前，请认真核查发送金额和接收地址。</translation>
     </message>
     <message>
-        <source>These are your PIVX addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>这是用于接收PIVX的钱包地址。建议每一笔交易都使用一个新的钱包地址。</translation>
+        <source>These are your eXperience Points addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>这是用于接收eXperience Points的钱包地址。建议每一笔交易都使用一个新的钱包地址。</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -348,8 +348,8 @@ for staking</source>
         <translation>删除</translation>
     </message>
     <message>
-        <source>PIVX will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your PIVs from being stolen by malware infecting your computer.</source>
-        <translation>PIVX将关闭以完成加密过程。但是，仅仅加密您的钱包是不够的，因为它并不能阻止恶意软件从您的电脑里面偷取PIVs。</translation>
+        <source>eXperience Points will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your XPs from being stolen by malware infecting your computer.</source>
+        <translation>eXperience Points将关闭以完成加密过程。但是，仅仅加密您的钱包是不够的，因为它并不能阻止恶意软件从您的电脑里面偷取XPs。</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -425,8 +425,8 @@ for staking</source>
         <translation>存款</translation>
     </message>
     <message>
-        <source>0,00 PIV</source>
-        <translation>0,00 PIV</translation>
+        <source>0,00 XP</source>
+        <translation>0,00 XP</translation>
     </message>
     <message>
         <source>address</source>
@@ -467,8 +467,8 @@ for staking</source>
         <translation>币选择</translation>
     </message>
     <message>
-        <source>Select PIV Outputs to Spend</source>
-        <translation>选择PIV支出花费</translation>
+        <source>Select XP Outputs to Spend</source>
+        <translation>选择XP支出花费</translation>
     </message>
     <message>
         <source>Dust:</source>
@@ -495,8 +495,8 @@ for staking</source>
         <translation>金额</translation>
     </message>
     <message>
-        <source>0.00 PIV</source>
-        <translation>0.00 PIV</translation>
+        <source>0.00 XP</source>
+        <translation>0.00 XP</translation>
     </message>
     <message>
         <source>0</source>
@@ -690,9 +690,9 @@ for staking</source>
         <translation>加载委托时出错：%1</translation>
     </message>
     <message>
-        <source>You can delegate your PIVs, letting a hot node (24/7 online node)
+        <source>You can delegate your XPs, letting a hot node (24/7 online node)
 stake on your behalf, while you keep the keys securely offline.</source>
-        <translation>您可以委托您的PIV并让一个热节点(24/7在线节点)
+        <translation>您可以委托您的XP并让一个热节点(24/7在线节点)
 代表你加注，而且保持密钥离线安全。</translation>
     </message>
     <message>
@@ -700,8 +700,8 @@ stake on your behalf, while you keep the keys securely offline.</source>
         <translation>输入所有者地址</translation>
     </message>
     <message>
-        <source>Accept PIV delegation / Delegate PIV</source>
-        <translation>接受PIV委托／委托PIV </translation>
+        <source>Accept XP delegation / Delegate XP</source>
+        <translation>接受XP委托／委托XP </translation>
     </message>
     <message>
         <source>Cold Staking address</source>
@@ -988,8 +988,8 @@ It will start automatically as soon as the wallet has enough confirmations on an
         <translation>编辑发送地址</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid PIVX address.</source>
-        <translation>所输入的地址“%1”不是有效的PIVX地址。</translation>
+        <source>The entered address "%1" is not a valid eXperience Points address.</source>
+        <translation>所输入的地址“%1”不是有效的eXperience Points地址。</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1041,16 +1041,16 @@ It will start automatically as soon as the wallet has enough confirmations on an
         <translation>版本</translation>
     </message>
     <message>
-        <source>PIVX Core</source>
-        <translation>PIVX Core</translation>
+        <source>eXperience Points Core</source>
+        <translation>eXperience Points Core</translation>
     </message>
     <message>
         <source>(%1-bit)</source>
         <translation>(%1-位)</translation>
     </message>
     <message>
-        <source>About PIVX Core</source>
-        <translation>关于PIVX Core</translation>
+        <source>About eXperience Points Core</source>
+        <translation>关于eXperience Points Core</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -1104,16 +1104,16 @@ It will start automatically as soon as the wallet has enough confirmations on an
         <translation>欢迎</translation>
     </message>
     <message>
-        <source>Welcome to PIVX Core.</source>
-        <translation>欢迎使用 PIVX Core</translation>
+        <source>Welcome to eXperience Points Core.</source>
+        <translation>欢迎使用 eXperience Points Core</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where PIVX Core will store its data.</source>
-        <translation>由于这是该程序第一次启动，您可以选择存储PIVX Core 数据的位置。</translation>
+        <source>As this is the first time the program is launched, you can choose where eXperience Points Core will store its data.</source>
+        <translation>由于这是该程序第一次启动，您可以选择存储eXperience Points Core 数据的位置。</translation>
     </message>
     <message>
-        <source>PIVX Core will download and store a copy of the PIVX block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>PIVX Core将下载并存储PIVX区块链副本。 至少 %1 GB的数据将存储在此目录中，并且会随着时间的推移而增长。 钱包也将存储在此目录中。</translation>
+        <source>eXperience Points Core will download and store a copy of the eXperience Points block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>eXperience Points Core将下载并存储eXperience Points区块链副本。 至少 %1 GB的数据将存储在此目录中，并且会随着时间的推移而增长。 钱包也将存储在此目录中。</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1132,8 +1132,8 @@ It will start automatically as soon as the wallet has enough confirmations on an
         <translation>好的</translation>
     </message>
     <message>
-        <source>PIVX Core</source>
-        <translation>PIVX Core</translation>
+        <source>eXperience Points Core</source>
+        <translation>eXperience Points Core</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -1232,8 +1232,8 @@ It will start automatically as soon as the wallet has enough confirmations on an
         <translation>创建新的主节点控制器</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To create a PIVX Masternode you must dedicate 10,000 PIV (the unit of PIVX) to the network (however, these coins are still yours and will never leave your possession). &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;You can deactivate the node and unlock the coins at any time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;要去创建一个PIVX主节点，你必须奉献10,000 PIV（PIVX的单位）到网络（但是这些币还是属于你的，一直为你所有）。&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;你可以在任何时候关闭该节点并解锁币。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To create a eXperience Points Masternode you must dedicate 500,000 XP (the unit of eXperience Points) to the network (however, these coins are still yours and will never leave your possession). &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;You can deactivate the node and unlock the coins at any time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;要去创建一个eXperience Points主节点，你必须奉献500,000 XP（eXperience Points的单位）到网络（但是这些币还是属于你的，一直为你所有）。&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;你可以在任何时候关闭该节点并解锁币。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Set Masternode Name</source>
@@ -1252,8 +1252,8 @@ It will start automatically as soon as the wallet has enough confirmations on an
         <translation>确保你有这么多币</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A transaction of 10,000 PIV will be made&lt;/p&gt;&lt;p&gt;to a new empty address in your wallet.&lt;/p&gt;&lt;p&gt;The Address is labeled under the master node's name.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;将进行10,000 PIV的交易&lt;/p&gt;&lt;p&gt;到您的钱包空地址&lt;/p&gt;&lt;p&gt;地址被标记在主节点的名称之下&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A transaction of 500,000 XP will be made&lt;/p&gt;&lt;p&gt;to a new empty address in your wallet.&lt;/p&gt;&lt;p&gt;The Address is labeled under the master node's name.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;将进行500,000 XP的交易&lt;/p&gt;&lt;p&gt;到您的钱包空地址&lt;/p&gt;&lt;p&gt;地址被标记在主节点的名称之下&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Address of the node that must always be online running the actual master node.</source>
@@ -1435,7 +1435,7 @@ Please wait few more minutes (masternode collaterals require %1 confirmations).<
 on a remote server to your clipboard.
 
 
-You will only have to paste the data in the pivx.conf file
+You will only have to paste the data in the eXperiencePoints.conf file
 of your remote server and start it, then start the Masternode using
 this controller wallet (select the Masternode in the list and press "start").
 </source>
@@ -1443,7 +1443,7 @@ this controller wallet (select the Masternode in the list and press "start").
 到剪贴板的远程服务器上。
 
 
-您只需将数据粘贴到pivx.conf文件中
+您只需将数据粘贴到eXperiencePoints.conf文件中
 ，然后使用主节点启动它
 这个控制器钱包(在列表中选择主节点并按“开始”)。
 </translation>
@@ -1583,8 +1583,8 @@ Are you sure?</source>
         <translation>解析的数据太大</translation>
     </message>
     <message>
-        <source>Invalid URI, not starting with "pivx" prefix</source>
-        <translation>无效的URI，不是以“ pivx”前缀开头</translation>
+        <source>Invalid URI, not starting with "xp" prefix</source>
+        <translation>无效的URI，不是以“ xp”前缀开头</translation>
     </message>
 </context>
 <context>
@@ -1629,8 +1629,8 @@ Are you sure?</source>
         <translation>如果您要禁用未经确认发送，在至少有一个确认之前&lt;br/&gt;不能更改。&lt;br/&gt;这也将影响您的余额计算。</translation>
     </message>
     <message>
-        <source>Automatically open the PIVX client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>自动打开路由器上的PIVX钱包使用的端口。 这只有当您的路由器支持UPnP并且该享生效时才有用。</translation>
+        <source>Automatically open the eXperience Points client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>自动打开路由器上的eXperience Points钱包使用的端口。 这只有当您的路由器支持UPnP并且该享生效时才有用。</translation>
     </message>
     <message>
         <source>Accept connections from outside</source>
@@ -1649,12 +1649,12 @@ Are you sure?</source>
         <translation>专家</translation>
     </message>
     <message>
-        <source>Automatically start PIVX after logging in to the system.</source>
-        <translation>登录系统后自动启动PIVX。</translation>
+        <source>Automatically start eXperience Points after logging in to the system.</source>
+        <translation>登录系统后自动启动eXperience Points。</translation>
     </message>
     <message>
-        <source>&amp;Start PIVX on system login</source>
-        <translation>&amp;开机启动PIVX</translation>
+        <source>&amp;Start eXperience Points on system login</source>
+        <translation>&amp;开机启动eXperience Points</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1681,58 +1681,58 @@ Are you sure?</source>
         <translation>&amp;网络</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting PIVX.</source>
-        <translation>可以在这里设置用户界面语言。此设置将在重新启动PIVX后生效。</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting eXperience Points.</source>
+        <translation>可以在这里设置用户界面语言。此设置将在重新启动eXperience Points后生效。</translation>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/pivx-project/pivx-project-translations</source>
+https://github.com/experience-points-development/eXperience-Points/issues</source>
         <translation>语言缺失或翻译不完整?帮助贡献翻译在这里:
-https://www.transifex.com/pivx-project/pivx-project-translations</translation>
+https://github.com/experience-points-development/eXperience-Points/issues</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>端口使用&amp;UPnP</translation>
     </message>
     <message>
-        <source>Enable automatic minting of PIV units to zPIV</source>
-        <translation>启动自动铸造PIV到zPIV</translation>
+        <source>Enable automatic minting of XP units to zXP</source>
+        <translation>启动自动铸造XP到zXP</translation>
     </message>
     <message>
-        <source>Enable zPIV Automint</source>
-        <translation>启动自动铸造zPIV</translation>
+        <source>Enable zXP Automint</source>
+        <translation>启动自动铸造zXP</translation>
     </message>
     <message>
-        <source>Enable automatic zPIV minting from specific addresses</source>
-        <translation>启用从特定地址自动生成zPIV</translation>
+        <source>Enable automatic zXP minting from specific addresses</source>
+        <translation>启用从特定地址自动生成zXP</translation>
     </message>
     <message>
         <source>Enable Automint Addresses</source>
         <translation>启动自动铸造地址</translation>
     </message>
     <message>
-        <source>Percentage of incoming PIV which get automatically converted to zPIV via Zerocoin Protocol (min: 10%)</source>
-        <translation>通过零币协议自动转换为zPIV的传入PIV的百分比(最小:10%)</translation>
+        <source>Percentage of incoming XP which get automatically converted to zXP via Zerocoin Protocol (min: 10%)</source>
+        <translation>通过零币协议自动转换为zXP的传入XP的百分比(最小:10%)</translation>
     </message>
     <message>
-        <source>Percentage of autominted zPIV</source>
-        <translation>自动铸造的zPIV百分比</translation>
+        <source>Percentage of autominted zXP</source>
+        <translation>自动铸造的zXP百分比</translation>
     </message>
     <message>
-        <source>Wait with automatic conversion to Zerocoin until enough PIV for this denomination is available</source>
-        <translation>等待自动转换为零币，直到足够的PIV为这种面额可用</translation>
+        <source>Wait with automatic conversion to Zerocoin until enough XP for this denomination is available</source>
+        <translation>等待自动转换为零币，直到足够的XP为这种面额可用</translation>
     </message>
     <message>
-        <source>Preferred Automint zPIV Denomination</source>
-        <translation>首选自动铸造zPIV面额</translation>
+        <source>Preferred Automint zXP Denomination</source>
+        <translation>首选自动铸造zXP面额</translation>
     </message>
     <message>
         <source>Stake split threshold:</source>
         <translation>股权分割阈值:</translation>
     </message>
     <message>
-        <source>Connect to the PIVX network through a SOCKS5 proxy.</source>
-        <translation>通过SOCKS5代理连接到PIVX网络。</translation>
+        <source>Connect to the eXperience Points network through a SOCKS5 proxy.</source>
+        <translation>通过SOCKS5代理连接到eXperience Points网络。</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -1788,7 +1788,7 @@ https://www.transifex.com/pivx-project/pivx-project-translations</translation>
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>选择显示发送PIVX的默认单位。</translation>
+        <translation>选择显示发送eXperience Points的默认单位。</translation>
     </message>
     <message>
         <source>Decimal digits</source>
@@ -1878,8 +1878,8 @@ https://www.transifex.com/pivx-project/pivx-project-translations</translation>
 <context>
     <name>PIVXGUI</name>
     <message>
-        <source>PIVX Core</source>
-        <translation>PIVX Core</translation>
+        <source>eXperience Points Core</source>
+        <translation>eXperience Points Core</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -1906,8 +1906,8 @@ https://www.transifex.com/pivx-project/pivx-project-translations</translation>
         <translation>关闭应用</translation>
     </message>
     <message>
-        <source>PIVX Core client</source>
-        <translation>PIVX Core 客户端</translation>
+        <source>eXperience Points Core client</source>
+        <translation>eXperience Points Core 客户端</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1973,12 +1973,12 @@ Address: %4
         <translation>无效支付地址%1</translation>
     </message>
     <message>
-        <source>Cannot start pivx: click-to-pay handler</source>
-        <translation>无法启动pivx:点击支付处理程序</translation>
+        <source>Cannot start xp: click-to-pay handler</source>
+        <translation>无法启动xp:点击支付处理程序</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid PIVX address or malformed URI parameters.</source>
-        <translation>URI不能被解析!这可能是由无效的PIVX地址或格式错误的URI参数造成的。</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid eXperience Points address or malformed URI parameters.</source>
+        <translation>URI不能被解析!这可能是由无效的eXperience Points地址或格式错误的URI参数造成的。</translation>
     </message>
     <message>
         <source>Payment request file cannot be read! This can be caused by an invalid payment request file.</source>
@@ -2063,8 +2063,8 @@ Address: %4
         <translation>金额</translation>
     </message>
     <message>
-        <source>Enter PIVX address (e.g. %1)</source>
-        <translation>输入PIVX a地址(e.g. %1)</translation>
+        <source>Enter eXperience Points address (e.g. %1)</source>
+        <translation>输入eXperience Points a地址(e.g. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -2107,12 +2107,12 @@ Address: %4
         <translation>%1 毫秒</translation>
     </message>
     <message>
-        <source>A fatal error occurred. PIVX can no longer continue safely and will quit.</source>
-        <translation>发生了一个致命的错误。PIVX不能继续安全，将退出。</translation>
+        <source>A fatal error occurred. eXperience Points can no longer continue safely and will quit.</source>
+        <translation>发生了一个致命的错误。eXperience Points不能继续安全，将退出。</translation>
     </message>
     <message>
-        <source>PIVX Core</source>
-        <translation>PIVX Core</translation>
+        <source>eXperience Points Core</source>
+        <translation>eXperience Points Core</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" does not exist.</source>
@@ -2306,8 +2306,8 @@ Address: %4
         <translation>区块链</translation>
     </message>
     <message>
-        <source>Open the PIVX debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>从当前数据目录打开PIVX调试日志文件。对于大型日志文件，这可能需要几秒钟。</translation>
+        <source>Open the eXperience Points debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>从当前数据目录打开eXperience Points调试日志文件。对于大型日志文件，这可能需要几秒钟。</translation>
     </message>
     <message>
         <source>Number of Masternodes</source>
@@ -2450,8 +2450,8 @@ Address: %4
         <translation>自定义备份路径:</translation>
     </message>
     <message>
-        <source>Custom zPIV Backup Path:</source>
-        <translation>自定义zPIV备份路径:</translation>
+        <source>Custom zXP Backup Path:</source>
+        <translation>自定义zXP备份路径:</translation>
     </message>
     <message>
         <source>Custom Backups Threshold:</source>
@@ -2530,8 +2530,8 @@ Address: %4
         <translation>出：</translation>
     </message>
     <message>
-        <source>Welcome to the PIVX RPC console.</source>
-        <translation>欢迎访问PIVX RPC控制台</translation>
+        <source>Welcome to the eXperience Points RPC console.</source>
+        <translation>欢迎访问eXperience Points RPC控制台</translation>
     </message>
     <message>
         <source>&amp;Disconnect Node</source>
@@ -2770,8 +2770,8 @@ Address: %4
         <translation>金额</translation>
     </message>
     <message>
-        <source>PIV</source>
-        <translation>PIV</translation>
+        <source>XP</source>
+        <translation>XP</translation>
     </message>
     <message>
         <source>D7VFR83SQbiezrW72hjcWJtcfip5krte2Z </source>
@@ -2849,8 +2849,8 @@ Address: %4
         <translation>自定义更改地址</translation>
     </message>
     <message>
-        <source>The remainder of the value resultant from the inputs minus the outputs value goes to the "change" PIVX address</source>
-        <translation>输入值减去输出值所得的值的其余部分归为“更改”PIVX地址</translation>
+        <source>The remainder of the value resultant from the inputs minus the outputs value goes to the "change" eXperience Points address</source>
+        <translation>输入值减去输出值所得的值的其余部分归为“更改”eXperience Points地址</translation>
     </message>
     <message>
         <source>SAVE</source>
@@ -2876,8 +2876,8 @@ Address: %4
         <translation>已推荐</translation>
     </message>
     <message>
-        <source>PIV/kilobyte</source>
-        <translation>PIV/k字节</translation>
+        <source>XP/kilobyte</source>
+        <translation>XP/k字节</translation>
     </message>
     <message>
         <source>0.00 KB</source>
@@ -3155,8 +3155,8 @@ These coins will no longer be cold-staked.</source>
         <translation>解密钥匙</translation>
     </message>
     <message>
-        <source>PIVX address</source>
-        <translation>PIVX地址</translation>
+        <source>eXperience Points address</source>
+        <translation>eXperience Points地址</translation>
     </message>
     <message>
         <source>Enter address</source>
@@ -3280,8 +3280,8 @@ Verify that you have installed a predetermined text editor.</source>
 确认您已经安装了预定的文本编辑器</translation>
     </message>
     <message>
-        <source>Welcome to the PIVX RPC console.</source>
-        <translation>欢迎访问PIVX RPC控制台</translation>
+        <source>Welcome to the eXperience Points RPC console.</source>
+        <translation>欢迎访问eXperience Points RPC控制台</translation>
     </message>
     <message>
         <source>Use up and down arrows to navigate history, and %1 to clear screen.</source>
@@ -3390,12 +3390,12 @@ Verify that you have installed a predetermined text editor.</source>
         <translation>导出地址列表</translation>
     </message>
     <message>
-        <source>PIVX_tx_csv_export(*.csv)</source>
-        <translation>PIVX_tx_csv_export(*.csv)</translation>
+        <source>XP_tx_csv_export(*.csv)</source>
+        <translation>XP_tx_csv_export(*.csv)</translation>
     </message>
     <message>
-        <source>PIVX_addresses_csv_export(*.csv)</source>
-        <translation>PIVX_addresses_csv_export(*.csv)</translation>
+        <source>XP_addresses_csv_export(*.csv)</source>
+        <translation>XP_addresses_csv_export(*.csv)</translation>
     </message>
     <message>
         <source>Please select a folder to export the csv file first.</source>
@@ -3465,28 +3465,28 @@ There was an error trying to save the address list to %1. Please try again.</sou
         <translation>来自</translation>
     </message>
     <message>
-        <source>1) What is PIVX?</source>
-        <translation>1）什么是PIVX?</translation>
+        <source>1) What is eXperience Points?</source>
+        <translation>1）什么是eXperience Points?</translation>
     </message>
     <message>
-        <source>2) Why are my PIV unspendable?</source>
-        <translation>2) 我的PIV为什么不能用？</translation>
+        <source>2) Why are my XP unspendable?</source>
+        <translation>2) 我的XP为什么不能用？</translation>
     </message>
     <message>
         <source>1</source>
         <translation>1</translation>
     </message>
     <message>
-        <source>What is PIVX?</source>
-        <translation>PIVX是什么?</translation>
+        <source>What is eXperience Points?</source>
+        <translation>eXperience Points是什么?</translation>
     </message>
     <message>
         <source>2</source>
         <translation>2</translation>
     </message>
     <message>
-        <source>Why are my PIV unspendable?</source>
-        <translation>我的PIV为什么不能用？</translation>
+        <source>Why are my XP unspendable?</source>
+        <translation>我的XP为什么不能用？</translation>
     </message>
     <message>
         <source>3</source>
@@ -3624,8 +3624,8 @@ There was an error trying to save the address list to %1. Please try again.</sou
         <translation>无法打开备份文件夹</translation>
     </message>
     <message>
-        <source>Unable to open pivx.conf with default application</source>
-        <translation>无法使用默认应用程序打开pivx.conf</translation>
+        <source>Unable to open eXperiencePoints.conf with default application</source>
+        <translation>无法使用默认应用程序打开eXperiencePoints.conf</translation>
     </message>
     <message>
         <source>In:</source>
@@ -3675,8 +3675,8 @@ There was an error trying to save the address list to %1. Please try again.</sou
         <translation>脚本&amp;验证线程数</translation>
     </message>
     <message>
-        <source>Start PIVX on system login</source>
-        <translation>开机启动PIVX</translation>
+        <source>Start eXperience Points on system login</source>
+        <translation>开机启动eXperience Points</translation>
     </message>
     <message>
         <source>Minimize to the tray instead of the taskbar</source>
@@ -3763,8 +3763,8 @@ Are you sure?
         <translation>查看列表</translation>
     </message>
     <message>
-        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other PIVX addresses after it matures.</source>
-        <translation>成熟以后，多重花费允许您自动发送高达 100% 的股权或主节点奖励到其他PIVX地址列表</translation>
+        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other eXperience Points addresses after it matures.</source>
+        <translation>成熟以后，多重花费允许您自动发送高达 100% 的股权或主节点奖励到其他eXperience Points地址列表</translation>
     </message>
     <message>
         <source>Active</source>
@@ -3882,8 +3882,8 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
         <translation>消息 </translation>
     </message>
     <message>
-        <source>PIVX address or contact label</source>
-        <translation>PIVX 地址或者联系人标签</translation>
+        <source>eXperience Points address or contact label</source>
+        <translation>eXperience Points 地址或者联系人标签</translation>
     </message>
     <message>
         <source>Enter address</source>
@@ -4159,8 +4159,8 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
         <translation>常见问题</translation>
     </message>
     <message>
-        <source>About PIVX</source>
-        <translation>关于PIVX </translation>
+        <source>About eXperience Points</source>
+        <translation>关于eXperience Points </translation>
     </message>
     <message>
         <source>Settings</source>
@@ -4226,8 +4226,8 @@ Are you sure?
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>PIVX Core is shutting down...</source>
-        <translation>PIVX 核心正在关闭...</translation>
+        <source>eXperience Points Core is shutting down...</source>
+        <translation>eXperience Points 核心正在关闭...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -4256,8 +4256,8 @@ Are you sure?
         <translation>正在下载…</translation>
     </message>
     <message>
-        <source>PIVX Core</source>
-        <translation>PIVX Core</translation>
+        <source>eXperience Points Core</source>
+        <translation>eXperience Points Core</translation>
     </message>
 </context>
 <context>
@@ -4653,8 +4653,8 @@ backup will be created.
         <translation>来自</translation>
     </message>
     <message>
-        <source>+0.000585 PIV</source>
-        <translation>+0.000585 PIV</translation>
+        <source>+0.000585 XP</source>
+        <translation>+0.000585 XP</translation>
     </message>
     </context>
 <context>
@@ -4704,25 +4704,25 @@ backup will be created.
     </message>
     <message>
         <source>Welcome to
-PIVX Core Wallet</source>
+eXperience Points Core Wallet</source>
         <translation>欢迎
-PIVX核心钱包</translation>
+eXperience Points核心钱包</translation>
     </message>
     <message>
-        <source>PIVX is the world’s most innovative Proof of Stake blockchain based technology. Developed by a team of highly experienced developers and cryptographers.</source>
-        <translation>PIVX是世界上最先进的隐私保护技术，由经验丰富的开发人员和密码专家开发。</translation>
+        <source>eXperience Points is the world’s most innovative Proof of Stake blockchain based technology. Developed by a team of highly experienced developers and cryptographers.</source>
+        <translation>eXperience Points是世界上最先进的隐私保护技术，由经验丰富的开发人员和密码专家开发。</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;As our manifesto says: Privacy is a non-negotiable basic human right; it grants users the freedom to share their data whenever and with whomever they want - PIVX believes in self sovereignty.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;正如我们的宣言所说:隐私是一项不容协商的基本人权;它赋予用户随时随地与任何人共享数据的自由——PIVX相信自我主权&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;As our manifesto says: Privacy is a non-negotiable basic human right; it grants users the freedom to share their data whenever and with whomever they want - eXperience Points believes in self sovereignty.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;正如我们的宣言所说:隐私是一项不容协商的基本人权;它赋予用户随时随地与任何人共享数据的自由——eXperience Points相信自我主权&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <source>The masternode network is PIVX's second layer network on top of the blockchain that enables our DAO to provide decentralized governance and a treasury.</source>
-        <translation>主节点网络是PIVX在区块链之上的第二层网络，它使我们的DAO能够提供去中心的治理。</translation>
+        <source>The masternode network is eXperience Points's second layer network on top of the blockchain that enables our DAO to provide decentralized governance and a treasury.</source>
+        <translation>主节点网络是eXperience Points在区块链之上的第二层网络，它使我们的DAO能够提供去中心的治理。</translation>
     </message>
     <message>
-        <source>How PIVX respects your privacy?</source>
-        <translation>PIVX 到底是怎么尊重你的隐私的？</translation>
+        <source>How eXperience Points respects your privacy?</source>
+        <translation>eXperience Points 到底是怎么尊重你的隐私的？</translation>
     </message>
     <message>
         <source>What is a Masternode?</source>
@@ -4888,8 +4888,8 @@ PIVX核心钱包</translation>
         <translation>网络版本字符串的总长度(%i)超过最大长度(%i)。减少任务的数量或大小。</translation>
     </message>
     <message>
-        <source>Unable to bind to %s on this computer. PIVX Core is probably already running.</source>
-        <translation>无法绑定到此计算机上的%s。PIVX核心可能已经在运行了。</translation>
+        <source>Unable to bind to %s on this computer. eXperience Points Core is probably already running.</source>
+        <translation>无法绑定到此计算机上的%s。eXperience Points核心可能已经在运行了。</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</source>
@@ -4904,8 +4904,8 @@ PIVX核心钱包</translation>
         <translation>警告:-支付tx费用设置的非常高!这是您发送交易时要支付的交易费。</translation>
     </message>
     <message>
-        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong PIVX Core will not work properly.</source>
-        <translation>注意：请检查您的电脑的日期和时间是否正确！ 如果您的时间设置不正确，PIVX Core将无法正常工作。</translation>
+        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong eXperience Points Core will not work properly.</source>
+        <translation>注意：请检查您的电脑的日期和时间是否正确！ 如果您的时间设置不正确，eXperience Points Core将无法正常工作。</translation>
     </message>
     <message>
         <source>Warning: The network does not appear to fully agree! Some miners appear to be experiencing issues.</source>
@@ -4977,7 +4977,7 @@ PIVX核心钱包</translation>
     </message>
     <message>
         <source>Copyright (C) 2015-%i The PIVX Core Developers</source>
-        <translation>版权所有(C) 2015-%i PIVX核心开发者</translation>
+        <translation>版权所有(C) 2015-%i eXperience Points核心开发者</translation>
     </message>
     <message>
         <source>Corrupted block database detected</source>
@@ -5300,8 +5300,8 @@ PIVX核心钱包</translation>
         <translation>准备重新同步……</translation>
     </message>
     <message>
-        <source>Please check that your computer's date and time are correct! If your clock is wrong PIVX Core will not work properly.</source>
-        <translation>请检查您的电脑的日期和时间是否正确!如果你的时间错误，PIVX Core将无法正常工作。</translation>
+        <source>Please check that your computer's date and time are correct! If your clock is wrong eXperience Points Core will not work properly.</source>
+        <translation>请检查您的电脑的日期和时间是否正确!如果你的时间错误，eXperience Points Core将无法正常工作。</translation>
     </message>
     <message>
         <source>Specify location of debug log file: this can be an absolute path or a path relative to the data directory (default: %s)</source>
@@ -5552,8 +5552,8 @@ PIVX核心钱包</translation>
         <translation>正在验证钱包……</translation>
     </message>
     <message>
-        <source>Wallet needed to be rewritten: restart PIVX Core to complete</source>
-        <translation>钱包需要重写:重新启动PIVX核心完成</translation>
+        <source>Wallet needed to be rewritten: restart eXperience Points Core to complete</source>
+        <translation>钱包需要重写:重新启动eXperience Points核心完成</translation>
     </message>
     <message>
         <source>Wallet options:</source>
@@ -5607,8 +5607,8 @@ PIVX核心钱包</translation>
         <translation>发送</translation>
     </message>
     <message>
-        <source>PIVX address or contact label</source>
-        <translation>PIVX 地址或者联系人标签</translation>
+        <source>eXperience Points address or contact label</source>
+        <translation>eXperience Points 地址或者联系人标签</translation>
     </message>
     <message>
         <source>Amount</source>

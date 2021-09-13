@@ -67,7 +67,7 @@ extern double NSAppKitVersionNumber;
 #endif
 #endif
 
-#define URI_SCHEME "pivx"
+#define URI_SCHEME "xp"
 
 #if defined(Q_OS_MAC)
 #pragma GCC diagnostic push
@@ -138,7 +138,7 @@ void setupAddressWidget(QValidatedLineEdit* widget, QWidget* parent)
     widget->setFont(bitcoinAddressFont());
     // We don't want translators to use own addresses in translations
     // and this is the only place, where this address is supplied.
-    widget->setPlaceholderText(QObject::tr("Enter PIVX address (e.g. %1)").arg("D7VFR83SQbiezrW72hjcWJtcfip5krte2Z"));
+    widget->setPlaceholderText(QObject::tr("Enter an address (e.g. %1)").arg("PTAgVppXHdbHgrowoagtwc5Y4zaqbVUJV5"));
     widget->setValidator(new BitcoinAddressEntryValidator(parent));
     widget->setCheckValidator(new BitcoinAddressCheckValidator(parent));
 }
@@ -631,11 +631,11 @@ bool DHMSTableWidgetItem::operator<(QTableWidgetItem const& item) const
 fs::path static StartupShortcutPath()
 {
     if (gArgs.GetBoolArg("-testnet", false))
-        return GetSpecialFolderPath(CSIDL_STARTUP) / "PIVX (testnet).lnk";
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "eXperience Points (testnet).lnk";
     else if (gArgs.GetBoolArg("-regtest", false))
-        return GetSpecialFolderPath(CSIDL_STARTUP) / "PIVX (regtest).lnk";
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "eXperience Points (regtest).lnk";
 
-    return GetSpecialFolderPath(CSIDL_STARTUP) / "PIVX.lnk";
+    return GetSpecialFolderPath(CSIDL_STARTUP) / "eXperience Points.lnk";
 }
 
 bool GetStartOnSystemStartup()
@@ -711,7 +711,7 @@ fs::path static GetAutostartDir()
 
 fs::path static GetAutostartFilePath()
 {
-    return GetAutostartDir() / "pivx.desktop";
+    return GetAutostartDir() / "eXperiencePoints.desktop";
 }
 
 bool GetStartOnSystemStartup()
@@ -752,11 +752,11 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
         if (gArgs.GetBoolArg("-testnet", false))
-            optionFile << "Name=PIVX (testnet)\n";
+            optionFile << "Name=eXperience Points (testnet)\n";
         else if (gArgs.GetBoolArg("-regtest", false))
-            optionFile << "Name=PIVX (regtest)\n";
+            optionFile << "Name=eXperience Points (regtest)\n";
         else
-            optionFile << "Name=PIVX\n";
+            optionFile << "Name=eXperience Points\n";
         optionFile << "Exec=" << pszExePath << strprintf(" -min -testnet=%d -regtest=%d\n", gArgs.GetBoolArg("-testnet", false), gArgs.GetBoolArg("-regtest", false));
         optionFile << "Terminal=false\n";
         optionFile << "Hidden=false\n";

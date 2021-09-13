@@ -152,12 +152,12 @@
     </message>
     <message>
         <location line="+7"/>
-        <source>These are your PIVX addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your eXperience Points addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>These are your PIVX addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your eXperience Points addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -448,7 +448,7 @@ for staking</source>
     </message>
     <message>
         <location line="+161"/>
-        <source>PIVX will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your PIVs from being stolen by malware infecting your computer.</source>
+        <source>eXperience Points will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your XPs from being stolen by malware infecting your computer.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -549,7 +549,7 @@ for staking</source>
     <message>
         <location line="+15"/>
         <location line="+26"/>
-        <source>0.00 pivx</source>
+        <source>0.00 XP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -585,7 +585,7 @@ for staking</source>
     </message>
     <message>
         <location line="+20"/>
-        <source>0,00 PIV</source>
+        <source>0,00 XP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -636,7 +636,7 @@ for staking</source>
     </message>
     <message>
         <location line="+81"/>
-        <source>Select PIV Outputs to Spend</source>
+        <source>Select XP Outputs to Spend</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -674,7 +674,7 @@ for staking</source>
         <location line="-393"/>
         <location line="+124"/>
         <location line="+461"/>
-        <source>0.00 PIV</source>
+        <source>0.00 XP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -937,7 +937,7 @@ for staking</source>
     </message>
     <message>
         <location filename="../pivx/forms/coldstakingwidget.ui" line="-603"/>
-        <source>You can delegate your PIVs, letting a hot node (24/7 online node)
+        <source>You can delegate your XPs, letting a hot node (24/7 online node)
 stake on your behalf, while you keep the keys securely offline.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -948,7 +948,7 @@ stake on your behalf, while you keep the keys securely offline.</source>
     </message>
     <message>
         <location line="-139"/>
-        <source>Accept PIV delegation / Delegate PIV</source>
+        <source>Accept XP delegation / Delegate XP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1192,7 +1192,7 @@ address</source>
     </message>
     <message>
         <location line="+357"/>
-        <source>How to get PIV</source>
+        <source>How to get XP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1342,7 +1342,7 @@ It will start automatically as soon as the wallet has enough confirmations on an
     </message>
     <message>
         <location line="+67"/>
-        <source>The entered address &quot;%1&quot; is not a valid PIVX address.</source>
+        <source>The entered address &quot;%1&quot; is not a valid eXperience Points address.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1406,7 +1406,7 @@ It will start automatically as soon as the wallet has enough confirmations on an
     </message>
     <message>
         <location line="+0"/>
-        <source>PIVX Core</source>
+        <source>eXperience Points Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1417,7 +1417,7 @@ It will start automatically as soon as the wallet has enough confirmations on an
     </message>
     <message>
         <location line="+6"/>
-        <source>About PIVX Core</source>
+        <source>About eXperience Points Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1485,17 +1485,17 @@ It will start automatically as soon as the wallet has enough confirmations on an
     </message>
     <message>
         <location line="+90"/>
-        <source>Welcome to PIVX Core.</source>
+        <source>Welcome to eXperience Points Core.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+35"/>
-        <source>As this is the first time the program is launched, you can choose where PIVX Core will store its data.</source>
+        <source>As this is the first time the program is launched, you can choose where eXperience Points Core will store its data.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+18"/>
-        <source>PIVX Core will download and store a copy of the PIVX block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <source>eXperience Points Core will download and store a copy of the eXperience Points block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1520,7 +1520,7 @@ It will start automatically as soon as the wallet has enough confirmations on an
     </message>
     <message>
         <location filename="../intro.cpp" line="+100"/>
-        <source>PIVX Core</source>
+        <source>eXperience Points Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1652,7 +1652,7 @@ It will start automatically as soon as the wallet has enough confirmations on an
     </message>
     <message>
         <location line="+23"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To create a PIVX Masternode you must dedicate 10,000 PIV (the unit of PIVX) to the network (however, these coins are still yours and will never leave your possession). &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;You can deactivate the node and unlock the coins at any time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To create a eXperience Points Masternode you must dedicate 500,000 XP (the unit of eXperience Points) to the network (however, these coins are still yours and will never leave your possession). &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;You can deactivate the node and unlock the coins at any time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1677,7 +1677,7 @@ It will start automatically as soon as the wallet has enough confirmations on an
     </message>
     <message>
         <location line="+97"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A transaction of 10,000 PIV will be made&lt;/p&gt;&lt;p&gt;to a new empty address in your wallet.&lt;/p&gt;&lt;p&gt;The Address is labeled under the master node&apos;s name.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A transaction of 500,000 XP will be made&lt;/p&gt;&lt;p&gt;to a new empty address in your wallet.&lt;/p&gt;&lt;p&gt;The Address is labeled under the master node&apos;s name.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1888,7 +1888,7 @@ Please wait few more minutes (masternode collaterals require %1 confirmations).<
     </message>
     <message>
         <location line="+118"/>
-        <source>Not enough balance to create a masternode, 10,000 %1 required.</source>
+        <source>Not enough balance to create a masternode, 500,000 %1 required.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1922,7 +1922,7 @@ Please wait few more minutes (masternode collaterals require %1 confirmations).<
 on a remote server to your clipboard.
 
 
-You will only have to paste the data in the pivx.conf file
+You will only have to paste the data in the eXperiencePoints.conf file
 of your remote server and start it, then start the Masternode using
 this controller wallet (select the Masternode in the list and press &quot;start&quot;).
 </source>
@@ -2142,7 +2142,7 @@ STAKING</source>
     </message>
     <message>
         <location line="+6"/>
-        <source>Invalid URI, not starting with &quot;pivx&quot; prefix</source>
+        <source>Invalid URI, not starting with &quot;xp&quot; prefix</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2198,7 +2198,7 @@ STAKING</source>
     </message>
     <message>
         <location line="+33"/>
-        <source>Automatically open the PIVX client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the eXperience Points client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2223,12 +2223,12 @@ STAKING</source>
     </message>
     <message>
         <location line="-236"/>
-        <source>Automatically start PIVX after logging in to the system.</source>
+        <source>Automatically start eXperience Points after logging in to the system.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start PIVX on system login</source>
+        <source>&amp;Start eXperience Points on system login</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2263,13 +2263,13 @@ STAKING</source>
     </message>
     <message>
         <location line="+192"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting PIVX.</source>
+        <source>The user interface language can be set here. This setting will take effect after restarting eXperience Points.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/pivx-project/pivx-project-translations</source>
+https://github.com/experience-points-development/eXperience-Points/issues</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2279,17 +2279,17 @@ https://www.transifex.com/pivx-project/pivx-project-translations</source>
     </message>
     <message>
         <location line="-187"/>
-        <source>Enable automatic minting of PIV units to zPIV</source>
+        <source>Enable automatic minting of XP units to zXP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Enable zPIV Automint</source>
+        <source>Enable zXP Automint</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Enable automatic zPIV minting from specific addresses</source>
+        <source>Enable automatic zXP minting from specific addresses</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2299,23 +2299,23 @@ https://www.transifex.com/pivx-project/pivx-project-translations</source>
     </message>
     <message>
         <location line="+11"/>
-        <source>Percentage of incoming PIV which get automatically converted to zPIV via Zerocoin Protocol (min: 10%)</source>
+        <source>Percentage of incoming XP which get automatically converted to zXP via Zerocoin Protocol (min: 10%)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Percentage of autominted zPIV</source>
+        <source>Percentage of autominted zXP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+30"/>
         <location line="+16"/>
-        <source>Wait with automatic conversion to Zerocoin until enough PIV for this denomination is available</source>
+        <source>Wait with automatic conversion to Zerocoin until enough XP for this denomination is available</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-13"/>
-        <source>Preferred Automint zPIV Denomination</source>
+        <source>Preferred Automint zXP Denomination</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2325,7 +2325,7 @@ https://www.transifex.com/pivx-project/pivx-project-translations</source>
     </message>
     <message>
         <location line="+98"/>
-        <source>Connect to the PIVX network through a SOCKS5 proxy.</source>
+        <source>Connect to the eXperience Points network through a SOCKS5 proxy.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2513,7 +2513,7 @@ https://www.transifex.com/pivx-project/pivx-project-translations</source>
         <location filename="../pivx/pivxgui.cpp" line="+69"/>
         <location line="+308"/>
         <location line="+69"/>
-        <source>PIVX Core</source>
+        <source>eXperience Points Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2548,7 +2548,7 @@ https://www.transifex.com/pivx-project/pivx-project-translations</source>
     </message>
     <message>
         <location line="+39"/>
-        <source>PIVX Core client</source>
+        <source>eXperience Points Core client</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2641,12 +2641,12 @@ Address: %4
     </message>
     <message>
         <location line="-101"/>
-        <source>Cannot start pivx: click-to-pay handler</source>
+        <source>Cannot start xp: click-to-pay handler</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+107"/>
-        <source>URI cannot be parsed! This can be caused by an invalid PIVX address or malformed URI parameters.</source>
+        <source>URI cannot be parsed! This can be caused by an invalid eXperience Points address or malformed URI parameters.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2759,7 +2759,7 @@ Address: %4
     </message>
     <message>
         <location filename="../guiutil.cpp" line="+141"/>
-        <source>Enter PIVX address (e.g. %1)</source>
+        <source>Enter eXperience Points address (e.g. %1)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2815,7 +2815,7 @@ Address: %4
     </message>
     <message>
         <location filename="../pivx.cpp" line="+535"/>
-        <source>A fatal error occurred. PIVX can no longer continue safely and will quit.</source>
+        <source>A fatal error occurred. eXperience Points can no longer continue safely and will quit.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2823,7 +2823,7 @@ Address: %4
         <location line="+7"/>
         <location line="+15"/>
         <location line="+19"/>
-        <source>PIVX Core</source>
+        <source>eXperience Points Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3208,7 +3208,7 @@ Address: %4
     </message>
     <message>
         <location line="+93"/>
-        <source>Open the PIVX debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <source>Open the eXperience Points debug log file from the current data directory. This can take a few seconds for large log files.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3390,7 +3390,7 @@ Address: %4
     </message>
     <message>
         <location line="+29"/>
-        <source>Custom zPIV Backup Path:</source>
+        <source>Custom zXP Backup Path:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3490,7 +3490,7 @@ Address: %4
     </message>
     <message>
         <location line="-39"/>
-        <source>Welcome to the PIVX RPC console.</source>
+        <source>Welcome to the eXperience Points RPC console.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3666,7 +3666,7 @@ Address: %4
     </message>
     <message>
         <location line="+61"/>
-        <source>Scan the QR code or copy the address to receive PIV</source>
+        <source>Scan the QR code or copy the address to receive XP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3681,7 +3681,7 @@ Address: %4
     </message>
     <message>
         <location line="+19"/>
-        <source>Accept transparent or shielded PIV</source>
+        <source>Accept transparent or shielded XP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3851,12 +3851,12 @@ try unlocking the wallet</source>
     </message>
     <message>
         <location line="+74"/>
-        <source>PIV</source>
+        <source>XP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-117"/>
-        <source>Instead of sharing only a PIVX address, you can create a payment request, bundling up more information</source>
+        <source>Instead of sharing only a eXperience Points address, you can create a payment request, bundling up more information</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3970,7 +3970,7 @@ try unlocking the wallet</source>
     </message>
     <message>
         <location line="+72"/>
-        <source>The remainder of the value resultant from the inputs minus the outputs value goes to the &quot;change&quot; PIVX address</source>
+        <source>The remainder of the value resultant from the inputs minus the outputs value goes to the &quot;change&quot; eXperience Points address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4008,7 +4008,7 @@ try unlocking the wallet</source>
     </message>
     <message>
         <location line="+86"/>
-        <source>PIV/kilobyte</source>
+        <source>XP/kilobyte</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4338,12 +4338,12 @@ Do you want to continue?
     </message>
     <message>
         <location line="+14"/>
-        <source>Error generating address to shield PIVs</source>
+        <source>Error generating address to shield XPs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8"/>
-        <source>You don&apos;t have any transparent PIVs to shield.</source>
+        <source>You don&apos;t have any transparent XPs to shield.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4483,7 +4483,7 @@ Remember to write it down and store it safely, otherwise you might lose access t
     </message>
     <message>
         <location line="+7"/>
-        <source>Encrypt your PIVX addresses (key pair actually) using BIP38 encryption.
+        <source>Encrypt your eXperience Points addresses (key pair actually) using BIP38 encryption.
 Using this mechanism you can share your keys without middle-man risk, only need to store your passphrase safely</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4530,7 +4530,7 @@ Using this mechanism you can share your keys without middle-man risk, only need 
     </message>
     <message>
         <location line="+77"/>
-        <source>PIVX address</source>
+        <source>eXperience Points address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4697,7 +4697,7 @@ Verify that you have installed a predetermined text editor.</source>
     </message>
     <message>
         <location line="+151"/>
-        <source>Welcome to the PIVX RPC console.</source>
+        <source>Welcome to the eXperience Points RPC console.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4837,12 +4837,12 @@ Verify that you have installed a predetermined text editor.</source>
     </message>
     <message>
         <location line="+1"/>
-        <source>PIVX_tx_csv_export(*.csv)</source>
+        <source>XP_tx_csv_export(*.csv)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>PIVX_addresses_csv_export(*.csv)</source>
+        <source>XP_addresses_csv_export(*.csv)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4925,17 +4925,17 @@ There was an error trying to save the address list to %1. Please try again.</sou
     </message>
     <message>
         <location line="+152"/>
-        <source>1) What is PIVX?</source>
+        <source>1) What is eXperience Points?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+31"/>
-        <source>2) Why are my PIV unspendable?</source>
+        <source>2) Why are my XP unspendable?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+148"/>
-        <source>https://PIVX.org/</source>
+        <source>https://eXperiencePoints.io</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4945,7 +4945,7 @@ There was an error trying to save the address list to %1. Please try again.</sou
     </message>
     <message>
         <location line="+18"/>
-        <source>What is PIVX?</source>
+        <source>What is eXperience Points?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4955,7 +4955,7 @@ There was an error trying to save the address list to %1. Please try again.</sou
     </message>
     <message>
         <location line="+21"/>
-        <source>Why are my PIV unspendable?</source>
+        <source>Why are my XP unspendable?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4965,7 +4965,7 @@ There was an error trying to save the address list to %1. Please try again.</sou
     </message>
     <message>
         <location line="+18"/>
-        <source>How do I stake PIV?</source>
+        <source>How do I stake XP?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5010,7 +5010,7 @@ There was an error trying to save the address list to %1. Please try again.</sou
     </message>
     <message>
         <location line="+138"/>
-        <source>3) How do I stake PIV?</source>
+        <source>3) How do I stake XP?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5035,22 +5035,22 @@ There was an error trying to save the address list to %1. Please try again.</sou
     </message>
     <message>
         <location filename="../pivx/settings/settingsfaqwidget.cpp" line="+71"/>
-        <source>PIVX is a form of digital online money using blockchain technology that can be easily transferred globally, instantly, and with near zero fees. PIVX incorporates market leading security &amp; privacy and is also the first PoS (Proof of Stake) Cryptocurrency to implement Sapling(SHIELD), a zk-SNARKs based privacy protocol.</source>
+        <source>eXperience Points is a form of digital online money using blockchain technology that can be easily transferred globally, instantly, and with near zero fees. eXperience Points incorporates market leading security &amp; privacy and is also the first PoS (Proof of Stake) Cryptocurrency to implement Sapling(SHIELD), a zk-SNARKs based privacy protocol.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>PIVX utilizes a Proof of Stake (PoS) consensus system algorithm, allowing all owners of PIVX to participate in earning block rewards while securing the network with full node wallets, as well as to run Masternodes to create and vote on proposals.</source>
+        <source>eXperience Points utilizes a Proof of Stake (PoS) consensus system algorithm, allowing all owners of eXperience Points to participate in earning block rewards while securing the network with full node wallets, as well as to run Masternodes to create and vote on proposals.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8"/>
-        <source>Newly received PIVX requires 6 confirmations on the network to become eligible for spending which can take ~6 minutes.</source>
+        <source>Newly received eXperience Points requires 6 confirmations on the network to become eligible for spending which can take ~6 minutes.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Your PIVX wallet also needs to be completely synchronized to see and spend balances on the network.</source>
+        <source>Your eXperience Points wallet also needs to be completely synchronized to see and spend balances on the network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5060,7 +5060,7 @@ There was an error trying to save the address list to %1. Please try again.</sou
     </message>
     <message>
         <location line="+1"/>
-        <source>You must have a balance of PIVX with a minimum of 600 confirmations.</source>
+        <source>You must have a balance of eXperience Points with a minimum of 600 confirmations.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5090,7 +5090,7 @@ There was an error trying to save the address list to %1. Please try again.</sou
     </message>
     <message>
         <location line="+5"/>
-        <source>A masternode is a computer running a full node PIVX core wallet with a requirement of 10,000 PIV secured collateral to provide extra services to the network and in return, receive a portion of the block reward regularly. These services include:</source>
+        <source>A masternode is a computer running a full node eXperience Points core wallet with a requirement of 500,000 XP secured collateral to provide extra services to the network and in return, receive a portion of the block reward regularly. These services include:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5125,7 +5125,7 @@ There was an error trying to save the address list to %1. Please try again.</sou
     </message>
     <message>
         <location line="+2"/>
-        <source>Participate in PIVX Governance</source>
+        <source>Participate in eXperience Points Governance</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5140,7 +5140,7 @@ There was an error trying to save the address list to %1. Please try again.</sou
     </message>
     <message>
         <location line="+1"/>
-        <source>Help secure the PIVX network</source>
+        <source>Help secure the eXperience Points network</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5150,7 +5150,7 @@ There was an error trying to save the address list to %1. Please try again.</sou
     </message>
     <message>
         <location line="+2"/>
-        <source>10,000 PIV per single Masternode instance</source>
+        <source>500,000 XP per single Masternode instance</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5170,7 +5170,7 @@ There was an error trying to save the address list to %1. Please try again.</sou
     </message>
     <message>
         <location line="+5"/>
-        <source>A Masternode Controller wallet is where the 10,000 PIV collateral can reside during a Controller-Remote masternode setup. It is a wallet that can activate the remote masternode wallet(s) and allows you to keep your collateral coins offline while the remote masternode remains online.</source>
+        <source>A Masternode Controller wallet is where the 500,000 XP collateral can reside during a Controller-Remote masternode setup. It is a wallet that can activate the remote masternode wallet(s) and allows you to keep your collateral coins offline while the remote masternode remains online.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -5298,7 +5298,7 @@ There was an error trying to save the address list to %1. Please try again.</sou
     </message>
     <message>
         <location line="+4"/>
-        <source>Unable to open pivx.conf with default application</source>
+        <source>Unable to open eXperiencePoints.conf with default application</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5371,7 +5371,7 @@ There was an error trying to save the address list to %1. Please try again.</sou
     </message>
     <message>
         <location filename="../pivx/settings/settingsmainoptionswidget.cpp" line="+54"/>
-        <source>Start PIVX on system login</source>
+        <source>Start eXperience Points on system login</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5479,7 +5479,7 @@ Are you sure?
     </message>
     <message>
         <location filename="../pivx/settings/settingsmultisendwidget.cpp" line="+164"/>
-        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other PIVX addresses after it matures.</source>
+        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other eXperience Points addresses after it matures.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5634,7 +5634,7 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
     </message>
     <message>
         <location line="-62"/>
-        <source>PIVX address or contact label</source>
+        <source>eXperience Points address or contact label</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6044,7 +6044,7 @@ Check one or both of the check boxes to send on stake and/or masternode rewards<
     </message>
     <message>
         <location line="+31"/>
-        <source>About PIVX</source>
+        <source>About eXperience Points</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6126,7 +6126,7 @@ Are you sure?
     <name>ShutdownWindow</name>
     <message>
         <location filename="../utilitydialog.cpp" line="+71"/>
-        <source>PIVX Core is shutting down...</source>
+        <source>eXperience Points Core is shutting down...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6162,7 +6162,7 @@ Are you sure?
     </message>
     <message>
         <location filename="../pivx/splash.cpp" line="+31"/>
-        <source>PIVX Core</source>
+        <source>eXperience Points Core</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6672,7 +6672,7 @@ backup will be created.
     </message>
     <message>
         <location line="+2"/>
-        <source>Burned PIVs</source>
+        <source>Burned XPs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6891,12 +6891,12 @@ backup will be created.
     </message>
     <message>
         <location line="+142"/>
-        <source>+0.000585 PIV</source>
+        <source>+0.000585 XP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>-0.000585 PIV</source>
+        <source>-0.000585 XP</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6970,27 +6970,27 @@ Select fewer inputs with coin control.</source>
     <message>
         <location line="+89"/>
         <source>Welcome to
-PIVX Core Wallet</source>
+eXperience Points Core Wallet</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+27"/>
-        <source>PIVX is the world’s most innovative Proof of Stake blockchain based technology. Developed by a team of highly experienced developers and cryptographers.</source>
+        <source>eXperience Points is the world’s most innovative Proof of Stake blockchain based technology. Developed by a team of highly experienced developers and cryptographers.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+93"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;As our manifesto says: Privacy is a non-negotiable basic human right; it grants users the freedom to share their data whenever and with whomever they want - PIVX believes in self sovereignty.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;As our manifesto says: Privacy is a non-negotiable basic human right; it grants users the freedom to share their data whenever and with whomever they want - eXperience Points believes in self sovereignty.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+83"/>
-        <source>The masternode network is PIVX&apos;s second layer network on top of the blockchain that enables our DAO to provide decentralized governance and a treasury.</source>
+        <source>The masternode network is eXperience Points&apos;s second layer network on top of the blockchain that enables our DAO to provide decentralized governance and a treasury.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-103"/>
-        <source>How PIVX respects your privacy?</source>
+        <source>How eXperience Points respects your privacy?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7198,7 +7198,7 @@ PIVX Core Wallet</source>
     </message>
     <message>
         <location line="+3"/>
-        <source>Unable to bind to %s on this computer. PIVX Core is probably already running.</source>
+        <source>Unable to bind to %s on this computer. eXperience Points Core is probably already running.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7218,7 +7218,7 @@ PIVX Core Wallet</source>
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong PIVX Core will not work properly.</source>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong eXperience Points Core will not work properly.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7570,7 +7570,7 @@ Please run &apos;sapling-fetch-params&apos; or &apos;./util/fetch-params.sh&apos
     </message>
     <message>
         <location line="+18"/>
-        <source>Disable all PIVX specific functionality (Masternodes, Budgeting) (0-1, default: %u)</source>
+        <source>Disable all eXperience Points specific functionality (Masternodes, Budgeting) (0-1, default: %u)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7615,7 +7615,7 @@ Please run &apos;sapling-fetch-params&apos; or &apos;./util/fetch-params.sh&apos
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading %s: Wallet requires newer version of PIVX Core</source>
+        <source>Error loading %s: Wallet requires newer version of eXperience Points Core</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7876,12 +7876,12 @@ Please run &apos;sapling-fetch-params&apos; or &apos;./util/fetch-params.sh&apos
     </message>
     <message>
         <location line="+28"/>
-        <source>Minimum positive amount (in PIV) allowed by GUI and RPC for the stake split threshold (default: %s)</source>
+        <source>Minimum positive amount (in XP) allowed by GUI and RPC for the stake split threshold (default: %s)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Please check that your computer&apos;s date and time are correct! If your clock is wrong PIVX Core will not work properly.</source>
+        <source>Please check that your computer&apos;s date and time are correct! If your clock is wrong eXperience Points Core will not work properly.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -8362,7 +8362,7 @@ Please run &apos;sapling-fetch-params&apos; or &apos;./util/fetch-params.sh&apos
     </message>
     <message>
         <location line="+2"/>
-        <source>Wallet needed to be rewritten: restart PIVX Core to complete</source>
+        <source>Wallet needed to be rewritten: restart eXperience Points Core to complete</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -8451,7 +8451,7 @@ Please run &apos;sapling-fetch-params&apos; or &apos;./util/fetch-params.sh&apos
     </message>
     <message>
         <location line="+53"/>
-        <source>PIVX address or contact label</source>
+        <source>eXperience Points address or contact label</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

@@ -122,12 +122,12 @@
         <translation>Adrese za primanje</translation>
     </message>
     <message>
-        <source>These are your PIVX addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>To su vaše PIVX adrese za slanje plaćanja. Uvijek provjerite iznos i adresu primatelja prije slanja novca.</translation>
+        <source>These are your eXperience Points addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>To su vaše eXperience Points adrese za slanje plaćanja. Uvijek provjerite iznos i adresu primatelja prije slanja novca.</translation>
     </message>
     <message>
-        <source>These are your PIVX addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>To su vaše PIVX adrese za primanje uplata. Preporuča se upotreba nove adrese primatelja za svaku transakciju.</translation>
+        <source>These are your eXperience Points addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>To su vaše eXperience Points adrese za primanje uplata. Preporuča se upotreba nove adrese primatelja za svaku transakciju.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -364,8 +364,8 @@ za staking</translation>
         <translation>PONIŠTI</translation>
     </message>
     <message>
-        <source>PIVX will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your PIVs from being stolen by malware infecting your computer.</source>
-        <translation>PIVX će se sada zatvoriti kako bi se dovršio proces šifriranja. Ne zaboravite da šifriranje Vašeg novčanika ne može u potpunosti zaštititi vaše PIV od krađje zlonamjernog softvera koji zarazi vaše računalo.</translation>
+        <source>eXperience Points will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your XPs from being stolen by malware infecting your computer.</source>
+        <translation>eXperience Points će se sada zatvoriti kako bi se dovršio proces šifriranja. Ne zaboravite da šifriranje Vašeg novčanika ne može u potpunosti zaštititi vaše XP od krađje zlonamjernog softvera koji zarazi vaše računalo.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -439,8 +439,8 @@ za staking</translation>
         <translation>Transparentno</translation>
     </message>
     <message>
-        <source>0.00 pivx</source>
-        <translation>0.00 pivx</translation>
+        <source>0.00 XP</source>
+        <translation>0.00 XP</translation>
     </message>
     <message>
         <source>Shielded</source>
@@ -469,8 +469,8 @@ za staking</translation>
         <translation>Ušteđjevina</translation>
     </message>
     <message>
-        <source>0,00 PIV</source>
-        <translation>0,00 PIV</translation>
+        <source>0,00 XP</source>
+        <translation>0,00 XP</translation>
     </message>
     <message>
         <source>address</source>
@@ -511,8 +511,8 @@ za staking</translation>
         <translation>Odabir novčića</translation>
     </message>
     <message>
-        <source>Select PIV Outputs to Spend</source>
-        <translation>Odaberi PIV za potrošiti</translation>
+        <source>Select XP Outputs to Spend</source>
+        <translation>Odaberi XP za potrošiti</translation>
     </message>
     <message>
         <source>Dust:</source>
@@ -539,8 +539,8 @@ za staking</translation>
         <translation>Iznos</translation>
     </message>
     <message>
-        <source>0.00 PIV</source>
-        <translation>0.00 PIV</translation>
+        <source>0.00 XP</source>
+        <translation>0.00 XP</translation>
     </message>
     <message>
         <source>0</source>
@@ -746,7 +746,7 @@ za staking</translation>
         <translation>Greška pri učitavanju delegacija: %1</translation>
     </message>
     <message>
-        <source>You can delegate your PIVs, letting a hot node (24/7 online node)
+        <source>You can delegate your XPs, letting a hot node (24/7 online node)
 stake on your behalf, while you keep the keys securely offline.</source>
         <translation>Možete delegirati vaše novčiće, dozvoljavajući drugom novčaniku (koji radi 24/7)
 staking u vaše ime, dok su vaši novčići spremljeni na sigurnom.</translation>
@@ -756,8 +756,8 @@ staking u vaše ime, dok su vaši novčići spremljeni na sigurnom.</translation
         <translation>Unesi adresu vlasnika</translation>
     </message>
     <message>
-        <source>Accept PIV delegation / Delegate PIV</source>
-        <translation>Prihvati PIV delegaciju / Delegiraj PIV</translation>
+        <source>Accept XP delegation / Delegate XP</source>
+        <translation>Prihvati XP delegaciju / Delegiraj XP</translation>
     </message>
     <message>
         <source>Cold Staking address</source>
@@ -961,8 +961,8 @@ vlasnika</translation>
         <translation>Pogledajte povijest vašeg novčanika</translation>
     </message>
     <message>
-        <source>How to get PIV</source>
-        <translation>Kako dobiti PIV</translation>
+        <source>How to get XP</source>
+        <translation>Kako dobiti XP</translation>
     </message>
     <message>
         <source>Sort by</source>
@@ -1077,8 +1077,8 @@ Staking će se automatski pokrenuti čim novčanik dobije dovoljno potvrda o nep
         <translation>Uredi adresu pošiljatelja</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid PIVX address.</source>
-        <translation>Unesena adresa "%1" nije ispravna PIVX adresa.</translation>
+        <source>The entered address "%1" is not a valid eXperience Points address.</source>
+        <translation>Unesena adresa "%1" nije ispravna eXperience Points adresa.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1130,16 +1130,16 @@ Staking će se automatski pokrenuti čim novčanik dobije dovoljno potvrda o nep
         <translation>verzija</translation>
     </message>
     <message>
-        <source>PIVX Core</source>
-        <translation>PIVX Core</translation>
+        <source>eXperience Points Core</source>
+        <translation>eXperience Points Core</translation>
     </message>
     <message>
         <source>(%1-bit)</source>
         <translation>(%1-bit)</translation>
     </message>
     <message>
-        <source>About PIVX Core</source>
-        <translation>O PIVX Core-u</translation>
+        <source>About eXperience Points Core</source>
+        <translation>O eXperience Points Core-u</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -1193,16 +1193,16 @@ Staking će se automatski pokrenuti čim novčanik dobije dovoljno potvrda o nep
         <translation>Dobrodošli</translation>
     </message>
     <message>
-        <source>Welcome to PIVX Core.</source>
-        <translation>Dobrodošli u PIVX Core.</translation>
+        <source>Welcome to eXperience Points Core.</source>
+        <translation>Dobrodošli u eXperience Points Core.</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where PIVX Core will store its data.</source>
-        <translation>Budući da je prvi put pokrenut program, možete odabrati gdje će PIVX Core pohraniti svoje podatke.</translation>
+        <source>As this is the first time the program is launched, you can choose where eXperience Points Core will store its data.</source>
+        <translation>Budući da je prvi put pokrenut program, možete odabrati gdje će eXperience Points Core pohraniti svoje podatke.</translation>
     </message>
     <message>
-        <source>PIVX Core will download and store a copy of the PIVX block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>PIVX Core preuzima i pohranjuje kopiju PIVX blok-lanca. Barem će %1GB podataka biti pohranjeno u ovom direktoriju i to će s vremenom rasti. Novčanik će također biti pohranjena u ovom direktoriju.</translation>
+        <source>eXperience Points Core will download and store a copy of the eXperience Points block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>eXperience Points Core preuzima i pohranjuje kopiju eXperience Points blok-lanca. Barem će %1GB podataka biti pohranjeno u ovom direktoriju i to će s vremenom rasti. Novčanik će također biti pohranjena u ovom direktoriju.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1221,8 +1221,8 @@ Staking će se automatski pokrenuti čim novčanik dobije dovoljno potvrda o nep
         <translation>OK</translation>
     </message>
     <message>
-        <source>PIVX Core</source>
-        <translation>PIVX Core</translation>
+        <source>eXperience Points Core</source>
+        <translation>eXperience Points Core</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -1329,8 +1329,8 @@ Staking će se automatski pokrenuti čim novčanik dobije dovoljno potvrda o nep
         <translation>Stvori novi Masternode Controller</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To create a PIVX Masternode you must dedicate 10,000 PIV (the unit of PIVX) to the network (however, these coins are still yours and will never leave your possession). &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;You can deactivate the node and unlock the coins at any time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Da biste stvoriti PIVX Masternode, morate odvojiti 10,000 PIV (jedinica PIVX-a) prema mreži (međjutim, ti novčići su i dalje vaši i nikad neće napustiti vaše vlasništvo). &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt; Možete isključiti node i otključati novčiće u bilo kojem trenutku.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To create a eXperience Points Masternode you must dedicate 500,000 XP (the unit of eXperience Points) to the network (however, these coins are still yours and will never leave your possession). &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;You can deactivate the node and unlock the coins at any time.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Da biste stvoriti eXperience Points Masternode, morate odvojiti 500,000 XP (jedinica eXperience Points-a) prema mreži (međjutim, ti novčići su i dalje vaši i nikad neće napustiti vaše vlasništvo). &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt; Možete isključiti node i otključati novčiće u bilo kojem trenutku.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Set Masternode Name</source>
@@ -1349,8 +1349,8 @@ Staking će se automatski pokrenuti čim novčanik dobije dovoljno potvrda o nep
         <translation>Obavezno imajte tu količinu novčića.</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A transaction of 10,000 PIV will be made&lt;/p&gt;&lt;p&gt;to a new empty address in your wallet.&lt;/p&gt;&lt;p&gt;The Address is labeled under the master node's name.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Transakcija od 10,000 PIV će biti napravljena&lt;/p&gt;&lt;p&gt;u novu praznu adresu u Vašem novčaniku.&lt;/p&gt;&lt;p&gt;Adresa je označena pod imenom Masternode-a.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A transaction of 500,000 XP will be made&lt;/p&gt;&lt;p&gt;to a new empty address in your wallet.&lt;/p&gt;&lt;p&gt;The Address is labeled under the master node's name.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Transakcija od 500,000 XP će biti napravljena&lt;/p&gt;&lt;p&gt;u novu praznu adresu u Vašem novčaniku.&lt;/p&gt;&lt;p&gt;Adresa je označena pod imenom Masternode-a.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Address of the node that must always be online running the actual master node.</source>
@@ -1528,8 +1528,8 @@ Molimo pričekajte nekoliko minuta (zalog za Masternode zahtjeva %1 potvrda).</t
         <translation>Podaci za Masternode kopirani u međjuspremnik.</translation>
     </message>
     <message>
-        <source>Not enough balance to create a masternode, 10,000 %1 required.</source>
-        <translation>Nemate dovoljno sredstava za stvoriti masternode, potrebno je 10,000 %1.</translation>
+        <source>Not enough balance to create a masternode, 500,000 %1 required.</source>
+        <translation>Nemate dovoljno sredstava za stvoriti masternode, potrebno je 500,000 %1.</translation>
     </message>
     <message>
         <source>Remote Masternode Data</source>
@@ -1556,7 +1556,7 @@ Molimo pričekajte nekoliko minuta (zalog za Masternode zahtjeva %1 potvrda).</t
 on a remote server to your clipboard.
 
 
-You will only have to paste the data in the pivx.conf file
+You will only have to paste the data in the eXperiencePoints.conf file
 of your remote server and start it, then start the Masternode using
 this controller wallet (select the Masternode in the list and press "start").
 </source>
@@ -1564,7 +1564,7 @@ this controller wallet (select the Masternode in the list and press "start").
 na udaljenom poslužitelju u medjuspremnik.
 
 
-Podatke ćete morati zalijepiti u datoteku pivx.conf
+Podatke ćete morati zalijepiti u datoteku eXperiencePoints.conf
 na udaljenom poslužitelju i pokrenuti ga, a zatim pokrenite Masternode
 koristeći ovaj controller novčanik (na popisu odaberite Masternode i pritisnite "start").
 </translation>
@@ -1754,8 +1754,8 @@ STAKING</translation>
         <translation>Parsirani podaci preveliki</translation>
     </message>
     <message>
-        <source>Invalid URI, not starting with "pivx" prefix</source>
-        <translation>Nevažeći URI, ne počinje "pivx" prefiksom</translation>
+        <source>Invalid URI, not starting with "xp" prefix</source>
+        <translation>Nevažeći URI, ne počinje "xp" prefiksom</translation>
     </message>
 </context>
 <context>
@@ -1800,8 +1800,8 @@ STAKING</translation>
         <translation>Ako onemogućite potrošnju nepotvrđjenog ostatka, ostatak od transakcije &lt;br/&gt;ne može se koristiti dok ta transakcija nema barem jednu potvrdu. &lt;br/&gt;Ovo takođjer utječe na izračun vašeg salda.</translation>
     </message>
     <message>
-        <source>Automatically open the PIVX client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatski otvorite PIVX klijentski ulaz na ruteru. To funkcionira samo kada vaš ruter podržava UPnP i omogućen je.</translation>
+        <source>Automatically open the eXperience Points client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatski otvorite eXperience Points klijentski ulaz na ruteru. To funkcionira samo kada vaš ruter podržava UPnP i omogućen je.</translation>
     </message>
     <message>
         <source>Accept connections from outside</source>
@@ -1820,12 +1820,12 @@ STAKING</translation>
         <translation>Stručnjak</translation>
     </message>
     <message>
-        <source>Automatically start PIVX after logging in to the system.</source>
-        <translation>Automatski pokrenite PIVX nakon prijave u sustav.</translation>
+        <source>Automatically start eXperience Points after logging in to the system.</source>
+        <translation>Automatski pokrenite eXperience Points nakon prijave u sustav.</translation>
     </message>
     <message>
-        <source>&amp;Start PIVX on system login</source>
-        <translation>&amp;Pokrenite PIVX pri pokretanju sustava</translation>
+        <source>&amp;Start eXperience Points on system login</source>
+        <translation>&amp;Pokrenite eXperience Points pri pokretanju sustava</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1852,58 +1852,58 @@ STAKING</translation>
         <translation>&amp;Mreža</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting PIVX.</source>
-        <translation>Jezik korisničkog sučelja možete postaviti ovdje. Postavke će stupiti na snagu nakon ponovnog pokretanja PIVX novčanika.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting eXperience Points.</source>
+        <translation>Jezik korisničkog sučelja možete postaviti ovdje. Postavke će stupiti na snagu nakon ponovnog pokretanja eXperience Points novčanika.</translation>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/pivx-project/pivx-project-translations</source>
+https://github.com/experience-points-development/eXperience-Points/issues</source>
         <translation>Jezik nedostaje ili prijevod nije potpun? Pomozite s prijevodom ovdje:
-https://www.transifex.com/pivx-project/pivx-project-translations</translation>
+https://github.com/experience-points-development/eXperience-Points/issues</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Mapiranje porta koristeći &amp;UPnP</translation>
     </message>
     <message>
-        <source>Enable automatic minting of PIV units to zPIV</source>
-        <translation>Omogući automatsko stvaranje PIV jedinica na zPIV</translation>
+        <source>Enable automatic minting of XP units to zXP</source>
+        <translation>Omogući automatsko stvaranje XP jedinica na zXP</translation>
     </message>
     <message>
-        <source>Enable zPIV Automint</source>
-        <translation>Omogući automatsko stvaranje zPIV-a</translation>
+        <source>Enable zXP Automint</source>
+        <translation>Omogući automatsko stvaranje zXP-a</translation>
     </message>
     <message>
-        <source>Enable automatic zPIV minting from specific addresses</source>
-        <translation>Omogući automatsko stvaranje zPIV-a s određjenih adresa</translation>
+        <source>Enable automatic zXP minting from specific addresses</source>
+        <translation>Omogući automatsko stvaranje zXP-a s određjenih adresa</translation>
     </message>
     <message>
         <source>Enable Automint Addresses</source>
         <translation>Omogući Automint adrese</translation>
     </message>
     <message>
-        <source>Percentage of incoming PIV which get automatically converted to zPIV via Zerocoin Protocol (min: 10%)</source>
-        <translation>Postotak dolaznih PIV koji se automatski pretvara u zPIV putem Zerocoin Protokola (min: 10%)</translation>
+        <source>Percentage of incoming XP which get automatically converted to zXP via Zerocoin Protocol (min: 10%)</source>
+        <translation>Postotak dolaznih XP koji se automatski pretvara u zXP putem Zerocoin Protokola (min: 10%)</translation>
     </message>
     <message>
-        <source>Percentage of autominted zPIV</source>
-        <translation>Postotak automatski stvorenog zPIV-a</translation>
+        <source>Percentage of autominted zXP</source>
+        <translation>Postotak automatski stvorenog zXP-a</translation>
     </message>
     <message>
-        <source>Wait with automatic conversion to Zerocoin until enough PIV for this denomination is available</source>
-        <translation>Pričekajte s automatskom pretvorbom u Zerocoin dok ne bude dostupno dovoljno PIV-a za ovu denominaciju</translation>
+        <source>Wait with automatic conversion to Zerocoin until enough XP for this denomination is available</source>
+        <translation>Pričekajte s automatskom pretvorbom u Zerocoin dok ne bude dostupno dovoljno XP-a za ovu denominaciju</translation>
     </message>
     <message>
-        <source>Preferred Automint zPIV Denomination</source>
-        <translation>Preferirana denominacija za automatsko stvaranje zPIV-a</translation>
+        <source>Preferred Automint zXP Denomination</source>
+        <translation>Preferirana denominacija za automatsko stvaranje zXP-a</translation>
     </message>
     <message>
         <source>Stake split threshold:</source>
         <translation>Prag dijeljenja Stake-a:</translation>
     </message>
     <message>
-        <source>Connect to the PIVX network through a SOCKS5 proxy.</source>
-        <translation>Povežite se s PIVX mrežom putem SOCKS5 proxy poslužitelja.</translation>
+        <source>Connect to the eXperience Points network through a SOCKS5 proxy.</source>
+        <translation>Povežite se s eXperience Points mrežom putem SOCKS5 proxy poslužitelja.</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -2049,8 +2049,8 @@ https://www.transifex.com/pivx-project/pivx-project-translations</translation>
 <context>
     <name>PIVXGUI</name>
     <message>
-        <source>PIVX Core</source>
-        <translation>PIVX Core</translation>
+        <source>eXperience Points Core</source>
+        <translation>eXperience Points Core</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -2077,8 +2077,8 @@ https://www.transifex.com/pivx-project/pivx-project-translations</translation>
         <translation>Napusti aplikaciju</translation>
     </message>
     <message>
-        <source>PIVX Core client</source>
-        <translation>PIVIX Core Klijent</translation>
+        <source>eXperience Points Core client</source>
+        <translation>XPIX Core Klijent</translation>
     </message>
     <message>
         <source>Alert!</source>
@@ -2148,12 +2148,12 @@ Adresa: %4
         <translation>Nevažeća adresa za plaćanje %1</translation>
     </message>
     <message>
-        <source>Cannot start pivx: click-to-pay handler</source>
-        <translation>Ne može se pokrenuti pivx: clik-to-pay handler</translation>
+        <source>Cannot start xp: click-to-pay handler</source>
+        <translation>Ne može se pokrenuti xp: clik-to-pay handler</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid PIVX address or malformed URI parameters.</source>
-        <translation>URI se ne može analizirati! To može biti uzrokovana nevažećom PIVX adresom ili nepravilnim URI parametrima.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid eXperience Points address or malformed URI parameters.</source>
+        <translation>URI se ne može analizirati! To može biti uzrokovana nevažećom eXperience Points adresom ili nepravilnim URI parametrima.</translation>
     </message>
     <message>
         <source>Payment request file cannot be read! This can be caused by an invalid payment request file.</source>
@@ -2242,8 +2242,8 @@ Adresa: %4
         <translation>Iznos</translation>
     </message>
     <message>
-        <source>Enter PIVX address (e.g. %1)</source>
-        <translation>Upišite PIVX adresu (npr. %1)</translation>
+        <source>Enter eXperience Points address (e.g. %1)</source>
+        <translation>Upišite eXperience Points adresu (npr. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -2286,12 +2286,12 @@ Adresa: %4
         <translation>%1 ms</translation>
     </message>
     <message>
-        <source>A fatal error occurred. PIVX can no longer continue safely and will quit.</source>
-        <translation>Dogodila se fatalna pogreška. PIVX ne može sigurno nastaviti i izaći će.</translation>
+        <source>A fatal error occurred. eXperience Points can no longer continue safely and will quit.</source>
+        <translation>Dogodila se fatalna pogreška. eXperience Points ne može sigurno nastaviti i izaći će.</translation>
     </message>
     <message>
-        <source>PIVX Core</source>
-        <translation>PIVX Core</translation>
+        <source>eXperience Points Core</source>
+        <translation>eXperience Points Core</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" does not exist.</source>
@@ -2561,8 +2561,8 @@ Adresa: %4
         <translation>Block chain</translation>
     </message>
     <message>
-        <source>Open the PIVX debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Otvorite PIVX debug log datoteku iz aktualnog direktorija podataka. To može potrajati nekoliko sekundi za velike datoteke zapisnika.</translation>
+        <source>Open the eXperience Points debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Otvorite eXperience Points debug log datoteku iz aktualnog direktorija podataka. To može potrajati nekoliko sekundi za velike datoteke zapisnika.</translation>
     </message>
     <message>
         <source>Number of Masternodes</source>
@@ -2705,8 +2705,8 @@ Adresa: %4
         <translation>Put prilagođenog sigurnosnog kopiranja:</translation>
     </message>
     <message>
-        <source>Custom zPIV Backup Path:</source>
-        <translation>Prilagođeni put zPIV sigurnosne kopije:</translation>
+        <source>Custom zXP Backup Path:</source>
+        <translation>Prilagođeni put zXP sigurnosne kopije:</translation>
     </message>
     <message>
         <source>Custom Backups Threshold:</source>
@@ -2785,8 +2785,8 @@ Adresa: %4
         <translation>Iz:</translation>
     </message>
     <message>
-        <source>Welcome to the PIVX RPC console.</source>
-        <translation>Dobrodošli na PIVX RPC konzolu.</translation>
+        <source>Welcome to the eXperience Points RPC console.</source>
+        <translation>Dobrodošli na eXperience Points RPC konzolu.</translation>
     </message>
     <message>
         <source>&amp;Disconnect Node</source>
@@ -2923,8 +2923,8 @@ Adresa: %4
         <translation>Obrazac</translation>
     </message>
     <message>
-        <source>Scan the QR code or copy the address to receive PIV</source>
-        <translation>Skeniraj QR kod ili kopiraj adresu da bi primio PIV</translation>
+        <source>Scan the QR code or copy the address to receive XP</source>
+        <translation>Skeniraj QR kod ili kopiraj adresu da bi primio XP</translation>
     </message>
     <message>
         <source>Transparent</source>
@@ -2935,8 +2935,8 @@ Adresa: %4
         <translation>Zaštićeno</translation>
     </message>
     <message>
-        <source>Accept transparent or shielded PIV</source>
-        <translation>Prihvati transparentan ili zaštićeni PIV</translation>
+        <source>Accept transparent or shielded XP</source>
+        <translation>Prihvati transparentan ili zaštićeni XP</translation>
     </message>
     <message>
         <source>Add Label</source>
@@ -3067,12 +3067,12 @@ pokušajte otključati novčanik</translation>
         <translation>Iznos</translation>
     </message>
     <message>
-        <source>PIV</source>
-        <translation>PIV</translation>
+        <source>XP</source>
+        <translation>XP</translation>
     </message>
     <message>
-        <source>Instead of sharing only a PIVX address, you can create a payment request, bundling up more information</source>
-        <translation>Umjesto da dijelite samo PIVX adresu, možete stvoriti zahtjev za plaćanjem, skupljajući više informacija</translation>
+        <source>Instead of sharing only a eXperience Points address, you can create a payment request, bundling up more information</source>
+        <translation>Umjesto da dijelite samo eXperience Points adresu, možete stvoriti zahtjev za plaćanjem, skupljajući više informacija</translation>
     </message>
     <message>
         <source>D7VFR83SQbiezrW72hjcWJtcfip5krte2Z </source>
@@ -3162,8 +3162,8 @@ pokušajte otključati novčanik</translation>
         <translation>Prilagođjena adresa za ostatak</translation>
     </message>
     <message>
-        <source>The remainder of the value resultant from the inputs minus the outputs value goes to the "change" PIVX address</source>
-        <translation>Ostatak vrijednosti koja proizlazi iz ulaza umanjen za izlaznu vrijednost ide na PIVX adresu za "ostatak"</translation>
+        <source>The remainder of the value resultant from the inputs minus the outputs value goes to the "change" eXperience Points address</source>
+        <translation>Ostatak vrijednosti koja proizlazi iz ulaza umanjen za izlaznu vrijednost ide na eXperience Points adresu za "ostatak"</translation>
     </message>
     <message>
         <source>SAVE</source>
@@ -3193,8 +3193,8 @@ pokušajte otključati novčanik</translation>
         <translation>Preporučeno</translation>
     </message>
     <message>
-        <source>PIV/kilobyte</source>
-        <translation>PIV/kilobajt</translation>
+        <source>XP/kilobyte</source>
+        <translation>XP/kilobajt</translation>
     </message>
     <message>
         <source>0.00 KB</source>
@@ -3477,12 +3477,12 @@ Uz naknadu %2
 </translation>
     </message>
     <message>
-        <source>Error generating address to shield PIVs</source>
-        <translation>Pogreška pri generiranju adrese za zaštićene PIV-ove</translation>
+        <source>Error generating address to shield XPs</source>
+        <translation>Pogreška pri generiranju adrese za zaštićene XP-ove</translation>
     </message>
     <message>
-        <source>You don't have any transparent PIVs to shield.</source>
-        <translation>Nemate nikakvih transparentnih PIV za zaštititi.</translation>
+        <source>You don't have any transparent XPs to shield.</source>
+        <translation>Nemate nikakvih transparentnih XP za zaštititi.</translation>
     </message>
     <message>
         <source>No contacts available, you can go to the contacts screen and add some there!</source>
@@ -3595,9 +3595,9 @@ Ne zaboravite zapisati i sigurno pohraniti novu lozinku, jer u protivnom ćete i
         <translation>BIP38 alat</translation>
     </message>
     <message>
-        <source>Encrypt your PIVX addresses (key pair actually) using BIP38 encryption.
+        <source>Encrypt your eXperience Points addresses (key pair actually) using BIP38 encryption.
 Using this mechanism you can share your keys without middle-man risk, only need to store your passphrase safely</source>
-        <translation>Kriptirajte vašu PIVX adresu (odnosno par ključeva) koristeći BIP38 enkripciju.
+        <translation>Kriptirajte vašu eXperience Points adresu (odnosno par ključeva) koristeći BIP38 enkripciju.
 Korištenjem ovog mehanizma možete dijeliti vaše ključeve bez rizika posredništva, samo trebate sigurno pohraniti lozinku</translation>
     </message>
     <message>
@@ -3633,8 +3633,8 @@ Korištenjem ovog mehanizma možete dijeliti vaše ključeve bez rizika posredni
         <translation>DEŠIFRIRAJ KLJUČ</translation>
     </message>
     <message>
-        <source>PIVX address</source>
-        <translation>PIVX adresa</translation>
+        <source>eXperience Points address</source>
+        <translation>eXperience Points adresa</translation>
     </message>
     <message>
         <source>Enter address</source>
@@ -3766,8 +3766,8 @@ Verify that you have installed a predetermined text editor.</source>
 Provjerite jeste li instalirali unaprijed određjeni uređjivač teksta.</translation>
     </message>
     <message>
-        <source>Welcome to the PIVX RPC console.</source>
-        <translation>Dobrodošli na PIVX RPC konzolu.</translation>
+        <source>Welcome to the eXperience Points RPC console.</source>
+        <translation>Dobrodošli na eXperience Points RPC konzolu.</translation>
     </message>
     <message>
         <source>Use up and down arrows to navigate history, and %1 to clear screen.</source>
@@ -3877,12 +3877,12 @@ podatke</translation>
         <translation>Izvezi popis adresa</translation>
     </message>
     <message>
-        <source>PIVX_tx_csv_export(*.csv)</source>
-        <translation>PIVX_transakcije_csv_izvoz(*.csv)</translation>
+        <source>XP_tx_csv_export(*.csv)</source>
+        <translation>eXperience Points_transakcije_csv_izvoz(*.csv)</translation>
     </message>
     <message>
-        <source>PIVX_addresses_csv_export(*.csv)</source>
-        <translation>PIVX_adrese_csv_izvoz(*.csv)</translation>
+        <source>XP_addresses_csv_export(*.csv)</source>
+        <translation>eXperience Points_adrese_csv_izvoz(*.csv)</translation>
     </message>
     <message>
         <source>Please select a folder to export the csv file first.</source>
@@ -3952,40 +3952,40 @@ Došlo je do greške prilikom spremanja popisa adresa u %1. Molimo pokušajte po
         <translation>Obrazac</translation>
     </message>
     <message>
-        <source>1) What is PIVX?</source>
-        <translation>1) Što je PIVX?</translation>
+        <source>1) What is eXperience Points?</source>
+        <translation>1) Što je eXperience Points?</translation>
     </message>
     <message>
-        <source>2) Why are my PIV unspendable?</source>
-        <translation>2) Zašto se moji PIV ne mogu potrošiti?</translation>
+        <source>2) Why are my XP unspendable?</source>
+        <translation>2) Zašto se moji XP ne mogu potrošiti?</translation>
     </message>
     <message>
-        <source>https://PIVX.org/</source>
-        <translation>https://PIVX.org/</translation>
+        <source>https://eXperiencePoints.io</source>
+        <translation>https://eXperiencePoints.io</translation>
     </message>
     <message>
         <source>1</source>
         <translation>1</translation>
     </message>
     <message>
-        <source>What is PIVX?</source>
-        <translation>Što je PIVX?</translation>
+        <source>What is eXperience Points?</source>
+        <translation>Što je eXperience Points?</translation>
     </message>
     <message>
         <source>2</source>
         <translation>2</translation>
     </message>
     <message>
-        <source>Why are my PIV unspendable?</source>
-        <translation>Zašto se moji PIV ne mogu potrošiti?</translation>
+        <source>Why are my XP unspendable?</source>
+        <translation>Zašto se moji XP ne mogu potrošiti?</translation>
     </message>
     <message>
         <source>3</source>
         <translation>3</translation>
     </message>
     <message>
-        <source>How do I stake PIV?</source>
-        <translation>Kako stakeat PIV?</translation>
+        <source>How do I stake XP?</source>
+        <translation>Kako stakeat XP?</translation>
     </message>
     <message>
         <source>4</source>
@@ -4021,8 +4021,8 @@ pitanja</translation>
         <translation>Zatvori FAQ</translation>
     </message>
     <message>
-        <source>3) How do I stake PIV?</source>
-        <translation>3) Kako stake-am PIV?</translation>
+        <source>3) How do I stake XP?</source>
+        <translation>3) Kako stake-am XP?</translation>
     </message>
     <message>
         <source>4) Where I should go if I need support?</source>
@@ -4140,8 +4140,8 @@ pitanja</translation>
         <translation>Ne može se otvoriti mapa sigurnosne kopije</translation>
     </message>
     <message>
-        <source>Unable to open pivx.conf with default application</source>
-        <translation>Nije moguće otvoriti pivx.conf sa zadanom aplikacijom</translation>
+        <source>Unable to open eXperiencePoints.conf with default application</source>
+        <translation>Nije moguće otvoriti eXperiencePoints.conf sa zadanom aplikacijom</translation>
     </message>
     <message>
         <source>In:</source>
@@ -4199,8 +4199,8 @@ pitanja</translation>
         <translation>Number of script verification threads</translation>
     </message>
     <message>
-        <source>Start PIVX on system login</source>
-        <translation>Pokrenite PIVX pri pokretanju računala</translation>
+        <source>Start eXperience Points on system login</source>
+        <translation>Pokrenite eXperience Points pri pokretanju računala</translation>
     </message>
     <message>
         <source>Minimize to the tray instead of the taskbar</source>
@@ -4287,8 +4287,8 @@ Jeste li sigurni?
         <translation>PotvrdniOkvir</translation>
     </message>
     <message>
-        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other PIVX addresses after it matures.</source>
-        <translation>MultiSend vam omogućuje da automatski pošaljete do 100% svog uloga ili nagrade masternode na popis drugih PIVX adresa nakon što sazriju.</translation>
+        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other eXperience Points addresses after it matures.</source>
+        <translation>MultiSend vam omogućuje da automatski pošaljete do 100% svog uloga ili nagrade masternode na popis drugih eXperience Points adresa nakon što sazriju.</translation>
     </message>
     <message>
         <source>Active</source>
@@ -4414,8 +4414,8 @@ Označite jedan ili oba polja za potvrdu da biste poslali staking i/ili masterno
         <translation>Poruka</translation>
     </message>
     <message>
-        <source>PIVX address or contact label</source>
-        <translation>PIVX adresa ili naziv kontakta</translation>
+        <source>eXperience Points address or contact label</source>
+        <translation>eXperience Points adresa ili naziv kontakta</translation>
     </message>
     <message>
         <source>Enter address</source>
@@ -4736,8 +4736,8 @@ podatke</translation>
         <translation>Najčešće postavljena pitanja</translation>
     </message>
     <message>
-        <source>About PIVX</source>
-        <translation>O PIVX-u</translation>
+        <source>About eXperience Points</source>
+        <translation>O eXperience Points-u</translation>
     </message>
     <message>
         <source>Settings</source>
@@ -4807,8 +4807,8 @@ Jeste li sigurni?
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>PIVX Core is shutting down...</source>
-        <translation>PIVX Core se zatvara...</translation>
+        <source>eXperience Points Core is shutting down...</source>
+        <translation>eXperience Points Core se zatvara...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -4837,8 +4837,8 @@ Jeste li sigurni?
         <translation>Učitavanje...</translation>
     </message>
     <message>
-        <source>PIVX Core</source>
-        <translation>PIVX Core</translation>
+        <source>eXperience Points Core</source>
+        <translation>eXperience Points Core</translation>
     </message>
 </context>
 <context>
@@ -5215,8 +5215,8 @@ stvorit će se nova sigurnosna kopija.
         <translation>Zaštićeno slanje na</translation>
     </message>
     <message>
-        <source>Burned PIVs</source>
-        <translation>Uništeni PIVovi</translation>
+        <source>Burned XPs</source>
+        <translation>Uništeni XPovi</translation>
     </message>
     <message>
         <source>watch-only</source>
@@ -5389,12 +5389,12 @@ stvorit će se nova sigurnosna kopija.
         <translation>Obrazac</translation>
     </message>
     <message>
-        <source>+0.000585 PIV</source>
-        <translation>+0.000585 PIV</translation>
+        <source>+0.000585 XP</source>
+        <translation>+0.000585 XP</translation>
     </message>
     <message>
-        <source>-0.000585 PIV</source>
-        <translation>-0.000585 PIV</translation>
+        <source>-0.000585 XP</source>
+        <translation>-0.000585 XP</translation>
     </message>
 </context>
 <context>
@@ -5456,25 +5456,25 @@ Odaberite manje ulaza pomoću Upravljanja novčićima.</translation>
     </message>
     <message>
         <source>Welcome to
-PIVX Core Wallet</source>
+eXperience Points Core Wallet</source>
         <translation>Dobrodošli u
-PIVX temeljni novčanik</translation>
+eXperience Points temeljni novčanik</translation>
     </message>
     <message>
-        <source>PIVX is the world’s most innovative Proof of Stake blockchain based technology. Developed by a team of highly experienced developers and cryptographers.</source>
-        <translation>PIVX je najinovativnija blockchain tehnologija na svijetu bazirana na Proof of Stake tehnologiji. Razvijena je od strane vrlo iskusnih programera i kriptografa.</translation>
+        <source>eXperience Points is the world’s most innovative Proof of Stake blockchain based technology. Developed by a team of highly experienced developers and cryptographers.</source>
+        <translation>eXperience Points je najinovativnija blockchain tehnologija na svijetu bazirana na Proof of Stake tehnologiji. Razvijena je od strane vrlo iskusnih programera i kriptografa.</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;As our manifesto says: Privacy is a non-negotiable basic human right; it grants users the freedom to share their data whenever and with whomever they want - PIVX believes in self sovereignty.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kao što naš manifest kaže: Privatnost je osnovno ljudsko pravo o kojemu se ne pregovara; korisnicima daje slobodu dijeljenja svojih podataka kad god i s kim god žele - PIVX vjeruje u suverenitet.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;As our manifesto says: Privacy is a non-negotiable basic human right; it grants users the freedom to share their data whenever and with whomever they want - eXperience Points believes in self sovereignty.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Kao što naš manifest kaže: Privatnost je osnovno ljudsko pravo o kojemu se ne pregovara; korisnicima daje slobodu dijeljenja svojih podataka kad god i s kim god žele - eXperience Points vjeruje u suverenitet.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <source>The masternode network is PIVX's second layer network on top of the blockchain that enables our DAO to provide decentralized governance and a treasury.</source>
-        <translation>Masternode mreža je mreža drugog sloja PIVX-a na vrhu blockchaina koja omogućuje našem DAO-u pružanje decentraliziranog upravljanja i riznice.</translation>
+        <source>The masternode network is eXperience Points's second layer network on top of the blockchain that enables our DAO to provide decentralized governance and a treasury.</source>
+        <translation>Masternode mreža je mreža drugog sloja eXperience Points-a na vrhu blockchaina koja omogućuje našem DAO-u pružanje decentraliziranog upravljanja i riznice.</translation>
     </message>
     <message>
-        <source>How PIVX respects your privacy?</source>
-        <translation>Kako PIVX poštuje Vašu privatnost?</translation>
+        <source>How eXperience Points respects your privacy?</source>
+        <translation>Kako eXperience Points poštuje Vašu privatnost?</translation>
     </message>
     <message>
         <source>What is a Masternode?</source>
@@ -5640,8 +5640,8 @@ PIVX temeljni novčanik</translation>
         <translation>Ukupna duljina teksta mrežne verzije (%i) prelazi maksimalnu duljinu (%i). Smanjite broj ili veličinu uacommentsa.</translation>
     </message>
     <message>
-        <source>Unable to bind to %s on this computer. PIVX Core is probably already running.</source>
-        <translation>Nije moguće vezati se na %s na ovom računalu. PIVX Core vjerojatno već radi.</translation>
+        <source>Unable to bind to %s on this computer. eXperience Points Core is probably already running.</source>
+        <translation>Nije moguće vezati se na %s na ovom računalu. eXperience Points Core vjerojatno već radi.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</source>
@@ -5656,8 +5656,8 @@ PIVX temeljni novčanik</translation>
         <translation>Upozorenje: -paytxfee je vrlo visoka! To je transakcijska naknada koju ćete platiti ako šaljete transakciju.</translation>
     </message>
     <message>
-        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong PIVX Core will not work properly.</source>
-        <translation>Upozorenje: Provjerite jesu li datum i vrijeme vašeg računala točni! Ako je vaš sat pogrešan, PIVX Core neće raditi ispravno.</translation>
+        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong eXperience Points Core will not work properly.</source>
+        <translation>Upozorenje: Provjerite jesu li datum i vrijeme vašeg računala točni! Ako je vaš sat pogrešan, eXperience Points Core neće raditi ispravno.</translation>
     </message>
     <message>
         <source>Warning: The network does not appear to fully agree! Some miners appear to be experiencing issues.</source>
@@ -5941,8 +5941,8 @@ Pokrenite 'sapling-fetch-params' ili '.util/fetch-params.sh' te ponovno pokrenit
         <translation>Nije moguće nadograditi na novčanik Sapling (već ima Sapling podršku). Verzija: %d</translation>
     </message>
     <message>
-        <source>Disable all PIVX specific functionality (Masternodes, Budgeting) (0-1, default: %u)</source>
-        <translation>Onemogućite sve PIVX specifične funkcionalnosti (Masternode, proračun) (0-1, zadano: %u)</translation>
+        <source>Disable all eXperience Points specific functionality (Masternodes, Budgeting) (0-1, default: %u)</source>
+        <translation>Onemogućite sve eXperience Points specifične funkcionalnosti (Masternode, proračun) (0-1, zadano: %u)</translation>
     </message>
     <message>
         <source>This file contains all of your private keys in plain text. DO NOT send this file to anyone!</source>
@@ -5977,8 +5977,8 @@ Pokrenite 'sapling-fetch-params' ili '.util/fetch-params.sh' te ponovno pokrenit
         <translation>Greška pri učitavanju %s: Novčanik oštećen</translation>
     </message>
     <message>
-        <source>Error loading %s: Wallet requires newer version of PIVX Core</source>
-        <translation>Pogreška pri učitavanju %s: Novčanik zahtijeva noviju verziju PIVX Core</translation>
+        <source>Error loading %s: Wallet requires newer version of eXperience Points Core</source>
+        <translation>Pogreška pri učitavanju %s: Novčanik zahtijeva noviju verziju eXperience Points Core</translation>
     </message>
     <message>
         <source>Error loading %s
@@ -6175,12 +6175,12 @@ Pokrenite 'sapling-fetch-params' ili '.util/fetch-params.sh' te ponovno pokrenit
         <translation>Naknade (u %s/Kb) manje od ovoga će se smatrati kao da nema naknade za stvaranje transakcije (default: %s)</translation>
     </message>
     <message>
-        <source>Minimum positive amount (in PIV) allowed by GUI and RPC for the stake split threshold (default: %s)</source>
-        <translation>Najmanji dozvoljeni iznos (u PIV) kroz GUI RPC za prag dijeljenja stake-a (default: %s)</translation>
+        <source>Minimum positive amount (in XP) allowed by GUI and RPC for the stake split threshold (default: %s)</source>
+        <translation>Najmanji dozvoljeni iznos (u XP) kroz GUI RPC za prag dijeljenja stake-a (default: %s)</translation>
     </message>
     <message>
-        <source>Please check that your computer's date and time are correct! If your clock is wrong PIVX Core will not work properly.</source>
-        <translation>Provjerite jesu li datum i vrijeme vašeg računala točni! Ako je vaš sat pogrešan, PIVX Core neće raditi ispravno.</translation>
+        <source>Please check that your computer's date and time are correct! If your clock is wrong eXperience Points Core will not work properly.</source>
+        <translation>Provjerite jesu li datum i vrijeme vašeg računala točni! Ako je vaš sat pogrešan, eXperience Points Core neće raditi ispravno.</translation>
     </message>
     <message>
         <source>Query for peer addresses via DNS lookup, if low on addresses (default: 1 unless -connect/-noconnect)</source>
@@ -6533,8 +6533,8 @@ Pokrenite 'sapling-fetch-params' ili '.util/fetch-params.sh' te ponovno pokrenit
         <translation>Provjera novčanika...</translation>
     </message>
     <message>
-        <source>Wallet needed to be rewritten: restart PIVX Core to complete</source>
-        <translation>Potrebno je prepisati novčanik: ponovo pokrenite PIVX Core</translation>
+        <source>Wallet needed to be rewritten: restart eXperience Points Core to complete</source>
+        <translation>Potrebno je prepisati novčanik: ponovo pokrenite eXperience Points Core</translation>
     </message>
     <message>
         <source>Wallet options:</source>
@@ -6604,8 +6604,8 @@ Pokrenite 'sapling-fetch-params' ili '.util/fetch-params.sh' te ponovno pokrenit
         <translation>Odaberi koje novčiće ćeš trošiti</translation>
     </message>
     <message>
-        <source>PIVX address or contact label</source>
-        <translation>PIVX adresa ili naziv kontakta</translation>
+        <source>eXperience Points address or contact label</source>
+        <translation>eXperience Points adresa ili naziv kontakta</translation>
     </message>
     <message>
         <source>Amount</source>

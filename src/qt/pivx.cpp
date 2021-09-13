@@ -532,7 +532,7 @@ void BitcoinApplication::shutdownResult(int retval)
 
 void BitcoinApplication::handleRunawayException(const QString& message)
 {
-    QMessageBox::critical(0, "Runaway exception", QObject::tr("A fatal error occurred. PIVX can no longer continue safely and will quit.") + QString("\n\n") + message);
+    QMessageBox::critical(0, "Runaway exception", QObject::tr("A fatal error occurred. eXperience Points can no longer continue safely and will quit.") + QString("\n\n") + message);
     ::exit(1);
 }
 
@@ -607,14 +607,14 @@ int main(int argc, char* argv[])
     /// 6. Determine availability of data directory and parse pivx.conf
     /// - Do not call GetDataDir(true) before this step finishes
     if (!fs::is_directory(GetDataDir(false))) {
-        QMessageBox::critical(0, QObject::tr("PIVX Core"),
+        QMessageBox::critical(0, QObject::tr("eXperience Points Core"),
             QObject::tr("Error: Specified data directory \"%1\" does not exist.").arg(QString::fromStdString(gArgs.GetArg("-datadir", ""))));
         return 1;
     }
     try {
         gArgs.ReadConfigFile();
     } catch (const std::exception& e) {
-        QMessageBox::critical(0, QObject::tr("PIVX Core"),
+        QMessageBox::critical(0, QObject::tr("eXperience Points Core"),
             QObject::tr("Error: Cannot parse configuration file: %1. Only use key=value syntax.").arg(e.what()));
         return 0;
     }
@@ -629,7 +629,7 @@ int main(int argc, char* argv[])
     try {
         SelectParams(ChainNameFromCommandLine());
     } catch(const std::exception& e) {
-        QMessageBox::critical(0, QObject::tr("PIVX Core"), QObject::tr("Error: %1").arg(e.what()));
+        QMessageBox::critical(0, QObject::tr("eXperience Points Core"), QObject::tr("Error: %1").arg(e.what()));
         return 1;
     }
 #ifdef ENABLE_WALLET
@@ -648,7 +648,7 @@ int main(int argc, char* argv[])
     /// 7a. parse masternode.conf
     std::string strErr;
     if (!masternodeConfig.read(strErr)) {
-        QMessageBox::critical(0, QObject::tr("PIVX Core"),
+        QMessageBox::critical(0, QObject::tr("eXperience Points Core"),
             QObject::tr("Error reading masternode configuration file: %1").arg(strErr.c_str()));
         return 0;
     }
