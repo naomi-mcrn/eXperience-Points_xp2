@@ -13,7 +13,7 @@
  * for both pivxd and pivx-qt, to make it harder for attackers to
  * target servers or GUI users specifically.
  */
-const std::string CLIENT_NAME("eXperience Points Core");
+const std::string CLIENT_NAME("XP2-Core-CVMU");
 
 /**
  * Client version number

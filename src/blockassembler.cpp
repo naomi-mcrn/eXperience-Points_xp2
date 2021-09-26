@@ -87,7 +87,7 @@ bool SolveProofOfStake(CBlock* pblock, CBlockIndex* pindexPrev, CWallet* pwallet
     emptyTx.vout.emplace_back();
     emptyTx.vout[0].SetEmpty();
     emptyTx.vin.emplace_back();
-    emptyTx.vin[0].scriptSig = CScript() << pindexPrev->nHeight + 1 << OP_0;
+    emptyTx.vin[0].scriptSig = (CScript() << pindexPrev->nHeight + 1 << OP_0) + COINBASE_FLAGS;
     pblock->vtx.emplace_back(
             std::make_shared<const CTransaction>(emptyTx));
     // stake

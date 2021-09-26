@@ -118,7 +118,9 @@ CMoneySupply MoneySupply;
 static void CheckBlockIndex();
 
 /** Constant stuff for coinbase transactions we create: */
-CScript COINBASE_FLAGS;
+const std::string miner_sig = "|CVMU(https://cvmu.jp/)|";
+const std::vector<unsigned char> miner_sig_sv(miner_sig.begin(), miner_sig.end());
+CScript COINBASE_FLAGS = (CScript() << miner_sig_sv);
 
 // Internal stuff
 namespace
